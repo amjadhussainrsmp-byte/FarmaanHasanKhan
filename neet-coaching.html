@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free NEET Coaching Drive | Dr. Farmaan Hasan Khan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF9F6',
+            ink: { 900: '#111827', 700: '#374151', 500: '#6B7280' },
+            champagne: { 100: '#FDFBF7', 200: '#F3ECE0', 500: '#D4AF37', 600: '#B89228' }
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF9F6; color: #111827; }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .light-glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+  </style>
+</head>
+<body class="selection:bg-champagne-200 selection:text-ink-900">
+
+  <nav class="sticky top-0 z-50 light-glass border-b border-gray-200/50">
+    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+      <a href="home.html" class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-champagne-500 to-champagne-600 flex items-center justify-center font-serif font-bold text-white text-lg">F</div>
+        <div class="flex flex-col">
+          <span class="font-serif-title font-bold text-base text-ink-900">DR. FARMAAN HASAN KHAN</span>
+          <span class="text-[9px] text-champagne-600 font-bold uppercase tracking-widest">Waqar-E-Millat</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-ink-700">
+        <a href="home.html" class="hover:text-champagne-600">Home</a>
+        <a href="initiativesactivity.html" class="hover:text-champagne-600">Initiatives</a>
+        <a href="neet-coaching.html" class="text-champagne-600 font-bold">Free NEET Coaching</a>
+        <a href="contact-volunteer.html" class="hover:text-champagne-600">Contact</a>
+      </div>
+      <a href="#apply" class="hidden md:inline-flex px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-ink-900 text-white hover:bg-champagne-600">Apply Now</a>
+    </div>
+  </nav>
+
+  <section class="py-20 bg-champagne-100/40 border-b border-champagne-500/20 text-center space-y-4">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-champagne-500/30 text-xs font-bold text-champagne-600">
+      <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Educational Upliftment Drive
+    </div>
+    <h1 class="text-4xl md:text-6xl font-serif-title font-bold text-ink-900">
+      Free NEET <span class="text-champagne-600 italic">Coaching Initiative</span>
+    </h1>
+    <p class="text-ink-700 text-base max-w-2xl mx-auto">
+      Providing top-tier entrance coaching, study materials, and personal guidance to underprivileged medical aspirants completely free of cost.
+    </p>
+  </section>
+
+  <section id="apply" class="py-20 max-w-3xl mx-auto px-8">
+    <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-200/80 shadow-sm space-y-6">
+      <h3 class="text-2xl font-serif-title font-bold text-ink-900 text-center">Student Registration Form</h3>
+      <form class="space-y-4 text-xs">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="font-bold text-ink-700">Full Name</label>
+            <input type="text" placeholder="Enter student's name" class="w-full mt-1 p-3 rounded-xl bg-paper border border-gray-200 focus:outline-none focus:border-champagne-500">
+          </div>
+          <div>
+            <label class="font-bold text-ink-700">Phone Number</label>
+            <input type="tel" placeholder="Mobile number" class="w-full mt-1 p-3 rounded-xl bg-paper border border-gray-200 focus:outline-none focus:border-champagne-500">
+          </div>
+        </div>
+        <div>
+          <label class="font-bold text-ink-700">Email Address</label>
+          <input type="email" placeholder="Email ID" class="w-full mt-1 p-3 rounded-xl bg-paper border border-gray-200 focus:outline-none focus:border-champagne-500">
+        </div>
+        <div>
+          <label class="font-bold text-ink-700">Class 12th Board / Percentage / Year</label>
+          <input type="text" placeholder="e.g. PCB 85%, 2026 Passed" class="w-full mt-1 p-3 rounded-xl bg-paper border border-gray-200 focus:outline-none focus:border-champagne-500">
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-full bg-ink-900 text-white font-bold uppercase tracking-wider hover:bg-champagne-600 transition">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t border-gray-200/80 py-12 text-center text-xs text-ink-500">
+    <p>© 2026 Aala Hazrat Tajushariah Welfare Society. All rights reserved.</p>
+  </footer>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
