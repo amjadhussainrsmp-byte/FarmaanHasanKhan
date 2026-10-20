@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biography | Dr. Farmaan Hasan Khan (Waqar-E-Millat)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF9F6',
+            surface: '#FFFFFF',
+            ink: {
+              900: '#111827',
+              700: '#374151',
+              500: '#6B7280',
+            },
+            champagne: {
+              100: '#FDFBF7',
+              200: '#F3ECE0',
+              500: '#D4AF37',
+              600: '#B89228',
+            },
+            emeraldAccent: {
+              50: '#ECFDF5',
+              600: '#059669',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            heading: ['Syne', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF9F6;
+      color: #111827;
+      overflow-x: hidden;
+    }
+    
+    .font-serif-title {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .light-glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #B89228 0%, #D4AF37 50%, #997417 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="selection:bg-champagne-200 selection:text-ink-900">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="sticky top-0 z-50 light-glass transition-all duration-300 border-b border-gray-200/50">
+    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+      <a href="home.html" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-champagne-500 to-champagne-600 flex items-center justify-center font-serif font-bold text-white text-lg shadow-md shadow-champagne-500/20">
+          F
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif-title font-bold text-base tracking-wide text-ink-900">DR. FARMAAN HASAN KHAN</span>
+          <span class="text-[9px] text-champagne-600 font-bold uppercase tracking-widest">Waqar-E-Millat</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-ink-700">
+        <a href="home.html" class="hover:text-champagne-600 transition">Home</a>
+        <a href="biography.html" class="text-champagne-600 font-bold">Biography</a>
+        <a href="#initiatives" class="hover:text-champagne-600 transition">Initiatives</a>
+        <a href="#recognitions" class="hover:text-champagne-600 transition">Recognitions</a>
+        <a href="#contact" class="hover:text-champagne-600 transition">Contact</a>
+      </div>
+
+      <a href="#contact" class="hidden md:inline-flex px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-ink-900 text-white hover:bg-champagne-600 transition shadow-sm">
+        Connect
+      </a>
+    </div>
+  </nav>
+
+  <!-- BIOGRAPHY HERO HEADER -->
+  <section class="py-20 bg-champagne-100/40 border-b border-champagne-500/20">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-8 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-champagne-500/30 text-xs font-bold text-champagne-600 shadow-sm">
+          <i data-lucide="user-check" class="w-3.5 h-3.5"></i> Official Biography
+        </div>
+        <h1 class="text-4xl md:text-6xl font-serif-title font-bold text-ink-900 leading-tight">
+          A Legacy of Service, <br />
+          <span class="text-gold-gradient italic">Justice & Compassion</span>
+        </h1>
+        <p class="text-ink-700 text-base leading-relaxed max-w-2xl">
+          Discover the inspiring personal journey, legal career, spiritual lineage, and impactful social movements of Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan.
+        </p>
+      </div>
+
+      <!-- Quick Profile At-A-Glance Box -->
+      <div class="lg:col-span-4 bg-white p-8 rounded-3xl border border-gray-200/80 shadow-md space-y-4">
+        <h3 class="text-xs uppercase font-bold tracking-widest text-champagne-600 border-b border-gray-100 pb-3">At A Glance</h3>
+        
+        <div class="space-y-3 text-xs">
+          <div class="flex justify-between border-b border-gray-50 pb-2">
+            <span class="text-ink-500">Born:</span>
+            <span class="font-bold text-ink-900">8 August 1995 (Bareilly, UP)</span>
+          </div>
+          <div class="flex justify-between border-b border-gray-50 pb-2">
+            <span class="text-ink-500">Qualification:</span>
+            <span class="font-bold text-ink-900">BA LL.B (MJPRU)</span>
+          </div>
+          <div class="flex justify-between border-b border-gray-50 pb-2">
+            <span class="text-ink-500">Profession:</span>
+            <span class="font-bold text-ink-900">High Court Advocate & Leader</span>
+          </div>
+          <div class="flex justify-between border-b border-gray-50 pb-2">
+            <span class="text-ink-500">Key Office:</span>
+            <span class="font-bold text-ink-900">National Gen. Sec. (JRM)</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-ink-500">Honorific Title:</span>
+            <span class="font-bold text-champagne-600">Waqar-E-Millat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN BIOGRAPHY CONTENT (EDITORIAL CHRONOLOGY) -->
+  <section class="py-24 max-w-5xl mx-auto px-8">
+    <div class="space-y-20">
+
+      <!-- SECTION 1: EARLY LIFE & EDUCATION -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-4 sticky top-28">
+          <span class="text-4xl font-serif-title font-bold text-champagne-500/40">01</span>
+          <h2 class="text-2xl font-serif-title font-bold text-ink-900 mt-1">Early Life & Education</h2>
+          <p class="text-xs text-ink-500 mt-2">Roots, Heritage & Academic Foundation</p>
+        </div>
+        <div class="md:col-span-8 bg-white p-8 md:p-10 rounded-3xl border border-gray-200/80 shadow-sm space-y-4 text-ink-700 text-sm leading-relaxed">
+          <p>
+            Dr. Farmaan Hasan Khan (affectionately known as <strong>Farman Mian</strong>) was born on <strong>8 August 1995</strong> in Bareilly, Uttar Pradesh—a historically significant hub of Islamic scholarship and spiritual legacy in North India. 
+          </p>
+          <p>
+            Coming from a prestigious family closely associated with the intellectual and spiritual heritage of Aala Hazrat Imam Ahmed Raza Khan Barelvi, he developed a profound sense of civic responsibility and social service from an early age.
+          </p>
+          <p>
+            He pursued higher education at <strong>Mahatma Jyotiba Phule Rohilkhand University (MJPRU)</strong>, completing his <strong>Bachelor of Arts and Bachelor of Laws (BA LL.B)</strong>. Equipped with legal acumen, he enrolled as an advocate practicing at the <strong>Allahabad High Court</strong>, utilizing law as a tool for public advocacy and legal empowerment for the underprivileged.
+          </p>
+        </div>
+      </div>
+
+      <!-- SECTION 2: ORGANIZATIONAL LEADERSHIP -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-4 sticky top-28">
+          <span class="text-4xl font-serif-title font-bold text-champagne-500/40">02</span>
+          <h2 class="text-2xl font-serif-title font-bold text-ink-900 mt-1">Leadership & Governance</h2>
+          <p class="text-xs text-ink-500 mt-2">Jama'at Raza-e-Mustafa & Welfare Society</p>
+        </div>
+        <div class="md:col-span-8 bg-white p-8 md:p-10 rounded-3xl border border-gray-200/80 shadow-sm space-y-6">
+          <div class="space-y-3">
+            <h3 class="text-lg font-serif-title font-bold text-ink-900">National General Secretary — Jama'at Raza-e-Mustafa</h3>
+            <p class="text-ink-700 text-sm leading-relaxed">
+              In 2021, Dr. Farmaan Hasan Khan assumed the role of <strong>National General Secretary</strong> of Jama'at Raza-e-Mustafa, an iconic socio-religious organization established in 1920 by Imam Ahmed Raza Khan Barelvi. Under his leadership, the organization expanded its footprint into community development, relief work, and interfaith dialogue across India.
+            </p>
+          </div>
+          <div class="border-t border-gray-100 pt-6 space-y-3">
+            <h3 class="text-lg font-serif-title font-bold text-ink-900">Founder — Aala Hazrat Tajushariah Welfare Society</h3>
+            <p class="text-ink-700 text-sm leading-relaxed">
+              To institutionalize humanitarian service, he founded the <strong>Aala Hazrat Tajushariah Welfare Society</strong>. The non-profit operates internationally with core focus areas in free medical surgeries, competitive exam coaching (NEET/JEE), tree plantation drives, and women empowerment initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: HUMANITARIAN MOVEMENTS -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-4 sticky top-28">
+          <span class="text-4xl font-serif-title font-bold text-champagne-500/40">03</span>
+          <h2 class="text-2xl font-serif-title font-bold text-ink-900 mt-1">Pillars of Impact</h2>
+          <p class="text-xs text-ink-500 mt-2">Transforming Words into Action</p>
+        </div>
+        <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-champagne-100 flex items-center justify-center text-champagne-600 mb-4">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-serif-title font-bold text-ink-900 text-base mb-1">Educational Equity</h4>
+            <p class="text-xs text-ink-500 leading-relaxed">Free NEET coaching, study materials, and mentoring for underprivileged students.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-emeraldAccent-50 flex items-center justify-center text-emeraldAccent-600 mb-4">
+              <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-serif-title font-bold text-ink-900 text-base mb-1">Healthcare Relief</h4>
+            <p class="text-xs text-ink-500 leading-relaxed">Sponsoring critical operations, medical camps, and TB-Free India campaign support.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-emeraldAccent-50 flex items-center justify-center text-emeraldAccent-600 mb-4">
+              <i data-lucide="trees" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-serif-title font-bold text-ink-900 text-base mb-1">Green Environment</h4>
+            <p class="text-xs text-ink-500 leading-relaxed">Over 25,000+ trees planted under nationwide environmental conservation drives.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-champagne-100 flex items-center justify-center text-champagne-600 mb-4">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h4 class="font-serif-title font-bold text-ink-900 text-base mb-1">Interfaith Brotherhood</h4>
+            <p class="text-xs text-ink-500 leading-relaxed">Promoting communal harmony, peace marches, and human dignity across communities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: HONORS & RECOGNITION -->
+      <div id="recognitions" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-4 sticky top-28">
+          <span class="text-4xl font-serif-title font-bold text-champagne-500/40">04</span>
+          <h2 class="text-2xl font-serif-title font-bold text-ink-900 mt-1">Honors & Accolades</h2>
+          <p class="text-xs text-ink-500 mt-2">National & International Awards</p>
+        </div>
+        <div class="md:col-span-8 bg-white p-8 rounded-3xl border border-gray-200/80 shadow-sm space-y-4">
+          <div class="flex gap-4 items-start border-b border-gray-100 pb-4">
+            <span class="text-xs font-bold text-champagne-600 bg-champagne-100 px-3 py-1 rounded-md">2023</span>
+            <div>
+              <h4 class="font-serif-title font-bold text-ink-900 text-base">Bharat Gaurav Ratna</h4>
+              <p class="text-xs text-ink-500 mt-1">Conferred for exemplary contributions to social healthcare and community development.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start border-b border-gray-100 pb-4">
+            <span class="text-xs font-bold text-champagne-600 bg-champagne-100 px-3 py-1 rounded-md">2023</span>
+            <div>
+              <h4 class="font-serif-title font-bold text-ink-900 text-base">World Peace Ambassador</h4>
+              <p class="text-xs text-ink-500 mt-1">Awarded by World Human Rights Protection Commissions for fostering communal harmony.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start">
+            <span class="text-xs font-bold text-champagne-600 bg-champagne-100 px-3 py-1 rounded-md">2026</span>
+            <div>
+              <h4 class="font-serif-title font-bold text-ink-900 text-base">Waqar-E-Millat Title</h4>
+              <p class="text-xs text-ink-500 mt-1">Bestowed by prominent community bodies in recognition of national leadership and public service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-white border-t border-gray-200/80 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="space-y-4 md:col-span-2">
+        <h3 class="font-serif-title font-bold text-xl text-ink-900">DR. FARMAAN HASAN KHAN</h3>
+        <p class="text-xs text-ink-500 max-w-sm leading-relaxed">
+          51, Quilla Crossing, Bakarganj Road, Katghar, Bareilly Shareef, Uttar Pradesh (243003).
+        </p>
+        <p class="text-xs font-semibold text-champagne-600">officialfarmaanhasankhan@gmail.com</p>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-ink-900 mb-4">Navigation</h4>
+        <ul class="space-y-2.5 text-xs text-ink-500 font-medium">
+          <li><a href="home.html" class="hover:text-champagne-600 transition">Home</a></li>
+          <li><a href="biography.html" class="hover:text-champagne-600 transition">Biography</a></li>
+          <li><a href="#initiatives" class="hover:text-champagne-600 transition">Free NEET Coaching</a></li>
+          <li><a href="#recognitions" class="hover:text-champagne-600 transition">Awards & Honors</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-ink-900 mb-4">Connect</h4>
+        <div class="flex gap-3 text-ink-700">
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-xs text-ink-500">
+      <p>© 2026 Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan. All rights reserved.</p>
+      <p class="mt-2 md:mt-0">Refined Biography Page Template.</p>
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
