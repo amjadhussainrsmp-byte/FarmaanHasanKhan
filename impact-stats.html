@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impact & Analytics | Dr. Farmaan Hasan Khan</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF9F6',
+            surface: '#FFFFFF',
+            ink: {
+              900: '#111827',
+              700: '#374151',
+              500: '#6B7280',
+            },
+            champagne: {
+              100: '#FDFBF7',
+              200: '#F3ECE0',
+              500: '#D4AF37',
+              600: '#B89228',
+            },
+            emeraldAccent: {
+              50: '#ECFDF5',
+              600: '#059669',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+            heading: ['Syne', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF9F6;
+      color: #111827;
+      overflow-x: hidden;
+    }
+    
+    .font-serif-title {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .light-glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #B89228 0%, #D4AF37 50%, #997417 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="selection:bg-champagne-200 selection:text-ink-900">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="sticky top-0 z-50 light-glass transition-all duration-300 border-b border-gray-200/50">
+    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+      <a href="home.html" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-champagne-500 to-champagne-600 flex items-center justify-center font-serif font-bold text-white text-lg shadow-md shadow-champagne-500/20">
+          F
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif-title font-bold text-base tracking-wide text-ink-900">DR. FARMAAN HASAN KHAN</span>
+          <span class="text-[9px] text-champagne-600 font-bold uppercase tracking-widest">Waqar-E-Millat</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-ink-700">
+        <a href="home.html" class="hover:text-champagne-600 transition">Home</a>
+        <a href="biography.html" class="hover:text-champagne-600 transition">Biography</a>
+        <a href="initiativesactivity.html" class="hover:text-champagne-600 transition">Initiatives</a>
+        <a href="impact-stats.html" class="text-champagne-600 font-bold">Impact Stats</a>
+        <a href="#contact" class="hover:text-champagne-600 transition">Contact</a>
+      </div>
+
+      <a href="#contact" class="hidden md:inline-flex px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-ink-900 text-white hover:bg-champagne-600 transition shadow-sm">
+        Join Movement
+      </a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO HEADER -->
+  <section class="py-20 bg-champagne-100/40 border-b border-champagne-500/20">
+    <div class="max-w-7xl mx-auto px-8 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-champagne-500/30 text-xs font-bold text-champagne-600 shadow-sm">
+        <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-champagne-500"></i> Measurable Social Change
+      </div>
+      <h1 class="text-4xl md:text-6xl font-serif-title font-bold text-ink-900">
+        Our Lives Touched & <span class="text-gold-gradient italic">Impact Stats</span>
+      </h1>
+      <p class="text-ink-700 text-base max-w-2xl mx-auto leading-relaxed">
+        Quantifying years of relentless humanitarian work across healthcare, education, environmental restoration, and civic peace.
+      </p>
+    </div>
+  </section>
+
+  <!-- HERO STATS BENTO GRID -->
+  <section class="py-20 max-w-7xl mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+      <!-- Stat Card 1 -->
+      <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-2xl bg-champagne-100 flex items-center justify-center text-champagne-600 mb-6">
+          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+        </div>
+        <div class="text-4xl font-serif-title font-bold text-ink-900">100+</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-champagne-600 mt-2">NEET Scholars</div>
+        <p class="text-xs text-ink-500 mt-2 leading-relaxed">Provided full free entrance coaching, study materials, and academic mentorship.</p>
+      </div>
+
+      <!-- Stat Card 2 -->
+      <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-2xl bg-emeraldAccent-50 flex items-center justify-center text-emeraldAccent-600 mb-6">
+          <i data-lucide="trees" class="w-6 h-6"></i>
+        </div>
+        <div class="text-4xl font-serif-title font-bold text-ink-900">25,000+</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-emeraldAccent-600 mt-2">Trees Planted</div>
+        <p class="text-xs text-ink-500 mt-2 leading-relaxed">Planted and nurtured under green drives across multiple North Indian districts.</p>
+      </div>
+
+      <!-- Stat Card 3 -->
+      <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-2xl bg-emeraldAccent-50 flex items-center justify-center text-emeraldAccent-600 mb-6">
+          <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+        </div>
+        <div class="text-4xl font-serif-title font-bold text-ink-900">10,000+</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-emeraldAccent-600 mt-2">Surgeries & Medical Aid</div>
+        <p class="text-xs text-ink-500 mt-2 leading-relaxed">Critical surgical sponsorships, free eye operations, and medicine support.</p>
+      </div>
+
+      <!-- Stat Card 4 -->
+      <div class="bg-white rounded-3xl p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition">
+        <div class="w-12 h-12 rounded-2xl bg-champagne-100 flex items-center justify-center text-champagne-600 mb-6">
+          <i data-lucide="package" class="w-6 h-6"></i>
+        </div>
+        <div class="text-4xl font-serif-title font-bold text-ink-900">10,000+</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-champagne-600 mt-2">Food & Aid Kits</div>
+        <p class="text-xs text-ink-500 mt-2 leading-relaxed">Emergency ration kits and winter relief blankets distributed to families in need.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTOR-WISE BREAKDOWN & PROGRESS BARS -->
+  <section class="py-20 bg-white border-y border-gray-200/80">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-5 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-champagne-600">Resource Allocation</span>
+        <h2 class="text-3xl font-serif-title font-bold text-ink-900">Driving Balanced Human Advancement</h2>
+        <p class="text-xs text-ink-700 leading-relaxed">
+          Every contribution and initiative is strictly monitored to ensure maximum reach for marginalized communities without discrimination based on religion or caste.
+        </p>
+        
+        <div class="pt-4 space-y-2 text-xs font-semibold text-ink-900">
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emeraldAccent-600"></i> 100% Volunteer-Driven On-Ground Execution
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emeraldAccent-600"></i> Direct Beneficiary Verification Protocols
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emeraldAccent-600"></i> Multi-State Network Outreach
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Indicators Column -->
+      <div class="lg:col-span-7 bg-paper p-8 rounded-3xl border border-gray-200/80 space-y-6">
+        
+        <!-- Bar 1 -->
+        <div class="space-y-2">
+          <div class="flex justify-between text-xs font-bold">
+            <span class="text-ink-900">Healthcare Relief & Surgeries</span>
+            <span class="text-champagne-600">35% Allocation</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div class="bg-champagne-500 h-2.5 rounded-full" style="width: 35%"></div>
+          </div>
+        </div>
+
+        <!-- Bar 2 -->
+        <div class="space-y-2">
+          <div class="flex justify-between text-xs font-bold">
+            <span class="text-ink-900">Free NEET Coaching & Youth Mentorship</span>
+            <span class="text-champagne-600">25% Allocation</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div class="bg-champagne-500 h-2.5 rounded-full" style="width: 25%"></div>
+          </div>
+        </div>
+
+        <!-- Bar 3 -->
+        <div class="space-y-2">
+          <div class="flex justify-between text-xs font-bold">
+            <span class="text-ink-900">Environmental Tree Plantation Missions</span>
+            <span class="text-emeraldAccent-600">20% Allocation</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div class="bg-emeraldAccent-600 h-2.5 rounded-full" style="width: 20%"></div>
+          </div>
+        </div>
+
+        <!-- Bar 4 -->
+        <div class="space-y-2">
+          <div class="flex justify-between text-xs font-bold">
+            <span class="text-ink-900">Communal Peace & Disaster Emergency Aid</span>
+            <span class="text-champagne-600">20% Allocation</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div class="bg-champagne-500 h-2.5 rounded-full" style="width: 20%"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEY MILESTONES TIMELINE -->
+  <section class="py-24 max-w-5xl mx-auto px-8">
+    <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
+      <span class="text-xs font-bold uppercase tracking-widest text-champagne-600">Growth Journey</span>
+      <h2 class="text-3xl font-serif-title font-bold text-ink-900">Impact Milestones Over Time</h2>
+    </div>
+
+    <div class="space-y-8 border-l-2 border-champagne-500/30 pl-6 ml-4 md:ml-32">
+      
+      <!-- Milestone 1 -->
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-champagne-500 border-4 border-paper"></div>
+        <span class="text-xs font-bold text-champagne-600">2021</span>
+        <h3 class="text-lg font-serif-title font-bold text-ink-900 mt-0.5">National Leadership & Free Medical Drives</h3>
+        <p class="text-xs text-ink-500 mt-1">Appointed National General Secretary of Jama'at Raza-e-Mustafa; launched large-scale free health checkup camps.</p>
+      </div>
+
+      <!-- Milestone 2 -->
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-champagne-500 border-4 border-paper"></div>
+        <span class="text-xs font-bold text-champagne-600">2023</span>
+        <h3 class="text-lg font-serif-title font-bold text-ink-900 mt-0.5">Bharat Gaurav Ratna & 25,000 Tree Benchmark</h3>
+        <p class="text-xs text-ink-500 mt-1">Honored with Bharat Gaurav Ratna and World Peace Ambassador Awards as plantation drive crossed 25,000 saplings.</p>
+      </div>
+
+      <!-- Milestone 3 -->
+      <div class="relative">
+        <div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-champagne-500 border-4 border-paper"></div>
+        <span class="text-xs font-bold text-champagne-600">2026</span>
+        <h3 class="text-lg font-serif-title font-bold text-ink-900 mt-0.5">Expansion of Free NEET Mentorship</h3>
+        <p class="text-xs text-ink-500 mt-1">Crossed 100+ supported NEET aspirants and 10,000+ surgical & aid beneficiaries nationwide.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-white border-t border-gray-200/80 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="space-y-4 md:col-span-2">
+        <h3 class="font-serif-title font-bold text-xl text-ink-900">DR. FARMAAN HASAN KHAN</h3>
+        <p class="text-xs text-ink-500 max-w-sm leading-relaxed">
+          51, Quilla Crossing, Bakarganj Road, Katghar, Bareilly Shareef, Uttar Pradesh (243003).
+        </p>
+        <p class="text-xs font-semibold text-champagne-600">officialfarmaanhasankhan@gmail.com</p>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-ink-900 mb-4">Navigation</h4>
+        <ul class="space-y-2.5 text-xs text-ink-500 font-medium">
+          <li><a href="home.html" class="hover:text-champagne-600 transition">Home</a></li>
+          <li><a href="biography.html" class="hover:text-champagne-600 transition">Biography</a></li>
+          <li><a href="initiativesactivity.html" class="hover:text-champagne-600 transition">Initiatives</a></li>
+          <li><a href="impact-stats.html" class="hover:text-champagne-600 transition">Impact Stats</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-ink-900 mb-4">Connect</h4>
+        <div class="flex gap-3 text-ink-700">
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-xs text-ink-500">
+      <p>© 2026 Dr. Farmaan Hasan Khan. All rights reserved.</p>
+      <p class="mt-2 md:mt-0">Refined Impact & Analytics Template.</p>
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
