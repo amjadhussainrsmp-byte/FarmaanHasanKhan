@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Associated Organizations | Dr. Farmaan Hasan Khan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF9F6',
+            ink: { 900: '#111827', 700: '#374151', 500: '#6B7280' },
+            champagne: { 100: '#FDFBF7', 200: '#F3ECE0', 500: '#D4AF37', 600: '#B89228' }
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF9F6; color: #111827; }
+    .font-serif-title { font-family: 'Playfair Display', serif; }
+    .light-glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+    .text-gold-gradient { background: linear-gradient(135deg, #B89228 0%, #D4AF37 50%, #997417 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="selection:bg-champagne-200 selection:text-ink-900">
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 light-glass border-b border-gray-200/50">
+    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+      <a href="home.html" class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-champagne-500 to-champagne-600 flex items-center justify-center font-serif font-bold text-white text-lg">F</div>
+        <div class="flex flex-col">
+          <span class="font-serif-title font-bold text-base text-ink-900">DR. FARMAAN HASAN KHAN</span>
+          <span class="text-[9px] text-champagne-600 font-bold uppercase tracking-widest">Waqar-E-Millat</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-ink-700">
+        <a href="home.html" class="hover:text-champagne-600">Home</a>
+        <a href="biography.html" class="hover:text-champagne-600">Biography</a>
+        <a href="organizations.html" class="text-champagne-600 font-bold">Organizations</a>
+        <a href="initiativesactivity.html" class="hover:text-champagne-600">Initiatives</a>
+        <a href="contact-volunteer.html" class="hover:text-champagne-600">Contact</a>
+      </div>
+      <a href="contact-volunteer.html" class="hidden md:inline-flex px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-ink-900 text-white hover:bg-champagne-600">Connect</a>
+    </div>
+  </nav>
+
+  <!-- HERO HEADER -->
+  <section class="py-20 bg-champagne-100/40 border-b border-champagne-500/20 text-center space-y-4">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-champagne-500/30 text-xs font-bold text-champagne-600">
+      <i data-lucide="building-2" class="w-3.5 h-3.5"></i> Institutional Wings
+    </div>
+    <h1 class="text-4xl md:text-6xl font-serif-title font-bold text-ink-900">
+      Associated <span class="text-gold-gradient italic">Organizations</span>
+    </h1>
+    <p class="text-ink-700 text-base max-w-2xl mx-auto">
+      Leading nationwide social bodies, legal aid platforms, and welfare societies driving systemic social transformation.
+    </p>
+  </section>
+
+  <!-- ORGANIZATIONS LIST -->
+  <section class="py-20 max-w-7xl mx-auto px-8 space-y-12">
+    <!-- Organization 1 -->
+    <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-200/80 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-8 space-y-4">
+        <span class="text-xs font-bold text-champagne-600 uppercase tracking-widest">National Body • Founded 1920</span>
+        <h2 class="text-3xl font-serif-title font-bold text-ink-900">Jama'at Raza-e-Mustafa (JRM)</h2>
+        <p class="text-xs text-ink-700 leading-relaxed">
+          Serving as the <strong>National General Secretary</strong>, Dr. Farmaan Hasan Khan guides JRM's nationwide social relief networks, disaster emergency management, interfaith dialogue forums, and educational development programs.
+        </p>
+        <div class="flex gap-4 text-xs font-semibold text-ink-900 pt-2">
+          <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-champagne-500"></i> Pan-India Presence</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-champagne-500"></i> Social & Educational Relief</span>
+        </div>
+      </div>
+      <div class="md:col-span-4 bg-paper p-6 rounded-2xl border border-gray-100 text-center space-y-2">
+        <span class="text-xs text-ink-500 font-medium">Designation</span>
+        <h4 class="text-lg font-serif-title font-bold text-ink-900">National General Secretary</h4>
+        <p class="text-[11px] text-champagne-600 font-semibold">Since 2021</p>
+      </div>
+    </div>
+
+    <!-- Organization 2 -->
+    <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-200/80 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-8 space-y-4">
+        <span class="text-xs font-bold text-champagne-600 uppercase tracking-widest">Non-Profit NGO • Global Outreach</span>
+        <h2 class="text-3xl font-serif-title font-bold text-ink-900">Aala Hazrat Tajushariah Welfare Society</h2>
+        <p class="text-xs text-ink-700 leading-relaxed">
+          As the <strong>Founder</strong>, Dr. Farmaan Hasan Khan established this institution to provide direct social intervention—including Free NEET Coaching, Free Health & Surgical Camps, Green Mission Tree Plantation, and Women Empowerment drives.
+        </p>
+        <div class="flex gap-4 text-xs font-semibold text-ink-900 pt-2">
+          <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-champagne-500"></i> Free Education & Health</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-champagne-500"></i> Environmental Protection</span>
+        </div>
+      </div>
+      <div class="md:col-span-4 bg-paper p-6 rounded-2xl border border-gray-100 text-center space-y-2">
+        <span class="text-xs text-ink-500 font-medium">Designation</span>
+        <h4 class="text-lg font-serif-title font-bold text-ink-900">Founder & Chief Trustee</h4>
+        <p class="text-[11px] text-champagne-600 font-semibold">Headquartered in Bareilly</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-gray-200/80 py-12 text-center text-xs text-ink-500">
+    <p>© 2026 Dr. Farmaan Hasan Khan. All rights reserved.</p>
+  </footer>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
