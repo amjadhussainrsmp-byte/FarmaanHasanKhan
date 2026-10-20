@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,33 +11,36 @@
   <!-- Tailwind Custom Configuration -->
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#f0fdf4',
-              500: '#10b981',
+            paper: '#FAF9F6',
+            surface: '#FFFFFF',
+            ink: {
+              900: '#111827',
+              700: '#374151',
+              500: '#6B7280',
+            },
+            champagne: {
+              100: '#FDFBF7',
+              200: '#F3ECE0',
+              500: '#D4AF37',
+              600: '#B89228',
+            },
+            emeraldAccent: {
+              50: '#ECFDF5',
               600: '#059669',
-              900: '#064e3b',
-              gold: '#D4AF37',
-              darkBg: '#090D16',
-              cardBg: 'rgba(17, 24, 39, 0.7)',
+              800: '#065F46',
             }
           },
           fontFamily: {
             sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
             heading: ['Syne', 'sans-serif'],
           },
-          animation: {
-            'marquee': 'marquee 25s linear infinite',
-            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          },
-          keyframes: {
-            marquee: {
-              '0%': { transform: 'translateX(0%)' },
-              '100%': { transform: 'translateX(-50%)' },
-            }
+          boxShadow: {
+            'soft-glass': '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
+            'premium-glow': '0 10px 30px -5px rgba(212, 175, 55, 0.15)',
           }
         }
       }
@@ -47,7 +50,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -55,149 +58,146 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #090D16;
-      color: #F3F4F6;
+      background-color: #FAF9F6;
+      color: #111827;
       overflow-x: hidden;
     }
-    h1, h2, h3, .font-heading {
-      font-family: 'Syne', sans-serif;
+    
+    .font-serif-title {
+      font-family: 'Playfair Display', serif;
     }
-    .glass-card {
-      background: rgba(17, 24, 39, 0.65);
+
+    .light-glass {
+      background: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.8);
     }
-    .glass-nav {
-      background: rgba(9, 13, 22, 0.8);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .text-gradient {
-      background: linear-gradient(135deg, #FFFFFF 0%, #A7F3D0 50%, #D4AF37 100%);
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #B89228 0%, #D4AF37 50%, #997417 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .gold-gradient {
-      background: linear-gradient(135deg, #FFE259 0%, #FFA751 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .glow-effect {
-      box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.3);
+
+    .border-gradient-gold {
+      border-image: linear-gradient(to right, #D4AF37, #F3ECE0) 1;
     }
   </style>
 </head>
-<body class="selection:bg-brand-500 selection:text-black">
+<body class="selection:bg-champagne-200 selection:text-ink-900">
 
   <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="bg-gradient-to-r from-emerald-900 via-brand-600 to-emerald-900 text-white text-xs py-2 px-4 text-center font-medium tracking-wide">
-    ✨ Recipient of <span class="font-bold underline decoration-brand-gold">Bharat Gaurav Ratna</span> & World Peace Ambassador Awards <a href="#awards" class="ml-2 inline-flex items-center gap-1 text-brand-gold hover:text-white">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+  <div class="bg-champagne-200/60 border-b border-champagne-500/20 text-ink-900 text-xs py-2.5 px-4 text-center font-medium tracking-wide flex justify-center items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emeraldAccent-600 animate-pulse"></span>
+    <span>Recipient of <strong class="font-semibold text-champagne-600">Bharat Gaurav Ratna</strong> & World Peace Ambassador Award</span>
+    <a href="#awards" class="ml-2 underline text-ink-700 hover:text-champagne-600 transition font-semibold">View Honors &rarr;</a>
   </div>
 
   <!-- NAVIGATION BAR -->
-  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <!-- Logo / Name -->
-      <a href="home.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-500 to-emerald-700 flex items-center justify-center font-heading font-bold text-black text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition">
+  <nav class="sticky top-0 z-50 light-glass transition-all duration-300 border-b border-gray-200/50">
+    <div class="max-w-7xl mx-auto px-8 h-22 flex items-center justify-between py-4">
+      
+      <!-- Brand Logo / Name -->
+      <a href="home.html" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-500 to-champagne-600 flex items-center justify-center font-serif font-bold text-white text-xl shadow-md shadow-champagne-500/20 group-hover:scale-105 transition">
           F
         </div>
         <div class="flex flex-col">
-          <span class="font-heading font-bold text-lg tracking-wider text-white group-hover:text-brand-500 transition">DR. FARMAAN HASAN KHAN</span>
-          <span class="text-[10px] text-gray-400 uppercase tracking-widest">Waqar-E-Millat | Social Leader</span>
+          <span class="font-serif-title font-bold text-lg tracking-wide text-ink-900">DR. FARMAAN HASAN KHAN</span>
+          <span class="text-[10px] text-champagne-600 font-bold uppercase tracking-widest">Waqar-E-Millat | Social Leader</span>
         </div>
       </a>
 
       <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-        <a href="#about" class="hover:text-brand-500 transition">About</a>
-        <a href="#initiatives" class="hover:text-brand-500 transition">Initiatives</a>
-        <a href="#impact" class="hover:text-brand-500 transition">Impact</a>
-        <a href="#awards" class="hover:text-brand-500 transition">Awards & Honors</a>
-        <a href="#contact" class="hover:text-brand-500 transition">Contact</a>
+      <div class="hidden md:flex items-center gap-9 text-xs font-semibold uppercase tracking-wider text-ink-700">
+        <a href="#about" class="hover:text-champagne-600 transition">Biography</a>
+        <a href="#initiatives" class="hover:text-champagne-600 transition">Initiatives</a>
+        <a href="#impact" class="hover:text-champagne-600 transition">Social Impact</a>
+        <a href="#awards" class="hover:text-champagne-600 transition">Recognitions</a>
+        <a href="#contact" class="hover:text-champagne-600 transition">Contact</a>
       </div>
 
       <!-- Action Button -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="#volunteer" class="px-5 py-2.5 rounded-full text-xs font-semibold bg-gradient-to-r from-brand-500 to-emerald-600 text-black hover:opacity-90 transition shadow-lg shadow-brand-500/25">
-          Join The Movement
+      <div class="hidden md:flex items-center">
+        <a href="#contact" class="px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-ink-900 text-white hover:bg-champagne-600 transition shadow-lg shadow-black/5">
+          Get In Touch
         </a>
       </div>
 
       <!-- Mobile Menu Icon -->
-      <button class="md:hidden text-gray-300 hover:text-white">
+      <button class="md:hidden text-ink-900 hover:text-champagne-600">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="relative min-h-[90vh] flex items-center justify-center pt-12 pb-20 overflow-hidden">
-    <!-- Glowing Background Orbs -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[140px] pointer-events-none animate-pulse-slow"></div>
-    <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
+  <section class="relative min-h-[85vh] flex items-center justify-center py-20 overflow-hidden">
+    <!-- Ambient Glow Backgrounds -->
+    <div class="absolute top-12 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-champagne-200/40 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-emeraldAccent-50/60 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
       
-      <!-- Left Column: Bio Details -->
-      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-brand-500/30 text-xs font-medium text-brand-500">
-          <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
-          Dedicated Whole-Heartedly to Humanity & Unity
+      <!-- Left Column: Key Narrative -->
+      <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-champagne-500/30 text-xs font-semibold text-champagne-600 shadow-sm">
+          <i data-lucide="award" class="w-4 h-4 text-champagne-500"></i>
+          National General Secretary | Jama'at Raza-e-Mustafa
         </div>
 
-        <h1 class="text-4xl md:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.1]">
-          Spreading <span class="text-gradient">Peace</span>,<br />
-          Planting <span class="gold-gradient">Hope</span> & <br />
-          Teaching Futures.
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif-title font-extrabold tracking-tight text-ink-900 leading-[1.15]">
+          Empowering Communities,<br />
+          <span class="text-gold-gradient font-italic italic">Championing Unity</span> &<br />
+          Educating Futures.
         </h1>
 
-        <p class="text-gray-400 text-base md:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0">
-          National General Secretary of Jama'at Raza-e-Mustafa & Founder of Aala Hazrat Tajushariah Welfare Society. Dedicated to empowering communities through free education, medical relief, and social justice.
+        <p class="text-ink-700 text-base md:text-lg max-w-2xl leading-relaxed mx-auto lg:mx-0 font-normal">
+          Founder of Aala Hazrat Tajushariah Welfare Society & High Court Advocate. Dedicated to uplifting humanity through free NEET education, medical aid, communal harmony, and environmental missions.
         </p>
 
-        <!-- CTA Action Buttons -->
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-          <a href="#initiatives" class="px-8 py-4 rounded-full bg-brand-500 text-black font-semibold text-sm hover:bg-brand-600 transition flex items-center gap-2 shadow-xl shadow-brand-500/20">
-            Explore Initiatives <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="#initiatives" class="px-8 py-4 rounded-full bg-champagne-500 text-white font-semibold text-xs uppercase tracking-wider hover:bg-champagne-600 transition flex items-center gap-2 shadow-soft-glass shadow-champagne-500/30">
+            Explore Initiatives <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="#about" class="px-8 py-4 rounded-full glass-card text-white font-semibold text-sm hover:bg-white/10 transition flex items-center gap-2 border border-white/10">
-            Read Biography
+          <a href="#about" class="px-8 py-4 rounded-full bg-white text-ink-900 font-semibold text-xs uppercase tracking-wider hover:bg-gray-50 transition border border-gray-200 shadow-sm">
+            Read Profile
           </a>
         </div>
 
         <!-- Quick Stats Overlay -->
-        <div class="pt-8 grid grid-cols-3 gap-4 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+        <div class="pt-8 grid grid-cols-3 gap-6 border-t border-gray-200/80 max-w-lg mx-auto lg:mx-0">
           <div>
-            <div class="text-2xl font-bold font-heading text-white">100+</div>
-            <div class="text-xs text-gray-400">NEET Scholars Supported</div>
+            <div class="text-3xl font-serif-title font-bold text-ink-900">100+</div>
+            <div class="text-xs font-medium text-ink-500 mt-0.5">NEET Scholars Mentored</div>
           </div>
           <div>
-            <div class="text-2xl font-bold font-heading text-white">25k+</div>
-            <div class="text-xs text-gray-400">Trees Planted</div>
+            <div class="text-3xl font-serif-title font-bold text-ink-900">25,000+</div>
+            <div class="text-xs font-medium text-ink-500 mt-0.5">Trees Planted</div>
           </div>
           <div>
-            <div class="text-2xl font-bold font-heading text-white">10k+</div>
-            <div class="text-xs text-gray-400">Medical Surgeries & Relief</div>
+            <div class="text-3xl font-serif-title font-bold text-ink-900">10,000+</div>
+            <div class="text-xs font-medium text-ink-500 mt-0.5">Medical Operations & Aid</div>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Hero Visual Card -->
+      <!-- Right Column: Premium Visual Card -->
       <div class="lg:col-span-5 relative flex justify-center">
-        <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden glass-card p-3 border border-white/10 glow-effect">
-          <div class="w-full h-full rounded-2xl bg-gradient-to-t from-black via-gray-900 to-gray-800 relative flex items-end p-6 overflow-hidden">
-            <!-- Professional Portrait Placeholder / Image -->
-            <div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-luminosity hover:mix-blend-normal transition duration-700" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80');"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-darkBg via-transparent to-transparent"></div>
+        <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl p-3 bg-white border border-gray-200/80 shadow-2xl shadow-champagne-500/10">
+          <div class="w-full h-full rounded-2xl bg-gray-100 relative overflow-hidden flex items-end p-8">
+            <!-- Portrait Image Placeholder -->
+            <div class="absolute inset-0 bg-cover bg-center transition duration-700 hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/20 to-transparent"></div>
 
-            <div class="relative z-10 space-y-2">
-              <span class="px-3 py-1 bg-brand-gold/20 text-brand-gold border border-brand-gold/30 rounded-md text-[10px] uppercase tracking-widest font-bold">
-                Waqar-E-Millat Title Holder
+            <div class="relative z-10 space-y-2 text-white">
+              <span class="px-3 py-1 bg-champagne-500 text-white rounded-md text-[10px] uppercase font-bold tracking-widest shadow-sm">
+                Waqar-E-Millat
               </span>
-              <h3 class="text-2xl font-bold font-heading text-white">Dr. Farmaan Hasan Khan</h3>
-              <p class="text-xs text-gray-300">High Court Advocate & Renowned Humanitarian Leader</p>
+              <h3 class="text-2xl font-serif-title font-bold">Dr. Farmaan Hasan Khan</h3>
+              <p class="text-xs text-gray-200">Bareilly Shareef, Uttar Pradesh, India</p>
             </div>
           </div>
         </div>
@@ -206,157 +206,138 @@
     </div>
   </section>
 
-  <!-- INFINITE MARQUEE TICKER -->
-  <section class="py-6 border-y border-white/10 bg-black/40 overflow-hidden relative">
-    <div class="flex whitespace-nowrap animate-marquee gap-12 items-center text-sm font-semibold tracking-wider text-gray-400 uppercase">
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-500 w-4 h-4"></i> Free NEET Coaching</span>
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-gold w-4 h-4"></i> Communal Harmony Drives</span>
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-500 w-4 h-4"></i> Free Healthcare & Operations</span>
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-gold w-4 h-4"></i> Green Plantation Mission</span>
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-500 w-4 h-4"></i> Women Skill Empowerment</span>
-      <!-- Repeated for seamless loop -->
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-500 w-4 h-4"></i> Free NEET Coaching</span>
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-gold w-4 h-4"></i> Communal Harmony Drives</span>
-      <span class="flex items-center gap-3"><i data-lucide="check-circle" class="text-brand-500 w-4 h-4"></i> Free Healthcare & Operations</span>
-    </div>
-  </section>
-
-  <!-- KEY INITIATIVES SECTION (BENTO GRID) -->
-  <section id="initiatives" class="py-28 max-w-7xl mx-auto px-6">
-    <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-      <h2 class="text-xs uppercase font-bold tracking-widest text-brand-500">Core Initiatives</h2>
-      <h3 class="text-3xl md:text-5xl font-extrabold font-heading text-white">Empowering Society At Every Frontier</h3>
-      <p class="text-gray-400 text-sm">Transforming compassion into scalable actions for sustainable community development.</p>
+  <!-- KEY INITIATIVES SECTION -->
+  <section id="initiatives" class="py-28 max-w-7xl mx-auto px-8">
+    <div class="text-center max-w-2xl mx-auto mb-20 space-y-3">
+      <span class="text-xs font-bold uppercase tracking-widest text-champagne-600">Pillars of Impact</span>
+      <h2 class="text-3xl md:text-5xl font-serif-title font-bold text-ink-900">Humanitarian Movements</h2>
+      <p class="text-ink-500 text-sm">Strategic and community-driven welfare programs serving without distinction.</p>
     </div>
 
     <!-- Bento Grid Container -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
-      <!-- Card 1: Free NEET Coaching (Large Card) -->
-      <div class="md:col-span-2 glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-brand-500/50 transition duration-500">
-        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl group-hover:bg-brand-500/20 transition"></div>
-        <div class="w-12 h-12 rounded-2xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center text-brand-500 mb-6">
-          <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+      <!-- Card 1: Free NEET Coaching -->
+      <div class="md:col-span-2 bg-white rounded-3xl p-10 border border-gray-200/80 shadow-sm hover:shadow-xl transition duration-300 relative overflow-hidden group">
+        <div class="w-14 h-14 rounded-2xl bg-champagne-100 flex items-center justify-center text-champagne-600 mb-8 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+          <i data-lucide="graduation-cap" class="w-7 h-7"></i>
         </div>
-        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider">Educational Equity</span>
-        <h4 class="text-2xl font-bold font-heading text-white mt-1 mb-3">Free NEET & Competitive Coaching</h4>
-        <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-xl">
-          Removing financial barriers for underprivileged medical aspirants. Providing top-tier coaching, study kits, and personal mentorship to turn dreams into reality.
+        <span class="text-xs font-bold text-champagne-600 uppercase tracking-widest">Educational Upliftment</span>
+        <h3 class="text-2xl font-serif-title font-bold text-ink-900 mt-2 mb-4">Free NEET Coaching & Guidance</h3>
+        <p class="text-ink-700 text-sm leading-relaxed mb-6 max-w-xl">
+          Empowering meritorious students from financially constrained backgrounds with top-tier medical entrance coaching, free study kits, and personal mentoring to produce future doctors.
         </p>
-        <a href="#initiatives" class="inline-flex items-center gap-2 text-xs font-bold text-brand-500 hover:text-white transition">
-          Read Success Stories <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        <a href="#" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-ink-900 hover:text-champagne-600 transition">
+          Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
 
-      <!-- Card 2: Health & Operations -->
-      <div class="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-brand-500/50 transition duration-500">
-        <div class="w-12 h-12 rounded-2xl bg-red-500/20 border border-red-500/30 flex items-center justify-center text-red-400 mb-6">
-          <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+      <!-- Card 2: Healthcare Support -->
+      <div class="bg-white rounded-3xl p-10 border border-gray-200/80 shadow-sm hover:shadow-xl transition duration-300 group">
+        <div class="w-14 h-14 rounded-2xl bg-emeraldAccent-50 flex items-center justify-center text-emeraldAccent-600 mb-8 group-hover:bg-emeraldAccent-600 group-hover:text-white transition duration-300">
+          <i data-lucide="heart-pulse" class="w-7 h-7"></i>
         </div>
-        <span class="text-xs font-semibold text-red-400 uppercase tracking-wider">Healthcare Support</span>
-        <h4 class="text-xl font-bold font-heading text-white mt-1 mb-3">Free Surgeries & Health Camps</h4>
-        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-          Sponsoring critical medical surgeries, free medicines, and regular health checkup camps in underserved rural sectors.
+        <span class="text-xs font-bold text-emeraldAccent-600 uppercase tracking-widest">Healthcare Relief</span>
+        <h3 class="text-xl font-serif-title font-bold text-ink-900 mt-2 mb-4">Surgeries & Medical Camps</h3>
+        <p class="text-ink-700 text-sm leading-relaxed mb-6">
+          Sponsoring critical surgeries and conducting free health checkups and medicine distribution in rural districts.
         </p>
       </div>
 
-      <!-- Card 3: Green Mission -->
-      <div class="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-brand-500/50 transition duration-500">
-        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-6">
-          <i data-lucide="trees" class="w-6 h-6"></i>
+      <!-- Card 3: Environmental Drive -->
+      <div class="bg-white rounded-3xl p-10 border border-gray-200/80 shadow-sm hover:shadow-xl transition duration-300 group">
+        <div class="w-14 h-14 rounded-2xl bg-emeraldAccent-50 flex items-center justify-center text-emeraldAccent-600 mb-8 group-hover:bg-emeraldAccent-600 group-hover:text-white transition duration-300">
+          <i data-lucide="trees" class="w-7 h-7"></i>
         </div>
-        <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">Environmental Drive</span>
-        <h4 class="text-xl font-bold font-heading text-white mt-1 mb-3">Green Mission Tree Plantation</h4>
-        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-          Fighting climate change on ground zero through mass tree plantation campaigns & environmental protection drives across states.
+        <span class="text-xs font-bold text-emeraldAccent-600 uppercase tracking-widest">Green Drive</span>
+        <h3 class="text-xl font-serif-title font-bold text-ink-900 mt-2 mb-4">Plantation Campaigns</h3>
+        <p class="text-ink-700 text-sm leading-relaxed mb-6">
+          Massive tree plantation drives across cities to advocate environmental protection and climate awareness.
         </p>
       </div>
 
-      <!-- Card 4: Communal Harmony (Large Card) -->
-      <div class="md:col-span-2 glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-brand-500/50 transition duration-500">
-        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
-          <i data-lucide="users" class="w-6 h-6"></i>
+      <!-- Card 4: Communal Harmony -->
+      <div class="md:col-span-2 bg-white rounded-3xl p-10 border border-gray-200/80 shadow-sm hover:shadow-xl transition duration-300 group">
+        <div class="w-14 h-14 rounded-2xl bg-champagne-100 flex items-center justify-center text-champagne-600 mb-8 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+          <i data-lucide="users" class="w-7 h-7"></i>
         </div>
-        <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">Peace & Harmony</span>
-        <h4 class="text-2xl font-bold font-heading text-white mt-1 mb-3">Unity Walks & Interfaith Dialogues</h4>
-        <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-xl">
-          Promoting brotherhood, interfaith understanding, and social cohesion through peace rallies and community bridge-building forums.
+        <span class="text-xs font-bold text-champagne-600 uppercase tracking-widest">Social Peace</span>
+        <h3 class="text-2xl font-serif-title font-bold text-ink-900 mt-2 mb-4">Interfaith Dialogue & Harmony</h3>
+        <p class="text-ink-700 text-sm leading-relaxed mb-6 max-w-xl">
+          Building bridges between diverse communities, organizing peace marches, and encouraging social brotherhood across states.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- AWARDS & RECOGNITION -->
-  <section id="awards" class="py-24 bg-gradient-to-b from-transparent via-emerald-950/20 to-transparent">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-        <div>
-          <h2 class="text-xs uppercase font-bold tracking-widest text-brand-gold">Honors & Accolades</h2>
-          <h3 class="text-3xl md:text-5xl font-extrabold font-heading text-white mt-2">National & Global Recognition</h3>
-        </div>
-        <p class="text-gray-400 text-sm max-w-md">Acknowledged by national ministries and global human rights organizations for relentless service.</p>
+  <!-- HONORS & RECOGNITIONS -->
+  <section id="awards" class="py-24 bg-champagne-100/50 border-y border-champagne-500/20">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-champagne-600">Accolades</span>
+        <h2 class="text-3xl md:text-4xl font-serif-title font-bold text-ink-900">National & Global Recognition</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Award 1 -->
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-gold">
-          <div class="text-brand-gold font-bold text-sm mb-1">2023</div>
-          <h4 class="text-xl font-bold font-heading text-white mb-2">Bharat Gaurav Ratna</h4>
-          <p class="text-xs text-gray-400">Awarded for extraordinary contributions in healthcare and social advancement.</p>
+        <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+          <span class="text-xs font-bold text-champagne-600">2023</span>
+          <h3 class="text-xl font-serif-title font-bold text-ink-900 mt-1 mb-2">Bharat Gaurav Ratna</h3>
+          <p class="text-xs text-ink-500 leading-relaxed">Conferred for distinguished service in medical relief, youth empowerment, and public welfare.</p>
         </div>
 
         <!-- Award 2 -->
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-500">
-          <div class="text-brand-500 font-bold text-sm mb-1">2023</div>
-          <h4 class="text-xl font-bold font-heading text-white mb-2">World Peace Ambassador</h4>
-          <p class="text-xs text-gray-400">Conferred by World Human Rights Protection Commissions for communal harmony.</p>
+        <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+          <span class="text-xs font-bold text-champagne-600">2023</span>
+          <h3 class="text-xl font-serif-title font-bold text-ink-900 mt-1 mb-2">World Peace Ambassador</h3>
+          <p class="text-xs text-ink-500 leading-relaxed">Awarded by World Human Rights Protection Commissions for fostering interfaith harmony.</p>
         </div>
 
         <!-- Award 3 -->
-        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-purple-500">
-          <div class="text-purple-400 font-bold text-sm mb-1">2026</div>
-          <h4 class="text-xl font-bold font-heading text-white mb-2">Waqar-E-Millat Title</h4>
-          <p class="text-xs text-gray-400">Honors bestowed for selfless leadership and community welfare achievements.</p>
+        <div class="bg-white p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+          <span class="text-xs font-bold text-champagne-600">2026</span>
+          <h3 class="text-xl font-serif-title font-bold text-ink-900 mt-1 mb-2">Waqar-E-Millat Title</h3>
+          <p class="text-xs text-ink-500 leading-relaxed">Honored by community institutions for unwavering national leadership and service.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer id="contact" class="border-t border-white/10 bg-black pt-16 pb-12">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+  <footer id="contact" class="bg-white border-t border-gray-200/80 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
       <div class="space-y-4 md:col-span-2">
-        <h3 class="font-heading font-bold text-xl text-white">DR. FARMAAN HASAN KHAN</h3>
-        <p class="text-xs text-gray-400 max-w-sm leading-relaxed">
+        <h3 class="font-serif-title font-bold text-xl text-ink-900">DR. FARMAAN HASAN KHAN</h3>
+        <p class="text-xs text-ink-500 max-w-sm leading-relaxed">
           51, Quilla Crossing, Bakarganj Road, Katghar, Bareilly Shareef, Uttar Pradesh, India.
         </p>
-        <p class="text-xs text-brand-500">officialfarmaanhasankhan@gmail.com</p>
+        <p class="text-xs font-semibold text-champagne-600">officialfarmaanhasankhan@gmail.com</p>
       </div>
 
       <div>
-        <h4 class="text-sm font-semibold text-white mb-4">Quick Links</h4>
-        <ul class="space-y-2 text-xs text-gray-400">
-          <li><a href="#about" class="hover:text-white transition">Biography</a></li>
-          <li><a href="#initiatives" class="hover:text-white transition">Free NEET Coaching</a></li>
-          <li><a href="#initiatives" class="hover:text-white transition">Health Relief Drives</a></li>
-          <li><a href="#awards" class="hover:text-white transition">Awards & Recognitions</a></li>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-ink-900 mb-4">Navigation</h4>
+        <ul class="space-y-2.5 text-xs text-ink-500 font-medium">
+          <li><a href="#about" class="hover:text-champagne-600 transition">Biography</a></li>
+          <li><a href="#initiatives" class="hover:text-champagne-600 transition">Free NEET Coaching</a></li>
+          <li><a href="#initiatives" class="hover:text-champagne-600 transition">Health Relief Drives</a></li>
+          <li><a href="#awards" class="hover:text-champagne-600 transition">Honors & Awards</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="text-sm font-semibold text-white mb-4">Connect</h4>
-        <div class="flex gap-3 text-gray-400">
-          <a href="#" class="w-9 h-9 rounded-full glass-card flex items-center justify-center hover:text-brand-500 hover:border-brand-500 transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-          <a href="#" class="w-9 h-9 rounded-full glass-card flex items-center justify-center hover:text-brand-500 hover:border-brand-500 transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-          <a href="#" class="w-9 h-9 rounded-full glass-card flex items-center justify-center hover:text-brand-500 hover:border-brand-500 transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-ink-900 mb-4">Connect</h4>
+        <div class="flex gap-3 text-ink-700">
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-champagne-500 hover:text-white transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
         </div>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500">
+    <div class="max-w-7xl mx-auto px-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-xs text-ink-500">
       <p>© 2026 Dr. Farmaan Hasan Khan. All rights reserved.</p>
-      <p class="mt-2 md:mt-0">Designed with Next-Gen Precision & Coding Standards.</p>
+      <p class="mt-2 md:mt-0">Refined Light Theme Editorial Layout.</p>
     </div>
   </footer>
 
