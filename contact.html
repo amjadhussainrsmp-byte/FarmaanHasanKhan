@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#501827">
+
+<title>Contact | Dr. Farmaan Hasan Khan</title>
+
+<meta name="description" content="Get in touch with Dr. Farmaan Hasan Khan and his official team for enquiries, invitations, collaborations and social initiatives.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --wine: #501827;
+    --wine2: #702a3d;
+    --wine3: #8c485a;
+    --deep: #291019;
+    --gold: #c5a36b;
+    --cream: #fbf8f6;
+    --pink: #f5edef;
+    --white: #ffffff;
+    --ink: #292326;
+    --muted: #766c70;
+    --line: #eadfe1;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', Arial, sans-serif;
+    --shadow: 0 12px 35px rgba(41,16,25,.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin: auto;
+}
+
+/* TOP BAR */
+
+.topbar {
+    background: var(--deep);
+    color: #e9dfe2;
+    padding: 9px 0;
+    font-size: 11px;
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar a {
+    color: #e9dfe2;
+}
+
+.topbar a:hover {
+    color: var(--gold);
+}
+
+.topbar-contact {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 18px rgba(41,16,25,.06);
+}
+
+.nav-inner {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: var(--wine);
+    color: var(--gold);
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--gold);
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.brand-name {
+    color: var(--wine);
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.brand-tagline {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 700;
+    color: #51454a;
+    transition: .25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--wine3);
+}
+
+.nav-links .nav-cta {
+    background: var(--wine);
+    color: white;
+    padding: 12px 17px;
+}
+
+.nav-links .nav-cta:hover {
+    background: var(--wine2);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--wine);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* PAGE HERO */
+
+.contact-hero {
+    background:
+        linear-gradient(110deg, rgba(41,16,25,.97), rgba(80,24,39,.88)),
+        url('https://farmaanhasankhan.com/wp-content/uploads/2026/09/IMG_20260915_151929-scaled.png')
+        center 35% / cover;
+    color: white;
+    padding: 90px 0 78px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero::after {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(197,163,107,.28);
+    border-radius: 50%;
+    right: -100px;
+    top: -190px;
+    box-shadow:
+        0 0 0 35px rgba(197,163,107,.05),
+        0 0 0 70px rgba(197,163,107,.035);
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.contact-hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(43px, 6vw, 68px);
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.contact-hero p {
+    max-width: 650px;
+    color: #e9dfe2;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.breadcrumb {
+    margin-top: 25px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #d8c5cb;
+}
+
+.breadcrumb a {
+    color: var(--gold);
+}
+
+/* COMMON SECTION */
+
+.contact-section {
+    padding: 85px 0;
+}
+
+.section-kicker {
+    color: var(--wine3);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    font-family: var(--serif);
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--wine);
+    margin: 10px 0 14px;
+}
+
+.section-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+    max-width: 690px;
+}
+
+/* CONTACT LAYOUT */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 35px;
+    margin-top: 43px;
+    align-items: start;
+}
+
+.contact-information {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-card {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 23px;
+    display: flex;
+    gap: 17px;
+    align-items: flex-start;
+    transition: .3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--pink);
+    border: 1px solid #eadde0;
+    color: var(--wine);
+    font-size: 19px;
+}
+
+.contact-card h3 {
+    color: var(--wine);
+    font-family: var(--serif);
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.contact-card p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.contact-card a {
+    color: var(--wine2);
+    font-size: 12px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    color: var(--wine3);
+}
+
+/* OFFICE DETAILS */
+
+.office-card {
+    background: var(--deep);
+    padding: 30px;
+    color: white;
+}
+
+.office-card h3 {
+    font-family: var(--serif);
+    color: var(--gold);
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+
+.office-item {
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding: 14px 0;
+}
+
+.office-item:last-child {
+    padding-bottom: 0;
+}
+
+.office-item strong {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.office-item p {
+    color: #e7dce0;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* CONTACT FORM */
+
+.form-panel {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 38px;
+    box-shadow: var(--shadow);
+}
+
+.form-panel h2 {
+    color: var(--wine);
+    font-family: var(--serif);
+    font-size: 29px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-panel .form-intro {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-field.full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    color: var(--wine);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: #fffdfc;
+    padding: 13px 14px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 12px;
+    outline: none;
+    border-radius: 0;
+    transition: .25s;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--wine3);
+    box-shadow: 0 0 0 3px rgba(140,72,90,.09);
+}
+
+.form-field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.submit-row {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    border: none;
+    background: var(--wine);
+    color: white;
+    padding: 14px 23px;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.submit-btn:hover {
+    background: var(--wine2);
+    transform: translateY(-2px);
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+/* MAP / LOCATION */
+
+.location-section {
+    padding: 0 0 85px;
+}
+
+.location-panel {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.location-panel h3 {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--wine);
+    margin-bottom: 7px;
+}
+
+.location-panel p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.map-btn {
+    display: inline-block;
+    background: var(--wine);
+    color: white;
+    padding: 13px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: .25s;
+}
+
+.map-btn:hover {
+    background: var(--wine2);
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--deep);
+    color: #e8dce0;
+    padding: 65px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 35px;
+    padding-bottom: 45px;
+}
+
+.footer h3 {
+    color: var(--gold);
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.footer p,
+.footer a {
+    color: #d5c6cb;
+    font-size: 11px;
+    line-height: 2;
+}
+
+.footer a:hover {
+    color: var(--gold);
+}
+
+.footer-links {
+    display: grid;
+    gap: 6px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.13);
+    padding: 20px 0;
+    text-align: center;
+    color: #bbaab0;
+    font-size: 10px;
+}
+
+/* REVEAL */
+
+.reveal {
+    animation: fadeUp .8s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:760px) {
+    .topbar-inner {
+        justify-content: center;
+    }
+
+    .topbar-contact {
+        justify-content: center;
+        gap: 8px 18px;
+    }
+
+    .nav-inner {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px 5%;
+        box-shadow: 0 12px 20px rgba(41,16,25,.1);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 12px;
+    }
+
+    .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 12px;
+        padding: 12px;
+    }
+
+    .contact-hero {
+        padding: 68px 0;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .form-panel {
+        padding: 27px;
+    }
+
+    .location-panel {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:480px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field.full,
+    .submit-row {
+        grid-column: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    .brand-logo {
+        width: 43px;
+        height: 43px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <div class="topbar-contact">
+            <a href="mailto:officialfarmaanhasankhan@gmail.com">
+                ✉ officialfarmaanhasankhan@gmail.com
+            </a>
+
+            <a href="tel:+917351172555">
+                ☎ +91 7351172555
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+    <div class="container nav-inner">
+
+        <a href="home.html" class="brand">
+            <div class="brand-logo">FHK</div>
+
+            <div>
+                <div class="brand-name">Dr. Farmaan Hasan Khan</div>
+                <div class="brand-tagline">Religious Leader & Social Activist</div>
+            </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="home.html">Home</a>
+            <a href="biography.html">Biography</a>
+            <a href="initiatives.html">Initiatives</a>
+            <a href="organisation.html">Organisation</a>
+            <a href="media-recognition.html">Recognition</a>
+            <a href="media-recognition.html">Media</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html" class="nav-cta">Get in Touch ↗</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="contact-hero">
+    <div class="container reveal">
+
+        <div class="eyebrow">Official Correspondence</div>
+
+        <h1>Get in Touch</h1>
+
+        <p>
+            Every meaningful initiative begins with a conversation.
+            For official correspondence, invitations, collaborations,
+            social welfare initiatives and general enquiries, please
+            connect with the office of Dr. Farmaan Hasan Khan.
+        </p>
+
+        <div class="breadcrumb">
+            <a href="home.html">HOME</a>
+            &nbsp; / &nbsp;
+            CONTACT
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT DETAILS -->
+
+<section class="contact-section">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-kicker">We would be glad to hear from you</div>
+
+            <h2 class="section-heading">Contact the Official Team</h2>
+
+            <p class="section-description">
+                Whether you wish to discuss a social initiative, extend
+                an invitation, seek information or get in touch for an
+                official matter, the following contact details are
+                available for communication.
+            </p>
+        </div>
+
+        <div class="contact-layout">
+
+            <!-- LEFT INFORMATION -->
+
+            <div class="contact-information reveal">
+
+                <div class="contact-card">
+                    <div class="contact-icon">✉</div>
+
+                    <div>
+                        <h3>Email Address</h3>
+                        <p>For official communication and written enquiries.</p>
+
+                        <a href="mailto:officialfarmaanhasankhan@gmail.com">
+                            officialfarmaanhasankhan@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">☎</div>
+
+                    <div>
+                        <h3>Phone Number</h3>
+                        <p>Connect with the official team.</p>
+
+                        <a href="tel:+917351172555">
+                            +91 7351172555
+                        </a>
+                    </div>
+                </div>
+
+                <div class="office-card">
+
+                    <h3>Office Addresses</h3>
+
+                    <div class="office-item">
+                        <strong>Head Office</strong>
+
+                        <p>
+                            51, Qilla Crossing, Bakarganj Road,
+                            Katghar, Bareilly Shareef,
+                            Uttar Pradesh – 243003.
+                        </p>
+                    </div>
+
+                    <div class="office-item">
+                        <strong>Corporate Office</strong>
+
+                        <p>
+                            NH24 Rampur Road, New Troll Plaza,
+                            Fatehganj, West Bareilly,
+                            Bareilly, Uttar Pradesh – 243501.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTACT FORM -->
+
+            <div class="form-panel reveal">
+
+                <h2>Send an Enquiry</h2>
+
+                <p class="form-intro">
+                    Have a question, proposal or invitation?
+                    Share your details and message with the official team.
+                </p>
+
+                <form class="contact-form" id="contactForm">
+
+                    <div class="form-field">
+                        <label for="name">Your Name *</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email Address *</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Your contact number"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Enquiry Type</label>
+
+                        <select id="subject" name="subject">
+                            <option>General Enquiry</option>
+                            <option>Invitation / Event</option>
+                            <option>Social Welfare Initiative</option>
+                            <option>Media / Interview</option>
+                            <option>Collaboration</option>
+                            <option>Organisation Related</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="message">Your Message *</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="submit-row">
+
+                        <button type="submit" class="submit-btn">
+                            Prepare Email &nbsp; ↗
+                        </button>
+
+                        <span class="form-note">
+                            Your email application will open with
+                            your enquiry details prepared.
+                        </span>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- LOCATION -->
+
+<section class="location-section">
+    <div class="container">
+
+        <div class="location-panel reveal">
+
+            <div>
+                <div class="section-kicker">Our Location</div>
+
+                <h3>Visit Our Head Office</h3>
+
+                <p>
+                    51, Qilla Crossing, Bakarganj Road, Katghar,
+                    Bareilly Shareef, Uttar Pradesh – 243003.
+                </p>
+            </div>
+
+            <a
+                class="map-btn"
+                href="https://www.google.com/maps/search/?api=1&query=51+Qilla+Crossing+Bakarganj+Road+Katghar+Bareilly+243003"
+                target="_blank"
+                rel="noopener"
+            >
+                View on Google Maps ↗
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <h3>Dr. Farmaan Hasan Khan</h3>
+
+                <p>
+                    Dedicated to social welfare, education,
+                    humanitarian service and community development.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <div class="footer-links">
+                    <a href="home.html">Home</a>
+                    <a href="biography.html">Biography</a>
+                    <a href="initiatives.html">Initiatives & Activities</a>
+                    <a href="organisation.html">Organisation</a>
+                    <a href="media-recognition.html">Media & Recognition</a>
+                </div>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+
+                <div class="footer-links">
+                    <a href="gallery.html">Gallery</a>
+                    <a href="support.html">Support Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://ahtskills.org/" target="_blank" rel="noopener">
+                        Welfare Society
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3>Contact the Team</h3>
+
+                <div class="footer-links">
+                    <a href="mailto:officialfarmaanhasankhan@gmail.com">
+                        officialfarmaanhasankhan@gmail.com
+                    </a>
+
+                    <a href="tel:+917351172555">
+                        +91 7351172555
+                    </a>
+
+                    <p>
+                        Head Office: 51, Qilla Crossing,
+                        Bareilly, Uttar Pradesh – 243003.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan.
+            All Rights Reserved.
+        </div>
+
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('show');
+
+    menuToggle.textContent =
+        navLinks.classList.contains('show') ? '✕' : '☰';
+});
+
+document.querySelectorAll('.nav-links a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        navLinks.classList.remove('show');
+        menuToggle.textContent = '☰';
+    });
+});
+
+/* CONTACT FORM */
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+
+    event.preventDefault();
+
+    const formData = new FormData(this);
+
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const phone = formData.get('phone') || 'Not provided';
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+
+    const emailSubject = 'Website Enquiry: ' + subject;
+
+    const emailBody =
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + phone + '\n' +
+        'Enquiry Type: ' + subject + '\n\n' +
+        'Message:\n' + message;
+
+    const mailtoLink =
+        'mailto:officialfarmaanhasankhan@gmail.com' +
+        '?subject=' + encodeURIComponent(emailSubject) +
+        '&body=' + encodeURIComponent(emailBody);
+
+    window.location.href = mailtoLink;
+
+});
+
+</script>
+
+</body>
+</html>
+ 
