@@ -1,880 +1,1028 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Biography | Dr. Farmaan Hasan Khan</title>
-<meta name="description" content="Read the biography of Dr. Farmaan Hasan Khan — humanitarian, social activist, founder of Ala Hazrat Tajushariah Welfare Society and advocate for peace and social harmony.">
 <meta name="theme-color" content="#501827">
+<meta name="description" content="The official biography of Dr. Farmaan Hasan Khan — humanitarian, religious leader, social activist and advocate for peace.">
+<title>Biography | Dr. Farmaan Hasan Khan</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --wine: #501827;
-  --wine-dark: #291019;
-  --wine-light: #702f40;
-  --gold: #c5a36b;
-  --cream: #f8f5ef;
-  --white: #ffffff;
-  --ink: #292326;
-  --muted: #777076;
-  --line: #e9e1d9;
+  --wine:#501827;
+  --wine2:#702a3d;
+  --wine3:#8c485a;
+  --deep:#291019;
+  --gold:#c5a36b;
+  --cream:#fbf8f6;
+  --pink:#f5edef;
+  --white:#fff;
+  --ink:#30252a;
+  --muted:#81747a;
+  --line:#eadde0;
+  --serif:'Playfair Display',serif;
+  --sans:'DM Sans',sans-serif;
+  --shadow:0 20px 65px rgba(65,20,35,.11);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:var(--sans);background:var(--white);color:var(--ink);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit}
+.container{width:min(1200px,calc(100% - 48px));margin:auto}
 
-html {
-  scroll-behavior: smooth;
-}
+/* TOP BAR */
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--white);
-  color: var(--ink);
-  line-height: 1.8;
+.topbar{
+  background:var(--deep);
+  color:#e9dce0;
+  padding:8px 0;
+  font-size:10px;
+  letter-spacing:1.2px;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(1160px, 90%);
-  margin: auto;
-}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.topbar a{color:#e7cda6}
+.topbar-right{display:flex;gap:22px}
 
 /* HEADER */
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--line);
 }
-
-.navbar {
-  min-height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
+.nav{
+  min-height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
-
-.brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 21px;
-  font-weight: 700;
-  color: var(--wine);
-  line-height: 1.2;
+.brand{display:flex;align-items:center;gap:13px}
+.brand-logo{
+  width:49px;height:49px;
+  border:1px solid var(--gold);
+  background:var(--wine);
+  color:white;
+  display:grid;place-items:center;
+  font-family:var(--serif);
+  font-size:19px;
+  border-radius:50%;
 }
-
-.brand span {
-  display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-top: 5px;
+.brand-name strong{
+  display:block;
+  font-family:var(--serif);
+  font-size:17px;
+  color:var(--wine);
+  line-height:1.3;
 }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  list-style: none;
-  font-size: 13px;
-  font-weight: 600;
-  color: #51484c;
+.brand-name small{
+  font-size:9px;
+  letter-spacing:2px;
+  color:var(--muted);
+  text-transform:uppercase;
 }
-
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{
+  font-size:11px;
+  font-weight:700;
+  color:#51444a;
+  transition:.25s;
+}
 .nav-links a:hover,
-.nav-links .active {
-  color: var(--wine);
+.nav-links a.active{color:var(--wine3)}
+.nav-links .contact-btn{
+  background:var(--wine);
+  color:white;
+  padding:12px 19px;
+}
+.nav-links .contact-btn:hover{background:var(--deep)}
+.menu-toggle{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  color:var(--wine);
+  padding:8px 12px;
+  font-size:22px;
+  cursor:pointer;
 }
 
-.nav-cta {
-  background: var(--wine);
-  color: white !important;
-  padding: 11px 20px;
-  border-radius: 3px;
-}
+/* COMMON */
 
-.menu-toggle {
-  display: none;
-  border: 0;
-  background: none;
-  font-size: 27px;
-  color: var(--wine);
-  cursor: pointer;
+section{padding:100px 0}
+.section-label{
+  color:var(--wine3);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
+.section-label:before{
+  content:"";
+  height:1px;
+  width:30px;
+  background:var(--gold);
+}
+.section-title{
+  font:500 clamp(34px,4vw,48px)/1.2 var(--serif);
+  color:var(--deep);
+  margin:17px 0;
+}
+.section-description{
+  font-size:13px;
+  color:var(--muted);
+  line-height:2;
+  max-width:680px;
+}
+.section-heading{margin-bottom:48px}
+.center{text-align:center}
+.center .section-label{justify-content:center}
+.center .section-description{margin:auto}
 
 /* HERO */
 
-.hero {
+.hero{
+  position:relative;
+  overflow:hidden;
   background:
-    linear-gradient(90deg, rgba(41,16,25,.97), rgba(80,24,39,.88)),
-    url('assets/biography-bg.jpg') center/cover;
-  color: white;
-  padding: 90px 0;
-  overflow: hidden;
-  position: relative;
+    radial-gradient(ellipse at 85% 40%,#f1e4e6 0%,transparent 40%),
+    linear-gradient(105deg,#fff 0%,#fff 60%,#faf4f3 100%);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:650px;height:650px;
+  border:1px solid rgba(80,24,39,.07);
+  border-radius:50%;
+  right:-190px;top:-10px;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:510px;height:510px;
+  border:1px solid rgba(197,163,107,.35);
+  border-radius:50%;
+  right:-120px;top:60px;
+}
+.hero-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:65px;
+  align-items:center;
+  padding:75px 0 90px;
+}
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--wine3);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.eyebrow:before{
+  content:"";
+  width:34px;height:1px;
+  background:var(--gold);
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(48px,6vw,75px);
+  font-weight:500;
+  line-height:1.08;
+  letter-spacing:-2px;
+  color:var(--deep);
+  margin:25px 0 18px;
+}
+.hero h1 span{color:var(--wine3);font-style:italic}
+.hero-subtitle{
+  color:var(--wine);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  line-height:2;
+}
+.hero-description{
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+  max-width:570px;
+}
+.hero-buttons{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--wine);
+  color:white;
+  padding:14px 23px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.8px;
+  border:1px solid var(--wine);
+  transition:.3s;
+}
+.btn:hover{background:var(--deep);transform:translateY(-3px)}
+.btn-outline{background:transparent;color:var(--wine)}
+.btn-outline:hover{color:white}
+.arrow-link{
+  color:var(--wine);
+  font-size:12px;
+  font-weight:800;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:5px;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  border: 1px solid rgba(197,163,107,.22);
-  border-radius: 50%;
-  right: -120px;
-  top: -160px;
+/* PORTRAIT */
+
+.hero-visual{position:relative;max-width:430px;margin:auto;width:100%}
+.portrait-frame{
+  position:absolute;
+  inset:20px -17px -18px 17px;
+  border:1px solid var(--gold);
+}
+.portrait{
+  height:490px;
+  position:relative;
+  background:linear-gradient(145deg,#eadbdd,#f7eff0);
+  overflow:hidden;
+}
+.portrait img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+.portrait-fallback{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:var(--wine);
+  font-family:var(--serif);
+  text-align:center;
+  padding:20px;
+}
+.portrait-fallback strong{font-size:27px}
+.portrait-fallback small{
+  font:10px var(--sans);
+  letter-spacing:2px;
+}
+.portrait-label{
+  position:absolute;
+  bottom:22px;
+  left:-32px;
+  background:var(--wine);
+  color:white;
+  padding:17px 25px;
+  box-shadow:var(--shadow);
+}
+.portrait-label strong{display:block;font:18px var(--serif)}
+.portrait-label span{
+  font-size:9px;
+  letter-spacing:1.7px;
+  color:#e7cbd2;
+  text-transform:uppercase;
 }
 
-.hero-inner {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  align-items: center;
-  gap: 65px;
-  position: relative;
-  z-index: 2;
+/* IDENTITY STRIP */
+
+.identity-strip{background:var(--wine);color:white}
+.identity-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  padding:26px 0;
+}
+.identity-item{
+  padding:5px 30px;
+  border-right:1px solid #ffffff2b;
+}
+.identity-item:first-child{padding-left:0}
+.identity-item:last-child{border:0}
+.identity-item strong{
+  font:20px var(--serif);
+  display:block;
+}
+.identity-item span{
+  font-size:9px;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+  color:#e6cbd2;
 }
 
-.eyebrow {
-  color: var(--gold);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: 700;
-  margin-bottom: 18px;
+/* INTRODUCTION */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:80px;
+  align-items:center;
 }
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(42px, 5vw, 65px);
-  line-height: 1.15;
-  font-weight: 500;
-  margin-bottom: 20px;
+.about-visual{
+  min-height:440px;
+  background:var(--pink);
+  position:relative;
+  padding:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
-.hero h1 span {
-  color: var(--gold);
+.about-visual:after{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border:1px solid var(--gold);
+  pointer-events:none;
 }
-
-.hero-description {
-  color: rgba(255,255,255,.78);
-  font-size: 16px;
-  max-width: 590px;
-  margin-bottom: 28px;
+.about-symbol{
+  text-align:center;
+  color:var(--wine);
+  font-family:var(--serif);
+  position:relative;
+  z-index:1;
 }
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
+.about-symbol strong{
+  display:block;
+  font-size:66px;
+  font-weight:400;
 }
-
-.hero-tags span {
-  border: 1px solid rgba(197,163,107,.55);
-  color: #f2dfbd;
-  padding: 7px 12px;
-  font-size: 11px;
-  letter-spacing: .5px;
+.about-symbol span{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
-
-.hero-image {
-  position: relative;
-  max-width: 360px;
-  margin: auto;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 440px;
-  object-fit: cover;
-  object-position: center top;
-  border: 7px solid rgba(255,255,255,.12);
-  box-shadow: 22px 22px 0 rgba(197,163,107,.18);
-}
-
-.image-caption {
-  color: #ead6b3;
-  font-size: 12px;
-  margin-top: 18px;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-/* INTRO */
-
-.intro {
-  padding: 95px 0;
-}
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 75px;
-  align-items: start;
-}
-
-.section-label {
-  color: var(--gold);
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 3px;
-  font-weight: 700;
-  margin-bottom: 13px;
-}
-
-.section-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4vw, 45px);
-  line-height: 1.25;
-  color: var(--wine);
-  font-weight: 500;
-}
-
-.intro-content p {
-  font-size: 15px;
-  color: #625b5f;
-  margin-bottom: 18px;
-}
-
-.intro-content strong {
-  color: var(--wine);
-  font-weight: 700;
+.about-text p{
+  font-size:13px;
+  color:var(--muted);
+  line-height:2.1;
+  margin:18px 0;
 }
 
 /* QUOTE */
 
-.quote-section {
-  background: var(--cream);
-  padding: 65px 20px;
-  text-align: center;
+.philosophy{
+  background:var(--cream);
+  position:relative;
+}
+.quote-block{
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+  padding:20px 0;
+}
+.quote-mark{
+  font:100px/.8 var(--serif);
+  color:var(--gold);
+}
+.quote-block blockquote{
+  font:italic 32px/1.5 var(--serif);
+  color:var(--wine);
+  margin:15px 0 25px;
+}
+.quote-block cite{
+  font-style:normal;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--muted);
+  text-transform:uppercase;
 }
 
-.quote-mark {
-  font-family: 'Playfair Display', serif;
-  color: var(--gold);
-  font-size: 65px;
-  line-height: 1;
+/* BIOGRAPHICAL STORY */
+
+.story-section{background:white}
+.story-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:65px;
+  align-items:start;
+}
+.story-copy p{
+  font-size:13px;
+  color:var(--muted);
+  line-height:2.15;
+  margin:0 0 19px;
+}
+.story-copy strong{color:var(--wine)}
+.story-aside{
+  background:var(--pink);
+  padding:38px;
+  border:1px solid var(--line);
+  position:relative;
+}
+.story-aside:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;
+  width:4px;height:100%;
+  background:var(--gold);
+}
+.story-aside h3{
+  font:26px var(--serif);
+  color:var(--wine);
+  margin-bottom:15px;
+}
+.story-aside p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:2;
+}
+.story-aside .aside-label{
+  color:var(--wine3);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:12px;
 }
 
-.quote-section blockquote {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(25px, 3.5vw, 36px);
-  color: var(--wine);
-  max-width: 780px;
-  margin: 12px auto 18px;
-  line-height: 1.45;
+/* FAMILY HERITAGE */
+
+.family-section{background:var(--cream)}
+.family-grid{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:65px;
+  align-items:center;
+}
+.family-emblem{
+  min-height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:white;
+  border:1px solid var(--line);
+  position:relative;
+}
+.family-emblem:after{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid var(--gold);
+}
+.family-emblem span{
+  font:italic 30px var(--serif);
+  color:var(--wine);
+  text-align:center;
+  padding:25px;
+}
+.family-copy p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:2.1;
+  margin:15px 0;
 }
 
-.quote-author {
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+/* ROLES */
+
+.roles-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.role-card{
+  background:white;
+  border:1px solid var(--line);
+  padding:35px;
+  position:relative;
+  transition:.3s;
+}
+.role-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+  border-color:#d8bdc3;
+}
+.role-number{
+  font:italic 17px var(--serif);
+  color:var(--gold);
+}
+.role-card h3{
+  font:25px/1.35 var(--serif);
+  color:var(--wine);
+  margin:17px 0 12px;
+}
+.role-card p{
+  font-size:12px;
+  color:var(--muted);
+  line-height:2;
 }
 
-/* BIOGRAPHY SECTIONS */
+/* HUMANITARIAN WORK */
 
-.content-section {
-  padding: 90px 0;
+.work-section{background:var(--cream)}
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
-
-.content-section.soft {
-  background: var(--cream);
+.work-card{
+  background:white;
+  border:1px solid var(--line);
+  padding:28px 25px;
+  min-height:205px;
+  transition:.3s;
 }
-
-.section-intro {
-  max-width: 690px;
-  margin-bottom: 45px;
+.work-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
 }
-
-.section-intro p {
-  color: var(--muted);
-  margin-top: 15px;
-  font-size: 15px;
+.work-index{
+  color:var(--gold);
+  font:italic 15px var(--serif);
 }
-
-.story-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: start;
+.work-card h3{
+  font:21px var(--serif);
+  color:var(--wine);
+  margin:17px 0 9px;
 }
-
-.story-text p {
-  color: #625b5f;
-  font-size: 15px;
-  margin-bottom: 18px;
-}
-
-.story-text h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--wine);
-  font-size: 25px;
-  margin: 25px 0 12px;
-}
-
-.story-note {
-  background: white;
-  border-left: 3px solid var(--gold);
-  padding: 28px;
-  box-shadow: 0 12px 35px rgba(60,30,35,.05);
-}
-
-.story-note h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--wine);
-  font-size: 24px;
-  margin-bottom: 12px;
-}
-
-.story-note p {
-  color: #6e6468;
-  font-size: 14px;
-}
-
-/* ROLE CARDS */
-
-.roles-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.role-card {
-  background: white;
-  padding: 32px;
-  border: 1px solid var(--line);
-  transition: .3s;
-}
-
-.role-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(60,30,35,.08);
-  border-color: var(--gold);
-}
-
-.role-number {
-  font-family: 'Playfair Display', serif;
-  color: var(--gold);
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.role-card h3 {
-  color: var(--wine);
-  font-family: 'Playfair Display', serif;
-  font-size: 23px;
-  line-height: 1.35;
-  margin-bottom: 12px;
-}
-
-.role-card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* INITIATIVES */
-
-.initiatives-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.initiative {
-  padding: 27px;
-  background: var(--cream);
-  border-bottom: 3px solid var(--gold);
-}
-
-.initiative h3 {
-  color: var(--wine);
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  margin-bottom: 9px;
-}
-
-.initiative p {
-  color: var(--muted);
-  font-size: 13px;
+.work-card p{
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.9;
 }
 
 /* RECOGNITION */
 
-.recognition-list {
-  border-top: 1px solid var(--line);
+.recognition-list{border-top:1px solid var(--line)}
+.recognition-item{
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:25px;
+  padding:25px 0;
+  border-bottom:1px solid var(--line);
 }
-
-.recognition-item {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 25px;
-  padding: 23px 0;
-  border-bottom: 1px solid var(--line);
+.recognition-year{
+  font:italic 25px var(--serif);
+  color:var(--gold);
 }
-
-.recognition-year {
-  color: var(--gold);
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
+.recognition-item h3{
+  font:22px var(--serif);
+  color:var(--wine);
+  margin-bottom:6px;
 }
-
-.recognition-item h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--wine);
-  font-size: 21px;
-  margin-bottom: 5px;
-}
-
-.recognition-item p {
-  font-size: 14px;
-  color: var(--muted);
+.recognition-item p{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.9;
 }
 
 /* MISSION */
 
-.mission {
-  background: var(--wine-dark);
-  color: white;
-  padding: 85px 0;
-  text-align: center;
+.mission{
+  background:linear-gradient(120deg,var(--deep),var(--wine));
+  color:white;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.mission:after{
+  content:"";
+  position:absolute;
+  width:550px;height:550px;
+  border:1px solid #ffffff12;
+  border-radius:50%;
+  right:-200px;top:-230px;
+}
+.mission-inner{position:relative;z-index:2;max-width:850px;margin:auto}
+.mission .section-label{justify-content:center;color:#e7c795}
+.mission h2{
+  font:500 clamp(34px,4vw,49px)/1.2 var(--serif);
+  color:white;
+  margin:22px 0;
+}
+.mission p{
+  font-size:13px;
+  line-height:2.1;
+  color:#e6d7dc;
+}
+.mission-line{
+  width:55px;height:1px;
+  background:var(--gold);
+  margin:27px auto;
 }
 
-.mission .section-heading {
-  color: white;
+/* CONTACT CTA */
+
+.cta{
+  background:var(--pink);
+  text-align:center;
 }
-
-.mission-text {
-  max-width: 780px;
-  margin: 22px auto 0;
-  color: rgba(255,255,255,.75);
-  font-size: 15px;
+.cta .section-label{justify-content:center}
+.cta h2{
+  font:500 clamp(32px,4vw,45px)/1.2 var(--serif);
+  color:var(--deep);
+  margin:18px 0;
 }
-
-.mission-line {
-  width: 65px;
-  height: 2px;
-  background: var(--gold);
-  margin: 25px auto;
-}
-
-/* CTA */
-
-.cta {
-  background: var(--cream);
-  padding: 75px 0;
-  text-align: center;
-}
-
-.cta h2 {
-  font-family: 'Playfair Display', serif;
-  color: var(--wine);
-  font-size: clamp(30px, 4vw, 43px);
-  font-weight: 500;
-}
-
-.cta p {
-  color: var(--muted);
-  max-width: 620px;
-  margin: 14px auto 25px;
-}
-
-.cta-button {
-  display: inline-block;
-  background: var(--wine);
-  color: white;
-  padding: 14px 28px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: .3s;
-}
-
-.cta-button:hover {
-  background: var(--wine-dark);
-  transform: translateY(-2px);
+.cta p{
+  max-width:650px;
+  margin:0 auto 28px;
+  font-size:13px;
+  color:var(--muted);
+  line-height:2;
 }
 
 /* FOOTER */
 
-footer {
-  background: #211319;
-  color: white;
-  padding: 55px 0 22px;
+footer{
+  background:var(--deep);
+  color:white;
+  padding:65px 0 25px;
 }
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 50px;
-  padding-bottom: 35px;
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr;
+  gap:60px;
+  padding-bottom:45px;
 }
-
-.footer-brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
-  color: white;
-  margin-bottom: 12px;
+.footer-name{font:24px var(--serif);color:white}
+.footer-description{
+  font-size:11px;
+  color:#bbaab0;
+  line-height:2;
+  margin-top:16px;
+  max-width:350px;
 }
-
-.footer-about {
-  color: rgba(255,255,255,.55);
-  font-size: 13px;
-  max-width: 340px;
+.footer-heading{
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#d7b985;
+  margin-bottom:19px;
 }
-
-.footer-column h4 {
-  color: var(--gold);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 17px;
+.footer-links{display:flex;flex-direction:column;gap:11px}
+.footer-links a{
+  font-size:11px;
+  color:#d6c7cc;
+  transition:.2s;
 }
-
-.footer-column a,
-.footer-column p {
-  display: block;
-  color: rgba(255,255,255,.65);
-  font-size: 13px;
-  margin-bottom: 9px;
-}
-
-.footer-column a:hover {
-  color: var(--gold);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.12);
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-  color: rgba(255,255,255,.42);
-  font-size: 11px;
+.footer-links a:hover{color:#e9c993}
+.footer-bottom{
+  border-top:1px solid #ffffff1c;
+  padding-top:22px;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  font-size:10px;
+  color:#a9959d;
 }
 
 /* ANIMATION */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity .7s ease, transform .7s ease;
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .8s ease,transform .8s ease;
 }
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal.visible{opacity:1;transform:translateY(0)}
+::selection{background:var(--wine);color:white}
 
 /* RESPONSIVE */
 
-@media(max-width: 900px) {
-  .nav-links {
-    gap: 14px;
-    font-size: 12px;
-  }
-
-  .hero-inner {
-    gap: 35px;
-  }
-
-  .intro-grid {
-    gap: 40px;
-  }
-
-  .initiatives-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media(max-width:1000px){
+  .nav-links{gap:14px}
+  .nav-links a{font-size:10px}
+  .hero-grid{gap:40px}
+  .about-grid,.story-grid,.family-grid{gap:40px}
 }
-
-@media(max-width: 700px) {
-  .navbar {
-    min-height: 72px;
+@media(max-width:760px){
+  .container{width:calc(100% - 34px)}
+  .topbar-right{display:none}
+  .nav{min-height:73px}
+  .brand-name strong{font-size:15px}
+  .brand-logo{width:42px;height:42px}
+  .menu-toggle{display:block}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:73px;left:0;right:0;
+    padding:18px 25px 25px;
+    background:white;
+    box-shadow:var(--shadow);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
   }
-
-  .menu-toggle {
-    display: block;
+  .nav-links.active{display:flex}
+  .nav-links a{
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:12px;
   }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    width: 100%;
-    background: white;
-    padding: 20px 6%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 17px;
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 12px 20px rgba(0,0,0,.06);
+  .nav-links .contact-btn{
+    text-align:center;
+    margin-top:12px;
+    padding:13px;
   }
-
-  .nav-links.open {
-    display: flex;
+  .hero-grid{
+    grid-template-columns:1fr;
+    padding:65px 0 75px;
+    gap:55px;
   }
-
-  .hero {
-    padding: 65px 0;
+  .hero h1{font-size:53px}
+  .hero-visual{width:85%;max-width:360px}
+  .portrait{height:410px}
+  .portrait-label{left:-15px}
+  .identity-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+    padding:23px 0;
   }
-
-  .hero-inner,
-  .intro-grid,
-  .story-grid {
-    grid-template-columns: 1fr;
+  .identity-item{
+    padding:0 0 13px!important;
+    border-right:0;
+    border-bottom:1px solid #ffffff2b;
   }
-
-  .hero-image {
-    max-width: 290px;
-    margin-top: 15px;
-  }
-
-  .hero-image img {
-    height: 360px;
-  }
-
-  .intro,
-  .content-section {
-    padding: 65px 0;
-  }
-
-  .roles-grid,
-  .initiatives-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .recognition-item {
-    grid-template-columns: 70px 1fr;
-    gap: 15px;
-  }
-
-  .recognition-year {
-    font-size: 20px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-  }
+  .identity-item:last-child{border:0}
+  section{padding:72px 0}
+  .about-grid,.story-grid,.family-grid{grid-template-columns:1fr;gap:35px}
+  .about-visual{min-height:300px}
+  .quote-block blockquote{font-size:25px}
+  .roles-grid{grid-template-columns:1fr}
+  .work-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .work-card{padding:24px 19px;min-height:190px}
+  .recognition-item{grid-template-columns:75px 1fr;gap:15px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:35px}
+  .footer-grid>div:first-child{grid-column:span 2}
 }
-
-@media(prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+@media(max-width:450px){
+  .hero h1{font-size:45px}
+  .hero-subtitle{font-size:10px;letter-spacing:1.2px}
+  .work-grid{grid-template-columns:1fr}
+  .work-card{min-height:0}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-grid>div:first-child{grid-column:auto}
+  .footer-bottom{flex-direction:column}
+  .story-aside{padding:27px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{
+    scroll-behavior:auto!important;
+    transition:none!important;
+  }
+  .reveal{opacity:1;transform:none}
 }
 </style>
 </head>
 
 <body>
 
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span>OFFICIAL WEBSITE</span>
+    <div class="topbar-right">
+      <a href="mailto:officialfarmaanhasankhan@gmail.com">Official Correspondence</a>
+      <a href="home.html">Back to Home ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
 <header>
-  <div class="container navbar">
+  <div class="container nav">
 
     <a href="home.html" class="brand">
-      Farmaan Hasan Khan
-      <span>Service · Humanity · Peace</span>
+      <div class="brand-logo">FHK</div>
+      <div class="brand-name">
+        <strong>Dr. Farmaan Hasan Khan</strong>
+        <small>Religious leader and Social activist</small>
+      </div>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation" aria-expanded="false">☰</button>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="biography.html" class="active">Biography</a></li>
-      <li><a href="founder.html">Founder</a></li>
-      <li><a href="activities.html">Initiatives</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="support.html" class="nav-cta">Support Us</a></li>
-    </ul>
+    <nav class="nav-links" id="navLinks">
+      <a href="home.html">Home</a>
+      <a href="biography.html" class="active">Biography</a>
+      <a href="/initiativesactivity/">Initiatives</a>
+      <a href="projects.html">Projects</a>
+      <a href="/media-recognition/">Media</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a class="contact-btn" href="mailto:officialfarmaanhasankhan@gmail.com">Get in Touch ↗</a>
+    </nav>
 
   </div>
 </header>
 
+<main>
 
 <!-- HERO -->
-
 <section class="hero">
-  <div class="container hero-inner">
+  <div class="container hero-grid">
 
-    <div class="reveal">
-      <div class="eyebrow">The Life & Journey</div>
+    <div class="hero-content reveal">
+      <div class="eyebrow">The Life Behind the Mission</div>
 
-      <h1>
-        Dr. Farmaan <span>Hasan Khan</span>
-      </h1>
+      <h1>Dr. Farmaan<br><span>Hasan Khan</span></h1>
+
+      <div class="hero-subtitle">
+        Humanitarian · Religious Leader · Social Activist · Advocate for Peace
+      </div>
 
       <p class="hero-description">
-        A life shaped by faith, compassion and a commitment to serving
-        humanity — working towards a more educated, inclusive and
-        harmonious society.
+        A life shaped by faith, compassion and public service.
+        Discover the journey of Waqaar-e-Millat Hazrat Dr. Farmaan
+        Hasan Khan, whose work centres on humanitarian assistance,
+        education, healthcare and social harmony.
       </p>
 
-      <div class="hero-tags">
-        <span>Humanitarian</span>
-        <span>Social Activist</span>
-        <span>Peace Advocate</span>
-        <span>Social Reformer</span>
+      <div class="hero-buttons">
+        <a href="#biographical-story" class="btn">EXPLORE HIS JOURNEY ↗</a>
+        <a href="home.html" class="arrow-link">Return to Homepage →</a>
       </div>
     </div>
 
-    <div class="hero-image reveal">
-      <img
-        src="assets/farmaan-portrait.jpg"
-        alt="Portrait of Dr. Farmaan Hasan Khan"
-        onerror="this.style.display='none'"
-      >
-      <div class="image-caption">A JOURNEY OF SERVICE AND PURPOSE</div>
+    <div class="hero-visual reveal">
+      <div class="portrait-frame"></div>
+
+      <div class="portrait">
+        <img
+          src="https://farmaanhasankhan.com/wp-content/uploads/2026/09/IMG_20260915_151929-scaled.png"
+          alt="Dr. Farmaan Hasan Khan"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        >
+        <div class="portrait-fallback" style="display:none">
+          <strong>Dr. Farmaan Hasan Khan</strong>
+          <small>OFFICIAL PORTRAIT</small>
+        </div>
+      </div>
+
+      <div class="portrait-label">
+        <strong>Dr. Farmaan Hasan Khan</strong>
+        <span>Faith · Service · Humanity</span>
+      </div>
     </div>
 
   </div>
 </section>
 
+<!-- IDENTITY STRIP -->
+<div class="identity-strip">
+  <div class="container identity-grid">
 
-<!-- INTRODUCTION -->
-
-<section class="intro">
-  <div class="container intro-grid">
-
-    <div class="reveal">
-      <div class="section-label">An Introduction</div>
-      <h2 class="section-heading">
-        A journey rooted in faith, service and humanity.
-      </h2>
+    <div class="identity-item">
+      <strong>Humanitarian Service</strong>
+      <span>Compassion in action</span>
     </div>
 
-    <div class="intro-content reveal">
+    <div class="identity-item">
+      <strong>Education & Healthcare</strong>
+      <span>Opportunity and dignity</span>
+    </div>
+
+    <div class="identity-item">
+      <strong>Peace & Brotherhood</strong>
+      <span>Building bridges between communities</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- INTRODUCTION -->
+<section id="biographical-story">
+  <div class="container about-grid">
+
+    <div class="about-visual reveal">
+      <div class="about-symbol">
+        <strong>FH</strong>
+        <span>Faith in Humanity</span>
+      </div>
+    </div>
+
+    <div class="about-text reveal">
+      <div class="section-label">An Introduction</div>
+
+      <h2 class="section-title">
+        A journey rooted in faith, compassion and purpose.
+      </h2>
+
       <p>
         <strong>Waqaar-e-Millat Hazrat Dr. Farmaan Hasan Khan</strong>,
         popularly known as Farmaan Mian, is an Indian humanitarian,
-        social activist, community worker and advocate for peace.
-        Born in Bareilly, Uttar Pradesh, he grew up in an environment
-        deeply connected with faith, compassion and public service.
+        religious leader, community leader, social activist and
+        advocate for peace. Born in Bareilly, India, he grew up in
+        a family deeply rooted in faith, compassion and public service.
       </p>
 
       <p>
-        His work reflects a commitment to the welfare of society,
-        particularly the upliftment of underprivileged communities,
-        the advancement of education, access to healthcare and
-        the promotion of social harmony.
+        As the National General Secretary of Jama'at Raza-e-Mustafa,
+        a historic organisation associated with the teachings of
+        Aala Hazrat Imam Ahmed Raza Khan Faazil-e-Bareilly, he is
+        engaged in organisational and community work.
       </p>
 
       <p>
-        Through organisational leadership and grassroots initiatives,
-        he seeks to translate the values of compassion and service
-        into meaningful action.
+        Through the Ala Hazrat Tajushariah Welfare Society, which
+        he founded, he has worked towards humanitarian assistance,
+        education, healthcare and community welfare.
       </p>
+
+      <a href="#roles" class="btn">HIS ROLES & CONTRIBUTIONS ↗</a>
     </div>
 
   </div>
 </section>
 
-
-<!-- QUOTE -->
-
-<section class="quote-section">
-  <div class="container reveal">
-    <div class="quote-mark">“</div>
-    <blockquote>
-      True leadership begins with service and ends with unity.
-    </blockquote>
-    <div class="quote-author">Farmaan Hasan Khan</div>
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="container">
+    <div class="quote-block reveal">
+      <div class="quote-mark">“</div>
+      <blockquote>
+        True leadership begins with service and ends with unity.
+      </blockquote>
+      <cite>Dr. Farmaan Hasan Khan</cite>
+    </div>
   </div>
 </section>
 
-
 <!-- EARLY LIFE AND EDUCATION -->
-
-<section class="content-section">
+<section class="story-section">
   <div class="container">
 
-    <div class="section-intro reveal">
-      <div class="section-label">His Background</div>
-      <h2 class="section-heading">Early Life & Education</h2>
-      <p>
-        The foundations of a life dedicated to public service
-        were shaped by family values, education and a strong
-        sense of social responsibility.
+    <div class="section-heading reveal">
+      <div class="section-label">His Beginnings</div>
+      <h2 class="section-title">Early Life & Education</h2>
+      <p class="section-description">
+        The formative years, educational journey and values
+        that shaped his engagement with public life.
       </p>
     </div>
 
     <div class="story-grid">
 
-      <div class="story-text reveal">
-        <h3>Early Life</h3>
-
+      <div class="story-copy reveal">
         <p>
-          Born on 8 August 1995 in Bareilly, India, Farmaan Hasan Khan
-          grew up in a family closely connected with the city's
-          spiritual and cultural heritage. From an early age,
-          he was inspired by the values of compassion, truth,
-          dignity and selfless service.
+          Born on <strong>8 August 1995</strong> in Bareilly, Uttar
+          Pradesh, Farmaan Hasan Khan grew up in a family closely
+          connected with the city's spiritual heritage. From an
+          early age, he was inspired by the values of compassion,
+          truth and selfless service.
         </p>
 
         <p>
-          These formative influences contributed to his interest
-          in social welfare, community development, justice
-          and peaceful coexistence.
-        </p>
-
-        <h3>Education</h3>
-
-        <p>
-          He pursued his higher education in law and completed
-          his B.A. LL.B. from Mahatma Jyotiba Phule Rohilkhand
-          University, Bareilly.
+          These formative influences nurtured his interest in
+          social reform, justice, spiritual harmony and the
+          welfare of people. His journey reflects an effort to
+          connect the values of faith with practical community
+          service.
         </p>
 
         <p>
-          His educational background, combined with his engagement
-          in community affairs, has informed his approach to
-          social responsibility and public service.
+          He completed his <strong>B.A. LL.B. from Mahatma Jyotiba
+          Phule Rohilkhand University, Bareilly</strong>. His
+          educational background and engagement with community
+          affairs have informed his approach to social responsibility.
+        </p>
+
+        <p>
+          After completing his legal education, he stepped into
+          public life with a focus on helping people at the
+          grassroots level and contributing to the welfare
+          of underserved communities.
         </p>
       </div>
 
-      <aside class="story-note reveal">
-        <h3>Values That Guide His Work</h3>
-
+      <aside class="story-aside reveal">
+        <div class="aside-label">Educational Background</div>
+        <h3>Learning with a Purpose</h3>
         <p>
-          His approach to public service is guided by the belief
-          that compassion should lead to action and that the
-          dignity of every individual deserves respect.
+          <strong>B.A. LL.B.</strong><br>
+          Mahatma Jyotiba Phule Rohilkhand University,
+          Bareilly, Uttar Pradesh.
         </p>
-
         <br>
-
         <p>
-          He advocates education, healthcare access, community
-          participation, women's empowerment and peaceful
-          relations among people of different backgrounds.
+          His journey brings together formal education,
+          community engagement and a commitment to
+          humanitarian service.
         </p>
       </aside>
 
@@ -882,45 +1030,85 @@ footer {
   </div>
 </section>
 
+<!-- FAMILY HERITAGE -->
+<section class="family-section">
+  <div class="container family-grid">
 
-<!-- PUBLIC LIFE -->
+    <div class="family-emblem reveal">
+      <span>Tradition<br>&nbsp;Responsibility</span>
+    </div>
 
-<section class="content-section soft">
+    <div class="family-copy reveal">
+      <div class="section-label">Family & Heritage</div>
+      <h2 class="section-title">
+        Rooted in a tradition of faith and service.
+      </h2>
+
+      <p>
+        Farmaan Hasan Khan's family background is closely
+        connected with Bareilly's religious and spiritual
+        heritage. His life and public work are situated within
+        a tradition that places importance on faith, community
+        responsibility and service.
+      </p>
+
+      <p>
+        He is the son-in-law of Hazrat Mufti Asjad Raza Khan Qadri,
+        known as the Grand Mufti of India and Islamic Chief Justice
+        of India. His public identity and work, however, are also
+        reflected through his own organisational and humanitarian
+        engagement.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ROLES AND CONTRIBUTIONS -->
+<section id="roles">
   <div class="container">
 
-    <div class="section-intro reveal">
-      <div class="section-label">Public Engagement</div>
-      <h2 class="section-heading">Roles & Contributions</h2>
-      <p>
-        His work brings together organisational responsibility,
-        community engagement and humanitarian service.
+    <div class="section-heading reveal">
+      <div class="section-label">Public & Organisational Life</div>
+      <h2 class="section-title">Roles & Contributions</h2>
+      <p class="section-description">
+        His organisational responsibilities connect
+        humanitarian work, community welfare and public engagement.
       </p>
     </div>
 
     <div class="roles-grid">
 
       <article class="role-card reveal">
-        <div class="role-number">01</div>
-        <h3>Founder — Ala Hazrat Tajushariah Welfare Society</h3>
+        <span class="role-number">01 / FOUNDER</span>
+        <h3>Ala Hazrat Tajushariah Welfare Society</h3>
         <p>
-          Farmaan Hasan Khan founded the Ala Hazrat Tajushariah
-          Welfare Society, an organisation committed to humanitarian
-          assistance, education, healthcare, skill development
-          and social welfare. Through its initiatives, the society
-          works to support marginalised and underserved communities.
+          Farmaan Hasan Khan is the founder of the Ala Hazrat
+          Tajushariah Welfare Society, an organisation dedicated
+          to humanitarian aid, education, healthcare and the
+          promotion of communal harmony.
         </p>
+        <p>
+          Under his guidance, the society undertakes welfare
+          initiatives aimed at improving the lives of
+          marginalised and underserved communities.
+        </p>
+        <a href="https://ahtskills.org/" class="card-link">VISIT THE ORGANISATION ↗</a>
       </article>
 
       <article class="role-card reveal">
-        <div class="role-number">02</div>
-        <h3>National General Secretary — Jama'at Raza-e-Mustafa</h3>
+        <span class="role-number">02 / NATIONAL GENERAL SECRETARY</span>
+        <h3>Jama'at Raza-e-Mustafa</h3>
         <p>
           He also serves as the National General Secretary of
-          Jama'at Raza-e-Mustafa, a historic organisation associated
-          with the teachings and legacy of Aala Hazrat Imam Ahmed
-          Raza Khan Faazil-e-Bareilly. His responsibilities include
-          organisational engagement and initiatives related to
-          community welfare, awareness and harmony.
+          Jama'at Raza-e-Mustafa, a historic Islamic organisation
+          associated with the spiritual legacy and teachings of
+          Aala Hazrat Imam Ahmed Raza Khan Faazil-e-Bareilly.
+        </p>
+        <p>
+          In this role, he contributes to organisational activities,
+          interfaith dialogue, religious awareness, youth engagement
+          and initiatives promoting peace and social harmony.
         </p>
       </article>
 
@@ -928,163 +1116,146 @@ footer {
   </div>
 </section>
 
-
 <!-- HUMANITARIAN WORK -->
-
-<section class="content-section">
+<section class="work-section">
   <div class="container">
 
-    <div class="section-intro reveal">
+    <div class="section-heading reveal">
       <div class="section-label">Service to Society</div>
-      <h2 class="section-heading">Humanitarian Work & Initiatives</h2>
-      <p>
-        His humanitarian engagement focuses on practical support
-        and opportunities for people who need them most.
+      <h2 class="section-title">Humanitarian Work & Initiatives</h2>
+      <p class="section-description">
+        His work through the welfare society focuses on
+        practical support, educational opportunity,
+        healthcare and community development.
+      </p>
+    </div>
+
+    <div class="work-grid">
+
+      <article class="work-card reveal">
+        <span class="work-index">01 / EDUCATION</span>
+        <h3>Education for All</h3>
+        <p>
+          Supporting educational opportunities and learning
+          assistance for children from underprivileged backgrounds.
+        </p>
+      </article>
+
+      <article class="work-card reveal">
+        <span class="work-index">02 / HEALTHCARE</span>
+        <h3>Free Operations</h3>
+        <p>
+          Helping patients who face financial barriers
+          to necessary surgical treatment and medical care.
+        </p>
+      </article>
+
+      <article class="work-card reveal">
+        <span class="work-index">03 / STUDENT SUPPORT</span>
+        <h3>Free NEET Coaching</h3>
+        <p>
+          Supporting aspiring students preparing for medical
+          entrance examinations and higher education.
+        </p>
+      </article>
+
+      <article class="work-card reveal">
+        <span class="work-index">04 / SKILL DEVELOPMENT</span>
+        <h3>Free Computer Classes</h3>
+        <p>
+          Encouraging digital learning and practical skills
+          among young people.
+        </p>
+      </article>
+
+      <article class="work-card reveal">
+        <span class="work-index">05 / ENVIRONMENT</span>
+        <h3>Tree Plantation Drives</h3>
+        <p>
+          Promoting environmental awareness and community
+          participation in plantation activities.
+        </p>
+      </article>
+
+      <article class="work-card reveal">
+        <span class="work-index">06 / COMMUNITY</span>
+        <h3>Peace & Social Harmony</h3>
+        <p>
+          Encouraging interfaith understanding, dialogue,
+          mutual respect and peaceful coexistence.
+        </p>
+      </article>
+
+    </div>
+
+    <div style="text-align:center;margin-top:35px">
+      <a href="/initiativesactivity/" class="btn">EXPLORE ALL INITIATIVES ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SOCIAL PHILOSOPHY -->
+<section>
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="section-label">A Shared Society</div>
+      <h2 class="section-title">Peace, Brotherhood & Social Harmony</h2>
+      <p class="section-description">
+        A commitment to building understanding across
+        communities and creating a society founded on
+        dignity, respect and cooperation.
       </p>
     </div>
 
     <div class="story-grid">
 
-      <div class="story-text reveal">
+      <div class="story-copy reveal">
         <p>
-          Through the Ala Hazrat Tajushariah Welfare Society,
-          he has been associated with programmes designed to
-          address educational, medical and social needs.
+          Farmaan Hasan Khan's public engagement reflects
+          an emphasis on bringing people together through
+          dialogue, social awareness and collective responsibility.
         </p>
 
         <p>
-          These initiatives include medical assistance, support
-          for surgeries, educational opportunities, skill training
-          and community welfare activities. Particular attention
-          is directed towards underprivileged families, women
-          and young people.
+          His work includes an interest in interfaith dialogue,
+          youth awareness programmes, religious teachings and
+          campaigns that promote peace and mutual understanding.
         </p>
 
         <p>
-          During important community gatherings and occasions
-          associated with Dargah-e-Aala Hazrat, welfare activities
-          provide an opportunity to connect the spirit of service
-          with practical assistance.
+          He believes that social progress requires compassion,
+          cooperation and respect for the dignity of every person.
+          His approach seeks to connect spiritual values with
+          practical responses to contemporary social needs.
         </p>
       </div>
 
-      <div class="story-note reveal">
-        <h3>Service Beyond Words</h3>
+      <aside class="story-aside reveal">
+        <div class="aside-label">A Continuing Commitment</div>
+        <h3>Tradition with a Purpose</h3>
         <p>
-          For Farmaan Hasan Khan, humanitarian work is not merely
-          an organisational activity. It is an expression of
-          responsibility towards society and a commitment to
-          helping people with dignity.
+          Rooted in tradition yet responsive to present needs,
+          his work reflects an effort to make compassion,
+          service and unity meaningful in everyday life.
         </p>
-      </div>
+      </aside>
 
     </div>
-
-    <div style="height:35px"></div>
-
-    <div class="initiatives-grid">
-
-      <div class="initiative reveal">
-        <h3>Education for All</h3>
-        <p>
-          Supporting access to learning and educational
-          opportunities for underserved communities.
-        </p>
-      </div>
-
-      <div class="initiative reveal">
-        <h3>Free NEET Coaching</h3>
-        <p>
-          Helping aspiring students prepare for medical
-          entrance examinations.
-        </p>
-      </div>
-
-      <div class="initiative reveal">
-        <h3>Healthcare Assistance</h3>
-        <p>
-          Facilitating medical support, free operations
-          and healthcare-related welfare.
-        </p>
-      </div>
-
-      <div class="initiative reveal">
-        <h3>Free Computer Classes</h3>
-        <p>
-          Encouraging digital literacy and practical
-          skills among young people.
-        </p>
-      </div>
-
-      <div class="initiative reveal">
-        <h3>Women's Empowerment</h3>
-        <p>
-          Supporting dignity, opportunity and participation
-          for women in society.
-        </p>
-      </div>
-
-      <div class="initiative reveal">
-        <h3>Tree Plantation</h3>
-        <p>
-          Encouraging environmental awareness and
-          responsibility through plantation drives.
-        </p>
-      </div>
-
-    </div>
-
   </div>
 </section>
 
-
-<!-- SOCIAL HARMONY -->
-
-<section class="content-section soft">
-  <div class="container story-grid">
-
-    <div class="reveal">
-      <div class="section-label">A Shared Society</div>
-      <h2 class="section-heading">
-        Peace, Brotherhood & Social Harmony
-      </h2>
-    </div>
-
-    <div class="story-text reveal">
-      <p>
-        Alongside humanitarian activities, Farmaan Hasan Khan
-        emphasises the importance of peace, mutual respect
-        and understanding among communities.
-      </p>
-
-      <p>
-        His public engagement reflects an interest in bringing
-        people together through dialogue, social awareness
-        and collective responsibility.
-      </p>
-
-      <p>
-        He believes that a healthy society is built not only
-        through institutions but also through empathy,
-        cooperation and respect for human dignity.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- RECOGNITION -->
-
-<section class="content-section">
+<!-- AWARDS AND RECOGNITION -->
+<section class="family-section" id="recognition">
   <div class="container">
 
-    <div class="section-intro reveal">
-      <div class="section-label">Milestones</div>
-      <h2 class="section-heading">Awards & Recognition</h2>
-      <p>
-        His public work and contributions have received
-        recognition through various honours and platforms.
+    <div class="section-heading reveal">
+      <div class="section-label">Honours & Milestones</div>
+      <h2 class="section-title">Awards & Recognition</h2>
+      <p class="section-description">
+        Selected recognitions and milestones mentioned
+        in the published biography.
       </p>
     </div>
 
@@ -1095,7 +1266,8 @@ footer {
         <div>
           <h3>Bharat Gaurav Ratna</h3>
           <p>
-            Recognised with the Bharat Gaurav Ratna in 2023.
+            Received the Bharat Gaurav Ratna in recognition
+            of his public and social engagement.
           </p>
         </div>
       </div>
@@ -1105,9 +1277,8 @@ footer {
         <div>
           <h3>Forbes 30 Under 30 India — Social Impact</h3>
           <p>
-            The existing biography identifies his inclusion
-            in Forbes 30 Under 30 India for Social Impact
-            as a significant milestone.
+            The source biography reports his inclusion in
+            Forbes 30 Under 30 India in the Social Impact category.
           </p>
         </div>
       </div>
@@ -1117,132 +1288,138 @@ footer {
         <div>
           <h3>Public & Academic Recognition</h3>
           <p>
-            His work has also received wider public attention,
-            including mentions in the context of competitive
-            examinations such as UPPCS and UPSSSC, as stated
-            in his published biography.
+            His work is also reported to have received attention
+            in the context of competitive examinations including
+            UPPCS and UPSSSC.
           </p>
         </div>
       </div>
 
     </div>
 
+    <div style="text-align:center;margin-top:35px">
+      <a href="/media-recognition/" class="btn">VIEW MEDIA & RECOGNITION ↗</a>
+    </div>
+
   </div>
 </section>
 
-
-<!-- MISSION -->
-
+<!-- ONGOING MISSION -->
 <section class="mission">
-  <div class="container reveal">
+  <div class="container mission-inner reveal">
 
     <div class="section-label">His Ongoing Mission</div>
 
-    <h2 class="section-heading">
-      A More Compassionate & Inclusive Society
-    </h2>
+    <h2>A More Balanced, Inclusive & Compassionate Society</h2>
 
     <div class="mission-line"></div>
 
-    <p class="mission-text">
-      Farmaan Hasan Khan's continuing mission is to connect
-      spiritual values with grassroots service, encourage
-      educational and social opportunities, support those
-      in need and build bridges of understanding across
-      communities. Through welfare initiatives, public
-      engagement and community participation, he seeks
-      to contribute towards a society founded on dignity,
-      justice, peace and brotherhood.
+    <p>
+      Farmaan Hasan Khan's life mission is to blend spiritual
+      awakening with grassroots activism, creating a balanced,
+      inclusive and compassionate society. Through lectures,
+      welfare activities and spiritual guidance, he seeks to
+      build bridges of peace and understanding across diverse
+      communities and faiths.
     </p>
 
   </div>
 </section>
 
-
 <!-- CONTACT CTA -->
-
 <section class="cta">
   <div class="container reveal">
 
     <div class="section-label">Connect & Collaborate</div>
 
-    <h2>Be a Part of the Journey</h2>
+    <h2>Be Part of the Journey</h2>
 
     <p>
-      Discover the initiatives, support humanitarian work
-      and join efforts to create meaningful change in society.
+      Discover the initiatives, connect with the team
+      and join efforts that promote education, healthcare,
+      humanitarian service and social harmony.
     </p>
 
-    <a href="activities.html" class="cta-button">
-      EXPLORE INITIATIVES →
-    </a>
+    <div class="hero-buttons" style="justify-content:center">
+      <a href="/initiativesactivity/" class="btn">EXPLORE INITIATIVES ↗</a>
+      <a href="contact.html" class="btn btn-outline">CONTACT THE OFFICE</a>
+    </div>
 
   </div>
 </section>
 
+</main>
 
 <!-- FOOTER -->
-
 <footer>
   <div class="container">
 
     <div class="footer-grid">
 
       <div>
-        <div class="footer-brand">Dr. Farmaan Hasan Khan</div>
-        <p class="footer-about">
-          A journey of faith, humanitarian service,
-          community welfare and commitment to peace.
+        <div class="footer-name">Dr. Farmaan Hasan Khan</div>
+        <p class="footer-description">
+          A life dedicated to humanity, education, peace
+          and social welfare. An ongoing journey of
+          compassion, service and collective progress.
         </p>
       </div>
 
-      <div class="footer-column">
-        <h4>Explore</h4>
-        <a href="home.html">Home</a>
-        <a href="biography.html">Biography</a>
-        <a href="founder.html">Founder</a>
-        <a href="activities.html">Initiatives</a>
-        <a href="gallery.html">Gallery</a>
+      <div>
+        <div class="footer-heading">Explore</div>
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="biography.html">Biography</a>
+          <a href="/initiativesactivity/">Initiatives</a>
+          <a href="/media-recognition/">Media & Recognition</a>
+          <a href="gallery.html">Gallery</a>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Get in Touch</h4>
-        <p>officialfarmaanhasankhan@gmail.com</p>
-        <p>+91 78701 55869</p>
-        <a href="contact.html">Contact the Team →</a>
+      <div>
+        <div class="footer-heading">Get Involved</div>
+        <div class="footer-links">
+          <a href="projects.html">Projects</a>
+          <a href="support.html">Support Us</a>
+          <a href="contact.html">Contact</a>
+          <a href="mailto:officialfarmaanhasankhan@gmail.com">Email Office</a>
+          <a href="https://ahtskills.org/">Welfare Society</a>
+        </div>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
-      <span>Dedicated to Humanity, Peace & Service.</span>
+      <span>© <span id="currentYear"></span> Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
+      <span>Designed with Purpose & Elegance.</span>
     </div>
 
   </div>
 </footer>
 
-
 <script>
+// Mobile Navigation
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
 menuToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', isOpen);
-  menuToggle.textContent = isOpen ? '×' : '☰';
+  const isActive = navLinks.classList.toggle('active');
+  menuToggle.textContent = isActive ? '×' : '☰';
+  menuToggle.setAttribute('aria-expanded', isActive);
 });
 
-document.querySelectorAll('.nav-links a').forEach(link => {
+navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('active');
     menuToggle.textContent = '☰';
+    menuToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+// Dynamic Copyright Year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+// Scroll Reveal
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1259,3 +1436,5 @@ document.querySelectorAll('.reveal').forEach(element => {
 
 </body>
 </html>
+
+  
