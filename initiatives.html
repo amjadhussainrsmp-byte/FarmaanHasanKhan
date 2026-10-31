@@ -1,1515 +1,995 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#501827">
-  <meta name="description" content="Explore the humanitarian initiatives and social activities associated with Dr. Farmaan Hasan Khan, including healthcare, education, environmental awareness, communal harmony and women empowerment.">
-  <title>Initiatives & Activities | Dr. Farmaan Hasan Khan</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --wine: #501827;
-      --wine-dark: #291019;
-      --wine-light: #702d40;
-      --gold: #c5a36b;
-      --cream: #fbf8f6;
-      --pink: #f5edef;
-      --white: #ffffff;
-      --text: #352a2c;
-      --muted: #776c6e;
-      --border: #eadfe1;
-      --shadow: 0 16px 45px rgba(53, 25, 34, .09);
-      --serif: 'Playfair Display', Georgia, serif;
-      --sans: 'DM Sans', Arial, sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 100px;
-    }
-
-    body {
-      font-family: var(--sans);
-      background: var(--white);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .container {
-      width: min(1160px, calc(100% - 44px));
-      margin: auto;
-    }
-
-    /* TOP BAR */
-
-    .topbar {
-      background: var(--wine-dark);
-      color: rgba(255,255,255,.88);
-      font-size: 12px;
-      padding: 9px 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    .topbar a {
-      transition: color .25s;
-    }
-
-    .topbar a:hover {
-      color: var(--gold);
-    }
-
-    .topbar-contact {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    /* NAVIGATION */
-
-    .navbar {
-      height: 86px;
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-    }
-
-    .nav-inner {
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 210px;
-    }
-
-    .brand-mark {
-      height: 48px;
-      width: 48px;
-      border: 1.5px solid var(--gold);
-      border-radius: 50%;
-      color: var(--wine);
-      display: grid;
-      place-items: center;
-      font-family: var(--serif);
-      font-size: 18px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .brand-name {
-      font-family: var(--serif);
-      font-size: 16px;
-      line-height: 1.25;
-      color: var(--wine-dark);
-      font-weight: 700;
-    }
-
-    .brand-subtitle {
-      font-size: 9px;
-      letter-spacing: 1.35px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 23px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 12px;
-      font-weight: 600;
-      color: #4d4143;
-      white-space: nowrap;
-      transition: color .25s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--wine);
-    }
-
-    .nav-links a.active {
-      position: relative;
-    }
-
-    .nav-links a.active::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      background: var(--gold);
-      left: 0;
-      right: 0;
-      bottom: -9px;
-    }
-
-    .nav-donate {
-      background: var(--wine);
-      color: white !important;
-      padding: 11px 18px;
-      border-radius: 3px;
-      transition: background .25s;
-    }
-
-    .nav-donate:hover {
-      background: var(--wine-dark);
-    }
-
-    .menu-toggle {
-      display: none;
-      border: 1px solid var(--border);
-      background: white;
-      color: var(--wine);
-      font-size: 24px;
-      width: 43px;
-      height: 43px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    /* HERO */
-
-    .hero {
-      position: relative;
-      background:
-        linear-gradient(105deg, rgba(41,16,25,.96), rgba(80,24,39,.91)),
-        url('https://farmaanhasankhan.com/wp-content/uploads/2025/07/9-scaled.jpg') center/cover;
-      color: white;
-      padding: 100px 0 105px;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 440px;
-      height: 440px;
-      border: 1px solid rgba(197,163,107,.2);
-      border-radius: 50%;
-      right: -110px;
-      top: -190px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border: 1px solid rgba(197,163,107,.15);
-      border-radius: 50%;
-      right: 30px;
-      bottom: -200px;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 35px;
-      height: 1px;
-      background: var(--gold);
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.12;
-      font-weight: 600;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .hero p {
-      max-width: 650px;
-      color: rgba(255,255,255,.8);
-      font-size: 15px;
-      line-height: 1.9;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 13px;
-      flex-wrap: wrap;
-      margin-top: 32px;
-    }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 13px 23px;
-      border-radius: 3px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .3px;
-      transition: .25s;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--wine-dark);
-    }
-
-    .btn-gold:hover {
-      background: #d8bb89;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,.5);
-      color: white;
-    }
-
-    .btn-outline:hover {
-      background: white;
-      color: var(--wine);
-    }
-
-    /* INTRODUCTION */
-
-    .intro {
-      padding: 90px 0 75px;
-      background: var(--cream);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 75px;
-      align-items: center;
-    }
-
-    .intro-label {
-      color: var(--wine-light);
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      margin-bottom: 16px;
-    }
-
-    .intro h2,
-    .section-heading h2 {
-      font-family: var(--serif);
-      color: var(--wine-dark);
-      font-size: clamp(30px, 4vw, 43px);
-      line-height: 1.25;
-      font-weight: 600;
-    }
-
-    .intro-copy p {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 2;
-      margin-bottom: 14px;
-    }
-
-    .intro-note {
-      border-left: 3px solid var(--gold);
-      padding: 14px 20px;
-      background: white;
-      margin-top: 23px;
-      color: var(--wine);
-      font-family: var(--serif);
-      font-size: 17px;
-      font-style: italic;
-    }
-
-    /* SECTION HEADINGS */
-
-    .section-heading {
-      max-width: 700px;
-      margin: 0 auto 48px;
-      text-align: center;
-    }
-
-    .section-heading .eyebrow {
-      justify-content: center;
-    }
-
-    .section-heading .eyebrow::before {
-      display: none;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 14px;
-      line-height: 1.9;
-    }
-
-    /* INITIATIVES */
-
-    .initiatives {
-      padding: 95px 0 100px;
-      background: white;
-    }
-
-    .initiative-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .initiative-card {
-      background: white;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: transform .3s, box-shadow .3s, border-color .3s;
-    }
-
-    .initiative-card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow);
-      border-color: #d8c2c6;
-    }
-
-    .initiative-image {
-      height: 225px;
-      overflow: hidden;
-      position: relative;
-      background: var(--pink);
-    }
-
-    .initiative-image img {
-      height: 100%;
-      transition: transform .6s;
-    }
-
-    .initiative-card:hover .initiative-image img {
-      transform: scale(1.06);
-    }
-
-    .initiative-number {
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      background: var(--wine);
-      color: var(--gold);
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      font-family: var(--serif);
-      font-size: 18px;
-    }
-
-    .initiative-body {
-      padding: 26px 25px 28px;
-    }
-
-    .initiative-body h3 {
-      font-family: var(--serif);
-      color: var(--wine-dark);
-      font-size: 21px;
-      line-height: 1.35;
-      margin-bottom: 12px;
-    }
-
-    .initiative-body p {
-      font-size: 13px;
-      line-height: 1.9;
-      color: var(--muted);
-    }
-
-    .initiative-tag {
-      display: inline-block;
-      margin-top: 18px;
-      color: var(--wine-light);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-    }
-
-    /* VISUAL JOURNEY */
-
-    .visual-section {
-      padding: 95px 0;
-      background: var(--cream);
-    }
-
-    .visual-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr .85fr;
-      grid-template-rows: 225px 225px;
-      gap: 17px;
-    }
-
-    .visual-item {
-      position: relative;
-      overflow: hidden;
-      background: var(--wine);
-      min-height: 200px;
-    }
-
-    .visual-item:first-child {
-      grid-row: span 2;
-    }
-
-    .visual-item img {
-      height: 100%;
-      transition: transform .6s;
-    }
-
-    .visual-item:hover img {
-      transform: scale(1.07);
-    }
-
-    .visual-caption {
-      position: absolute;
-      inset: auto 0 0;
-      padding: 42px 20px 18px;
-      background: linear-gradient(transparent, rgba(25,10,15,.88));
-      color: white;
-    }
-
-    .visual-caption span {
-      color: var(--gold);
-      font-size: 9px;
-      letter-spacing: 1.7px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .visual-caption h3 {
-      font-family: var(--serif);
-      font-size: 19px;
-      line-height: 1.3;
-      margin-top: 5px;
-    }
-
-    /* APPROACH */
-
-    .approach {
-      padding: 90px 0;
-      background: white;
-    }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .approach-card {
-      padding: 30px 26px;
-      background: var(--cream);
-      border-top: 2px solid var(--gold);
-    }
-
-    .approach-icon {
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      background: var(--pink);
-      color: var(--wine);
-      font-size: 20px;
-      margin-bottom: 18px;
-      border-radius: 50%;
-    }
-
-    .approach-card h3 {
-      font-family: var(--serif);
-      font-size: 20px;
-      color: var(--wine-dark);
-      margin-bottom: 10px;
-    }
-
-    .approach-card p {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.9;
-    }
-
-    /* QUOTE */
-
-    .quote-section {
-      background: var(--wine-dark);
-      padding: 75px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    .quote-mark {
-      font-family: var(--serif);
-      color: var(--gold);
-      font-size: 65px;
-      line-height: .8;
-    }
-
-    .quote-section blockquote {
-      max-width: 800px;
-      margin: 18px auto;
-      font-family: var(--serif);
-      font-size: clamp(23px, 3.5vw, 34px);
-      line-height: 1.5;
-      font-style: italic;
-    }
-
-    .quote-section .quote-author {
-      color: var(--gold);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-top: 20px;
-    }
-
-    /* CTA */
-
-    .cta-section {
-      padding: 85px 0;
-      background: var(--pink);
-    }
-
-    .cta-box {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 35px;
-      background: white;
-      padding: 45px 50px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .cta-box h2 {
-      font-family: var(--serif);
-      color: var(--wine-dark);
-      font-size: clamp(27px, 3.5vw, 37px);
-      line-height: 1.3;
-      margin-bottom: 10px;
-    }
-
-    .cta-box p {
-      color: var(--muted);
-      font-size: 13px;
-      max-width: 610px;
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      flex-shrink: 0;
-    }
-
-    .btn-wine {
-      background: var(--wine);
-      color: white;
-    }
-
-    .btn-wine:hover {
-      background: var(--wine-dark);
-      transform: translateY(-2px);
-    }
-
-    .btn-light {
-      border: 1px solid var(--border);
-      color: var(--wine);
-    }
-
-    .btn-light:hover {
-      border-color: var(--wine);
-    }
-
-    /* FOOTER */
-
-    .footer {
-      background: var(--wine-dark);
-      color: rgba(255,255,255,.75);
-      padding: 65px 0 0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.35fr .8fr .9fr 1.15fr;
-      gap: 40px;
-      padding-bottom: 45px;
-    }
-
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 19px;
-    }
-
-    .footer-brand .brand-mark {
-      color: white;
-      border-color: var(--gold);
-    }
-
-    .footer-brand .brand-name {
-      color: white;
-    }
-
-    .footer-brand .brand-subtitle {
-      color: rgba(255,255,255,.55);
-    }
-
-    .footer-about {
-      font-size: 12px;
-      line-height: 1.9;
-      color: rgba(255,255,255,.62);
-    }
-
-    .footer h4 {
-      color: white;
-      font-family: var(--serif);
-      font-size: 17px;
-      margin-bottom: 19px;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 11px;
-      font-size: 12px;
-    }
-
-    .footer-links a:hover {
-      color: var(--gold);
-    }
-
-    .footer-contact p {
-      font-size: 12px;
-      line-height: 1.8;
-      margin-bottom: 12px;
-      color: rgba(255,255,255,.68);
-      overflow-wrap: anywhere;
-    }
-
-    .footer-contact strong {
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.12);
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      font-size: 11px;
-      color: rgba(255,255,255,.5);
-    }
-
-    .footer-bottom a {
-      color: var(--gold);
-    }
-
-    /* REVEAL ANIMATION */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 1050px) {
-      .nav-links {
-        gap: 14px;
-      }
-
-      .nav-links a {
-        font-size: 11px;
-      }
-
-      .brand {
-        min-width: 185px;
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 850px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 86px;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 20px 25px 25px;
-        border-bottom: 1px solid var(--border);
-        box-shadow: 0 15px 25px rgba(0,0,0,.07);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links li {
-        border-bottom: 1px solid #f0e9ea;
-      }
-
-      .nav-links a {
-        display: block;
-        padding: 13px 0;
-        font-size: 13px;
-      }
-
-      .nav-links a.active::after {
-        display: none;
-      }
-
-      .nav-donate {
-        display: inline-block !important;
-        margin-top: 8px;
-        padding: 11px 16px !important;
-      }
-
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .initiative-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .visual-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 250px 200px 200px;
-      }
-
-      .visual-item:first-child {
-        grid-column: span 2;
-        grid-row: auto;
-      }
-
-      .approach-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .cta-box {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 35px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        width: min(100% - 32px, 1160px);
-      }
-
-      .topbar-inner {
-        justify-content: center;
-      }
-
-      .topbar-contact {
-        justify-content: center;
-        gap: 8px 17px;
-      }
-
-      .topbar-contact span:last-child {
-        display: none;
-      }
-
-      .navbar {
-        height: 75px;
-      }
-
-      .brand-mark {
-        width: 43px;
-        height: 43px;
-      }
-
-      .brand-name {
-        font-size: 14px;
-      }
-
-      .brand-subtitle {
-        font-size: 8px;
-      }
-
-      .nav-links {
-        top: 75px;
-      }
-
-      .hero {
-        padding: 75px 0 80px;
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .hero p {
-        font-size: 13px;
-      }
-
-      .intro,
-      .initiatives,
-      .visual-section,
-      .approach {
-        padding: 70px 0;
-      }
-
-      .initiative-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .initiative-image {
-        height: 230px;
-      }
-
-      .visual-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 230px);
-      }
-
-      .visual-item:first-child {
-        grid-column: auto;
-      }
-
-      .approach-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-box {
-        padding: 28px 23px;
-      }
-
-      .cta-actions {
-        width: 100%;
-      }
-
-      .cta-actions .btn {
-        flex: 1;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .footer {
-        padding-top: 50px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#501827">
+<meta name="description" content="Explore the initiatives and social activities associated with Dr. Farmaan Hasan Khan, including education, healthcare, environmental responsibility and community welfare.">
+<title>Initiatives & Activities | Dr. Farmaan Hasan Khan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+ --wine:#501827;
+ --wine2:#702a3d;
+ --wine3:#8c485a;
+ --deep:#291019;
+ --gold:#c5a36b;
+ --cream:#fbf8f6;
+ --pink:#f5edef;
+ --white:#fff;
+ --ink:#30252a;
+ --muted:#81747a;
+ --line:#eadde0;
+ --serif:'Playfair Display',serif;
+ --sans:'DM Sans',sans-serif;
+ --shadow:0 20px 65px rgba(65,20,35,.11);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--sans);background:var(--white);color:var(--ink);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit}
+.container{width:min(1200px,calc(100% - 48px));margin:auto}
+
+/* TOP BAR */
+
+.topbar{
+ background:var(--deep);
+ color:#e9dce0;
+ padding:8px 0;
+ font-size:10px;
+ letter-spacing:1.2px;
+}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.topbar a{color:#e7cda6}
+.topbar-right{display:flex;gap:22px}
+
+/* HEADER */
+
+header{
+ position:sticky;top:0;z-index:100;
+ background:rgba(255,255,255,.96);
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid var(--line);
+}
+.nav{
+ min-height:86px;
+ display:flex;align-items:center;
+ justify-content:space-between;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-logo{
+ width:49px;height:49px;
+ border:1px solid var(--gold);
+ background:var(--wine);
+ color:white;
+ display:grid;place-items:center;
+ font-family:var(--serif);font-size:19px;
+ border-radius:50%;
+}
+.brand-name strong{
+ display:block;font-family:var(--serif);
+ font-size:17px;color:var(--wine);
+ line-height:1.3;
+}
+.brand-name small{
+ font-size:9px;letter-spacing:2px;
+ color:var(--muted);text-transform:uppercase;
+}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{
+ font-size:11px;font-weight:700;
+ color:#51444a;transition:.25s;
+}
+.nav-links a:hover{color:var(--wine3)}
+.nav-links .contact-btn{
+ background:var(--wine);color:white;
+ padding:12px 19px;
+}
+.nav-links .contact-btn:hover{background:var(--deep)}
+.menu-toggle{
+ display:none;background:none;border:1px solid var(--line);
+ color:var(--wine);padding:8px 12px;font-size:22px;
+ cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+ min-height:690px;
+ position:relative;
+ display:flex;align-items:center;
+ background:
+ radial-gradient(ellipse at 85% 40%,#f1e4e6 0%,transparent 40%),
+ linear-gradient(105deg,#fff 0%,#fff 60%,#faf4f3 100%);
+ overflow:hidden;
+}
+.hero:before{
+ content:"";position:absolute;
+ width:650px;height:650px;
+ border:1px solid rgba(80,24,39,.07);
+ border-radius:50%;
+ right:-190px;top:-10px;
+}
+.hero:after{
+ content:"";position:absolute;
+ width:510px;height:510px;
+ border:1px solid rgba(197,163,107,.35);
+ border-radius:50%;
+ right:-120px;top:60px;
+}
+.hero-grid{
+ position:relative;z-index:2;
+ display:grid;grid-template-columns:1.1fr .9fr;
+ gap:65px;align-items:center;
+ padding:80px 0;
+}
+.eyebrow{
+ display:flex;align-items:center;gap:12px;
+ color:var(--wine3);
+ font-size:10px;font-weight:800;
+ letter-spacing:3px;text-transform:uppercase;
+}
+.eyebrow:before{
+ content:"";width:34px;height:1px;background:var(--gold);
+}
+.hero h1{
+ font-family:var(--serif);
+ font-size:clamp(48px,6vw,79px);
+ font-weight:500;line-height:1.06;
+ letter-spacing:-2px;
+ color:var(--deep);
+ margin:25px 0 18px;
+}
+.hero h1 span{color:var(--wine3);font-style:italic}
+.hero-subtitle{
+ color:var(--wine);
+ font-size:12px;font-weight:700;
+ letter-spacing:2px;text-transform:uppercase;
+ margin-bottom:20px;
+}
+.hero-description{
+ color:var(--muted);
+ font-size:14px;line-height:2;
+ max-width:570px;
+}
+.hero-buttons{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:32px}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;
+ background:var(--wine);color:white;
+ padding:14px 23px;
+ font-size:11px;font-weight:800;
+ letter-spacing:.8px;
+ border:1px solid var(--wine);
+ transition:.3s;
+}
+.btn:hover{background:var(--deep);transform:translateY(-3px)}
+.btn-outline{background:transparent;color:var(--wine)}
+.btn-outline:hover{color:white}
+.arrow-link{color:var(--wine);font-size:12px;font-weight:800;border-bottom:1px solid var(--gold);padding-bottom:5px}
+
+/* PORTRAIT */
+
+.hero-visual{position:relative;max-width:430px;margin:auto;width:100%}
+.portrait-frame{
+ position:absolute;inset:20px -17px -18px 17px;
+ border:1px solid var(--gold);
+}
+.portrait{
+ height:490px;position:relative;
+ background:linear-gradient(145deg,#eadbdd,#f7eff0);
+ overflow:hidden;
+}
+.portrait img{
+ width:100%;height:100%;object-fit:cover;
+ object-position:center top;
+}
+.portrait-fallback{
+ height:100%;display:flex;
+ flex-direction:column;align-items:center;justify-content:center;
+ color:var(--wine);font-family:var(--serif);
+}
+.portrait-fallback strong{font-size:30px}
+.portrait-fallback small{font:10px var(--sans);letter-spacing:2px}
+.portrait-label{
+ position:absolute;bottom:22px;left:-32px;
+ background:var(--wine);color:white;
+ padding:17px 25px;box-shadow:var(--shadow);
+}
+.portrait-label strong{display:block;font:18px var(--serif)}
+.portrait-label span{font-size:9px;letter-spacing:1.7px;color:#e7cbd2;text-transform:uppercase}
+
+/* INTRO STRIP */
+
+.identity-strip{background:var(--wine);color:white}
+.identity-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:26px 0}
+.identity-item{padding:5px 30px;border-right:1px solid #ffffff2b}
+.identity-item:first-child{padding-left:0}
+.identity-item:last-child{border:0}
+.identity-item strong{font:20px var(--serif);display:block}
+.identity-item span{font-size:9px;letter-spacing:1.7px;text-transform:uppercase;color:#e6cbd2}
+
+/* GENERAL SECTIONS */
+
+section{padding:100px 0}
+.section-label{
+ color:var(--wine3);font-size:10px;
+ font-weight:800;letter-spacing:3px;text-transform:uppercase;
+ display:flex;align-items:center;gap:12px;
+}
+.section-label:before{content:"";height:1px;width:30px;background:var(--gold)}
+.section-title{
+ font:500 clamp(34px,4vw,48px)/1.2 var(--serif);
+ color:var(--deep);margin:17px 0;
+}
+.section-description{font-size:13px;color:var(--muted);line-height:2;max-width:640px}
+.section-heading{margin-bottom:48px}
+.center{text-align:center}
+.center .section-label{justify-content:center}
+.center .section-description{margin:auto}
+
+/* BIOGRAPHY */
+
+.about-grid{
+ display:grid;grid-template-columns:.8fr 1.2fr;
+ gap:80px;align-items:center;
+}
+.about-visual{
+ min-height:440px;
+ background:var(--pink);
+ position:relative;
+ padding:38px;
+ display:flex;align-items:center;justify-content:center;
+}
+.about-visual:after{
+ content:"";position:absolute;
+ inset:13px;border:1px solid var(--gold);
+ pointer-events:none;
+}
+.about-symbol{
+ text-align:center;color:var(--wine);
+ font-family:var(--serif);
+ position:relative;z-index:1;
+}
+.about-symbol strong{display:block;font-size:52px;font-weight:400}
+.about-symbol span{font-size:10px;letter-spacing:3px;text-transform:uppercase}
+.about-text p{font-size:13px;color:var(--muted);line-height:2.1;margin:18px 0}
+.about-text .btn{margin-top:12px}
+
+/* PHILOSOPHY */
+
+.philosophy{
+ background:var(--cream);
+ position:relative;
+}
+.quote-block{
+ max-width:850px;margin:auto;text-align:center;
+ padding:20px 0;
+}
+.quote-mark{font:100px/.8 var(--serif);color:var(--gold)}
+.quote-block blockquote{
+ font:italic 32px/1.5 var(--serif);
+ color:var(--wine);
+ margin:15px 0 25px;
+}
+.quote-block cite{
+ font-style:normal;font-size:10px;
+ font-weight:800;letter-spacing:2px;
+ color:var(--muted);text-transform:uppercase;
+}
+
+/* INITIATIVES */
+
+.initiatives{background:#fff}
+.initiative-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.initiative-card{
+ background:#fff;border:1px solid var(--line);
+ padding:32px 27px;min-height:255px;
+ position:relative;transition:.3s;
+ overflow:hidden;
+}
+.initiative-card:after{
+ content:"";position:absolute;
+ width:100px;height:100px;
+ border:1px solid #f0e3e5;border-radius:50%;
+ right:-45px;bottom:-45px;
+ transition:.3s;
+}
+.initiative-card:hover{
+ transform:translateY(-7px);
+ box-shadow:var(--shadow);border-color:#d8bdc3;
+}
+.initiative-card:hover:after{transform:scale(1.5)}
+.card-index{font:italic 15px var(--serif);color:var(--gold)}
+.card-icon{
+ width:44px;height:44px;border:1px solid #ead9dd;
+ display:grid;place-items:center;
+ color:var(--wine);margin:19px 0;
+ font-size:19px;
+}
+.initiative-card h3{font:22px var(--serif);color:var(--wine);margin-bottom:9px}
+.initiative-card p{font-size:11px;color:var(--muted);line-height:1.9}
+.card-link{display:inline-block;margin-top:16px;color:var(--wine);font-size:10px;font-weight:800;letter-spacing:1px}
+
+/* INSTITUTION */
+
+.institution{
+ background:var(--wine);
+ color:white;position:relative;overflow:hidden;
+}
+.institution:after{
+ content:"";position:absolute;width:570px;height:570px;
+ border:1px solid #ffffff12;border-radius:50%;
+ right:-200px;top:-220px;
+}
+.institution-grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:65px;align-items:center;position:relative;z-index:2;
+}
+.institution .section-label{color:#e5c69a}
+.institution .section-title{color:white}
+.institution p{font-size:13px;color:#e5d5da;line-height:2;margin:18px 0}
+.institution .btn{background:white;color:var(--wine);border-color:white}
+.institution .btn:hover{background:#f2e6e8}
+.institution-box{
+ background:#ffffff0b;border:1px solid #ffffff35;
+ padding:38px;
+}
+.institution-box h3{font:29px var(--serif);margin-bottom:15px}
+.institution-box .small-label{font-size:9px;letter-spacing:2px;color:#dfc18f;text-transform:uppercase}
+.institution-box ul{list-style:none;margin:22px 0}
+.institution-box li{
+ padding:12px 0;border-bottom:1px solid #ffffff22;
+ font-size:12px;color:#f1e5e8;
+}
+.institution-box li:before{content:"✦";color:var(--gold);margin-right:12px}
+
+/* PUBLIC ENGAGEMENT */
+
+.engagement{background:var(--cream)}
+.engagement-grid{
+ display:grid;grid-template-columns:repeat(2,1fr);gap:17px;
+}
+.engagement-card{
+ background:white;padding:25px;
+ border-left:3px solid var(--gold);
+ display:flex;gap:20px;align-items:center;
+}
+.engagement-number{font:25px var(--serif);color:var(--wine3)}
+.engagement-card h3{font:19px var(--serif);color:var(--wine)}
+.engagement-card p{font-size:10px;color:var(--muted);margin-top:5px}
+
+/* RECOGNITION */
+
+.recognition-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.recognition-card{
+ padding:30px 25px;background:white;
+ border:1px solid var(--line);
+ min-height:175px;
+}
+.recognition-card span{font:italic 14px var(--serif);color:var(--gold)}
+.recognition-card h3{font:20px var(--serif);color:var(--wine);margin:15px 0 8px}
+.recognition-card p{font-size:11px;color:var(--muted)}
+
+/* MEDIA */
+
+.media-section{background:var(--cream)}
+.media-card{
+ background:white;border:1px solid var(--line);
+ padding:27px;display:flex;align-items:center;gap:20px;
+ margin-bottom:13px;transition:.25s;
+}
+.media-card:hover{box-shadow:var(--shadow);transform:translateX(4px)}
+.media-icon{
+ width:48px;height:48px;flex-shrink:0;
+ display:grid;place-items:center;
+ background:var(--pink);color:var(--wine);
+ font-size:20px;
+}
+.media-card small{color:var(--wine3);font-size:9px;letter-spacing:2px;text-transform:uppercase}
+.media-card h3{font:19px var(--serif);color:var(--wine)}
+.media-card .media-arrow{margin-left:auto;color:var(--gold);font-size:23px}
+
+/* GALLERY */
+
+.gallery-grid{
+ display:grid;grid-template-columns:1.2fr 1fr 1fr;
+ grid-template-rows:190px 190px;gap:13px;
+}
+.gallery-placeholder{
+ background:linear-gradient(145deg,#eadadd,#f8f0f1);
+ border:1px solid var(--line);
+ display:flex;align-items:center;justify-content:center;
+ color:var(--wine);position:relative;overflow:hidden;
+}
+.gallery-placeholder:first-child{grid-row:span 2}
+.gallery-placeholder span{
+ font-size:10px;letter-spacing:2px;text-transform:uppercase;
+}
+.gallery-placeholder img{width:100%;height:100%;object-fit:cover}
+.gallery-placeholder:after{
+ content:"";position:absolute;inset:8px;
+ border:1px solid #c5a36b88;pointer-events:none;
+}
+
+/* SUPPORT */
+
+.support{
+ background:linear-gradient(120deg,var(--deep),var(--wine));
+ color:white;
+}
+.support-inner{text-align:center;max-width:760px;margin:auto}
+.support .section-label{justify-content:center;color:#e7c795}
+.support h2{font:500 clamp(34px,4vw,49px)/1.2 var(--serif);margin:20px 0}
+.support p{font-size:13px;line-height:2;color:#e6d7dc;margin-bottom:28px}
+.support .btn{background:white;color:var(--wine);border-color:white}
+.support .btn:hover{background:#f1e4e7}
+
+/* CONTACT */
+
+.contact{background:var(--pink)}
+.contact-grid{
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:65px;align-items:center;
+}
+.contact-info p{font-size:13px;color:var(--muted);line-height:2;margin:15px 0}
+.contact-detail{
+ padding:17px 0;border-bottom:1px solid #e5d5d9;
+ display:flex;gap:16px;align-items:center;
+}
+.contact-detail b{font-size:11px;color:var(--wine);display:block}
+.contact-detail span{font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+.contact-detail .detail-icon{color:var(--gold);font-size:19px}
+.contact-panel{
+ background:white;padding:38px;
+ border:1px solid var(--line);
+ box-shadow:var(--shadow);
+}
+.contact-panel h3{font:27px var(--serif);color:var(--wine);margin-bottom:13px}
+.contact-panel p{font-size:12px;color:var(--muted);line-height:2;margin-bottom:20px}
+
+/* FOOTER */
+
+footer{background:var(--deep);color:white;padding:65px 0 25px}
+.footer-grid{
+ display:grid;grid-template-columns:1.4fr .8fr .8fr;
+ gap:60px;padding-bottom:45px;
+}
+.footer-name{font:24px var(--serif);color:white}
+.footer-description{font-size:11px;color:#bbaab0;line-height:2;margin-top:16px;max-width:350px}
+.footer-heading{
+ font-size:10px;letter-spacing:2px;text-transform:uppercase;
+ color:#d7b985;margin-bottom:19px;
+}
+.footer-links{display:flex;flex-direction:column;gap:11px}
+.footer-links a{font-size:11px;color:#d6c7cc;transition:.2s}
+.footer-links a:hover{color:#e9c993}
+.footer-bottom{
+ border-top:1px solid #ffffff1c;padding-top:22px;
+ display:flex;justify-content:space-between;gap:15px;
+ font-size:10px;color:#a9959d;
+}
+
+/* ANIMATION */
+
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+::selection{background:var(--wine);color:white}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+ .nav-links{gap:14px}
+ .nav-links a{font-size:10px}
+ .hero-grid{gap:40px}
+ .about-grid{gap:45px}
+}
+@media(max-width:760px){
+ .container{width:calc(100% - 34px)}
+ .topbar-right{display:none}
+ .nav{min-height:73px}
+ .brand-name strong{font-size:15px}
+ .brand-logo{width:42px;height:42px}
+ .menu-toggle{display:block}
+ .nav-links{
+  display:none;position:absolute;top:73px;left:0;right:0;
+  padding:18px 25px 25px;background:white;
+  box-shadow:var(--shadow);flex-direction:column;
+  align-items:stretch;gap:0;
+ }
+ .nav-links.active{display:flex}
+ .nav-links a{padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}
+ .nav-links .contact-btn{text-align:center;margin-top:12px;padding:13px}
+ .hero{min-height:0}
+ .hero-grid{grid-template-columns:1fr;padding:65px 0 75px;gap:55px}
+ .hero h1{font-size:53px}
+ .hero-visual{width:85%;max-width:360px}
+ .portrait{height:410px}
+ .portrait-label{left:-15px}
+ .identity-grid{grid-template-columns:1fr;gap:15px;padding:23px 0}
+ .identity-item{padding:0 0 13px!important;border-right:0;border-bottom:1px solid #ffffff2b}
+ .identity-item:last-child{border:0}
+ section{padding:72px 0}
+ .about-grid,.institution-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+ .about-visual{min-height:300px}
+ .quote-block blockquote{font-size:25px}
+ .initiative-grid{grid-template-columns:1fr 1fr;gap:12px}
+ .initiative-card{padding:24px 19px;min-height:240px}
+ .institution-box{padding:25px}
+ .engagement-grid{grid-template-columns:1fr}
+ .recognition-grid{grid-template-columns:1fr 1fr}
+ .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}
+ .gallery-placeholder:first-child{grid-row:span 2}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:35px}
+ .footer-grid>div:first-child{grid-column:span 2}
+}
+@media(max-width:450px){
+ .hero h1{font-size:45px}
+ .hero-subtitle{font-size:10px;letter-spacing:1.4px}
+ .initiative-grid,.recognition-grid{grid-template-columns:1fr}
+ .initiative-card{min-height:0}
+ .gallery-grid{grid-template-rows:140px 140px 140px}
+ .footer-grid{grid-template-columns:1fr}
+ .footer-grid>div:first-child{grid-column:auto}
+ .footer-bottom{flex-direction:column}
+ .contact-panel{padding:25px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;transition:none!important}
+ .reveal{opacity:1;transform:none}
+}
+
+
+/* INITIATIVES PAGE — additions; homepage design system retained */
+.page-hero .hero-grid{grid-template-columns:1.1fr .9fr}
+.page-hero .hero-visual{max-width:430px}
+.page-hero .about-visual{width:100%;min-height:390px}
+.page-hero .about-symbol strong{font-size:64px}
+.page-hero .about-symbol span{display:block;margin-top:8px}
+.page-hero .hero-description{max-width:620px}
+.page-intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:center}
+.page-intro-visual{min-height:330px;background:var(--pink);position:relative;display:flex;align-items:center;justify-content:center;padding:30px}
+.page-intro-visual:after{content:"";position:absolute;inset:13px;border:1px solid var(--gold)}
+.page-intro-visual .about-symbol{z-index:1}
+.page-intro-copy p{font-size:13px;color:var(--muted);line-height:2.1;margin:15px 0}
+.page-intro-copy .section-title{margin-top:15px}
+@media(max-width:760px){
+ .page-hero .hero-grid{grid-template-columns:1fr}
+ .page-hero .hero-visual{width:100%;max-width:100%}
+ .page-hero .about-visual{min-height:250px}
+ .page-intro-grid{grid-template-columns:1fr;gap:30px}
+}
+
+</style>
 </head>
-
 <body>
+<!-- TOP BAR -->
+<div class="topbar">
+ <div class="container topbar-inner">
+  <span>OFFICIAL WEBSITE</span>
+  <div class="topbar-right">
+   <a href="mailto:officialfarmaanhasankhan@gmail.com">Official Correspondence</a>
+   <a href="https://farmaanhasankhan.com/biography/">Biography ↗</a>
+  </div>
+ </div>
+</div>
 
-  <!-- TOP INFORMATION BAR -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-contact">
-        <span>✉ <a href="mailto:officialfarmaanhasankhan@gmail.com">officialfarmaanhasankhan@gmail.com</a></span>
-        <span>☎ <a href="tel:+917870155869">+91 78701 55869</a></span>
-      </div>
-      <span>Service • Humanity • Unity</span>
-    </div>
+<!-- NAVIGATION -->
+<header>
+ <div class="container nav">
+  <a href="home.html" class="brand">
+   <div class="brand-logo">FHK</div>
+   <div class="brand-name">
+    <strong>Dr. Farmaan Hasan Khan</strong>
+    <small>Religious leader and Social activist</small>
+   </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+
+  <nav class="nav-links" id="navLinks">
+   <a href="home.html">Home</a>
+   <a href="biography.html">Biography</a>
+   <a href="#initiatives" aria-current="page">Initiatives</a>
+   <a href="home.html#society">Organisation</a>
+   <a href="home.html#recognition">Recognition</a>
+   <a href="home.html#media">Media</a>
+   <a href="home.html#contact">Contact</a>
+   <a class="contact-btn" href="mailto:officialfarmaanhasankhan@gmail.com">Get in Touch ↗</a>
+  </nav>
+ </div>
+</header>
+
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="hero page-hero" id="top">
+ <div class="container hero-grid">
+  <div class="hero-content reveal">
+   <div class="eyebrow">Compassion in Action</div>
+   <h1>Initiatives &<br><span>Activities</span></h1>
+   <div class="hero-subtitle">Humanitarian Service · Community Welfare · Social Responsibility</div>
+   <p class="hero-description">
+    An overview of the initiatives and public activities associated with
+    Dr. Farmaan Hasan Khan, with a focus on education, healthcare,
+    environmental responsibility, youth opportunity and community welfare.
+   </p>
+   <div class="hero-buttons">
+    <a href="#initiatives" class="btn">EXPLORE INITIATIVES ↗</a>
+    <a href="support.html" class="arrow-link">Support the Mission →</a>
+   </div>
   </div>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <div class="container nav-inner">
-
-      <a href="home.html" class="brand">
-        <div class="brand-mark">FHK</div>
-        <div>
-          <div class="brand-name">Dr. Farmaan Hasan Khan</div>
-          <div class="brand-subtitle">Service Before Self</div>
-        </div>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="biography.html">Biography</a></li>
-        <li><a href="press-releases.html">Press Releases</a></li>
-        <li><a href="initiatives.html" class="active">Initiatives</a></li>
-        <li><a href="media-recognition.html">Media & Recognition</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="support.html" class="nav-donate">Donate Now</a></li>
-      </ul>
-
+  <div class="hero-visual reveal">
+   <div class="about-visual">
+    <div class="about-symbol">
+     <strong>FH</strong>
+     <span>Faith in Humanity</span>
     </div>
-  </header>
+   </div>
+  </div>
+ </div>
+</section>
 
-  <main>
+<!-- IDENTITY STRIP -->
+<div class="identity-strip">
+ <div class="container identity-grid">
+  <div class="identity-item">
+   <strong>Education for All</strong>
+   <span>Opportunity without barriers</span>
+  </div>
+  <div class="identity-item">
+   <strong>Healthcare for Humanity</strong>
+   <span>Care with dignity</span>
+  </div>
+  <div class="identity-item">
+   <strong>Peace & Unity</strong>
+   <span>Building bridges between communities</span>
+  </div>
+ </div>
+</div>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content reveal">
-          <div class="eyebrow">Compassion in Action</div>
-          <h1>Initiatives & <span>Activities</span></h1>
-          <p>
-            Meaningful change begins with meaningful action. Explore initiatives
-            dedicated to humanitarian assistance, healthcare, education,
-            environmental responsibility, women's empowerment and communal harmony.
-          </p>
+<!-- INTRODUCTION -->
+<section>
+ <div class="container page-intro-grid">
+  <div class="page-intro-visual reveal">
+   <div class="about-symbol">
+    <strong>FHK</strong>
+    <span>Service Before Self</span>
+   </div>
+  </div>
+  <div class="page-intro-copy reveal">
+   <div class="section-label">A Commitment to Society</div>
+   <h2 class="section-title">Turning concern into practical support.</h2>
+   <p>
+    Social responsibility becomes meaningful when concern is translated
+    into action. The initiatives associated with Dr. Farmaan Hasan Khan
+    reflect an emphasis on helping people access education, healthcare,
+    skills and opportunities, while encouraging mutual respect and
+    environmental awareness.
+   </p>
+   <p>
+    These efforts are connected with the work of Ala Hazrat Tajushariah
+    Welfare Society and wider community engagement. The central purpose
+    is to support people with dignity and to encourage participation in
+    the welfare of society.
+   </p>
+   <a href="https://ahtskills.org/" class="btn">VISIT WELFARE SOCIETY ↗</a>
+  </div>
+ </div>
+</section>
 
-          <div class="hero-actions">
-            <a href="#initiatives" class="btn btn-gold">Explore Initiatives</a>
-            <a href="support.html" class="btn btn-outline">Support the Mission</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- INITIATIVES -->
+<section class="initiatives" id="initiatives">
+ <div class="container">
+  <div class="section-heading reveal">
+   <div class="section-label">Our Areas of Work</div>
+   <h2 class="section-title">Initiatives that respond to real needs.</h2>
+   <p class="section-description">
+    The following areas represent the principal initiatives highlighted
+    in the official website's overview of social and humanitarian work.
+   </p>
+  </div>
 
-    <!-- INTRODUCTION -->
-    <section class="intro">
-      <div class="container intro-grid">
+  <div class="initiative-grid">
 
-        <div class="reveal">
-          <div class="intro-label">A Commitment to Society</div>
-          <h2>Turning compassion into meaningful action.</h2>
-        </div>
+   <article class="initiative-card reveal">
+    <span class="card-index">01 / EDUCATION</span>
+    <div class="card-icon">✦</div>
+    <h3>Education for All</h3>
+    <p>
+     Educational assistance and learning support for children and
+     students from economically weaker backgrounds, helping them
+     continue their studies and pursue better opportunities.
+    </p>
+    <a href="https://ahtskills.org/" class="card-link">LEARN MORE ↗</a>
+   </article>
 
-        <div class="intro-copy reveal">
-          <p>
-            Social responsibility is reflected not merely in words, but in the
-            efforts made to improve the lives of others. The initiatives
-            associated with Dr. Farmaan Hasan Khan reflect a commitment to
-            humanitarian service, social awareness and community welfare.
-          </p>
+   <article class="initiative-card reveal">
+    <span class="card-index">02 / HEALTHCARE</span>
+    <div class="card-icon">✚</div>
+    <h3>Free Operations</h3>
+    <p>
+     Support for patients who face financial barriers to necessary
+     surgical treatment, helping make essential medical care more
+     accessible to those in need.
+    </p>
+    <a href="https://ahtskills.org/" class="card-link">LEARN MORE ↗</a>
+   </article>
 
-          <p>
-            Through the activities of the Ala Hazrat Tajushariah Welfare Society
-            and associated social efforts, attention is directed towards
-            communities and individuals who need support, opportunity and care.
-          </p>
+   <article class="initiative-card reveal">
+    <span class="card-index">03 / YOUTH</span>
+    <div class="card-icon">◇</div>
+    <h3>Free NEET Coaching</h3>
+    <p>
+     Academic support for deserving students preparing for medical
+     entrance examinations, with the aim of widening access to
+     professional education.
+    </p>
+    <a href="https://ahtskills.org/" class="card-link">LEARN MORE ↗</a>
+   </article>
 
-          <div class="intro-note">
-            “True leadership begins with service and ends with unity.”
-          </div>
-        </div>
+   <article class="initiative-card reveal">
+    <span class="card-index">04 / DIGITAL LEARNING</span>
+    <div class="card-icon">⌘</div>
+    <h3>Free Computer Classes</h3>
+    <p>
+     Opportunities to develop practical computer knowledge and
+     digital skills, helping young people build confidence for
+     education and employment.
+    </p>
+    <a href="https://ahtskills.org/" class="card-link">LEARN MORE ↗</a>
+   </article>
 
-      </div>
-    </section>
+   <article class="initiative-card reveal">
+    <span class="card-index">05 / ENVIRONMENT</span>
+    <div class="card-icon">♧</div>
+    <h3>Tree Plantation Drives</h3>
+    <p>
+     Encouraging environmental responsibility through plantation
+     activities and public awareness about the importance of
+     protecting and improving the natural environment.
+    </p>
+    <a href="https://ahtskills.org/" class="card-link">LEARN MORE ↗</a>
+   </article>
 
-    <!-- INITIATIVES -->
-    <section class="initiatives" id="initiatives">
-      <div class="container">
+   <article class="initiative-card reveal">
+    <span class="card-index">06 / COMMUNITY</span>
+    <div class="card-icon">◎</div>
+    <h3>Peace & Social Harmony</h3>
+    <p>
+     Encouraging mutual respect, communal harmony and constructive
+     engagement among people from different backgrounds.
+    </p>
+    <a href="home.html#media" class="card-link">EXPLORE PUBLIC WORK ↗</a>
+   </article>
 
-        <div class="section-heading reveal">
-          <div class="eyebrow">Areas of Engagement</div>
-          <h2>Initiatives That Make a Difference</h2>
-          <p>
-            A range of social and humanitarian activities focused on dignity,
-            opportunity, awareness and the well-being of communities.
-          </p>
-        </div>
+  </div>
 
-        <div class="initiative-grid">
+  <div class="activity-note reveal">
+   <strong style="color:var(--wine)">A note on programme details:</strong>
+   Specific schedules, eligibility criteria, locations and participation
+   details should be confirmed directly with the organisation before
+   publication or registration.
+  </div>
+ </div>
+</section>
 
-          <!-- 01 -->
-          <article class="initiative-card reveal">
-            <div class="initiative-image">
-              <img
-                src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/9-scaled.jpg"
-                alt="Community awareness and humanitarian activity"
-                loading="lazy">
-              <span class="initiative-number">01</span>
-            </div>
-            <div class="initiative-body">
-              <h3>Humanitarian Aid Drives</h3>
-              <p>
-                Distributing food packets, clothing, medicines and essential
-                supplies to people in need across rural and urban communities.
-                These efforts aim to extend timely assistance with compassion
-                and respect for human dignity.
-              </p>
-              <span class="initiative-tag">Humanitarian Assistance</span>
-            </div>
-          </article>
+<!-- COMMUNITY ENGAGEMENT -->
+<section class="engagement">
+ <div class="container">
+  <div class="section-heading reveal">
+   <div class="section-label">Community Engagement</div>
+   <h2 class="section-title">Service extends beyond programmes.</h2>
+   <p class="section-description">
+    Alongside focused initiatives, public engagement and community
+    participation help strengthen the culture of service.
+   </p>
+  </div>
 
-          <!-- 02 -->
-          <article class="initiative-card reveal">
-            <div class="initiative-image">
-              <img
-                src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/3-scaled.jpg"
-                alt="Community awareness programme"
-                loading="lazy">
-              <span class="initiative-number">02</span>
-            </div>
-            <div class="initiative-body">
-              <h3>Communal Harmony Campaigns</h3>
-              <p>
-                Organising seminars, peace marches and interfaith dialogues
-                to encourage mutual respect and understanding among Hindu,
-                Muslim, Sikh and Christian communities.
-              </p>
-              <span class="initiative-tag">Peace & Social Harmony</span>
-            </div>
-          </article>
-
-          <!-- 03 -->
-          <article class="initiative-card reveal">
-            <div class="initiative-image">
-              <img
-                src="https://farmaanhasankhan.com/wp-content/uploads/2025/06/484991249_9250380978405691_8867787576858421502_n.jpg"
-                alt="Medical and healthcare activity"
-                loading="lazy">
-              <span class="initiative-number">03</span>
-            </div>
-            <div class="initiative-body">
-              <h3>Free Health Camps</h3>
-              <p>
-                Supporting access to medical check-ups, medicines and health
-                awareness programmes, particularly for underserved communities
-                and people with limited access to healthcare facilities.
-              </p>
-              <span class="initiative-tag">Healthcare & Well-being</span>
-            </div>
-          </article>
-
-          <!-- 04 -->
-          <article class="initiative-card reveal">
-            <div class="initiative-image">
-              <img
-                src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/9.png"
-                alt="Women's awareness and empowerment programme"
-                loading="lazy">
-              <span class="initiative-number">04</span>
-            </div>
-            <div class="initiative-body">
-              <h3>Women Empowerment Programmes</h3>
-              <p>
-                Encouraging skill development, awareness and self-employment
-                opportunities so that women can strengthen their confidence,
-                independence and participation in society.
-              </p>
-              <span class="initiative-tag">Empowerment & Opportunity</span>
-            </div>
-          </article>
-
-          <!-- 05 -->
-          <article class="initiative-card reveal">
-            <div class="initiative-image">
-              <img
-                src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/11-scaled.jpg"
-                alt="Tree plantation and environmental awareness activity"
-                loading="lazy">
-              <span class="initiative-number">05</span>
-            </div>
-            <div class="initiative-body">
-              <h3>Environmental Campaigns</h3>
-              <p>
-                Promoting environmental responsibility through tree plantation
-                drives, cleanliness programmes and awareness sessions on
-                protecting nature and adopting eco-friendly practices.
-              </p>
-              <span class="initiative-tag">Environment & Sustainability</span>
-            </div>
-          </article>
-
-          <!-- 06 -->
-          <article class="initiative-card reveal">
-            <div class="initiative-image">
-              <img
-                src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/0-scaled.jpg"
-                alt="Youth awareness and educational programme"
-                loading="lazy">
-              <span class="initiative-number">06</span>
-            </div>
-            <div class="initiative-body">
-              <h3>Youth Engagement & Moral Development</h3>
-              <p>
-                Conducting workshops and motivational sessions that encourage
-                character building, discipline, civic responsibility and
-                constructive participation among young people.
-              </p>
-              <span class="initiative-tag">Youth Development</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- VISUAL JOURNEY -->
-    <section class="visual-section">
-      <div class="container">
-
-        <div class="section-heading reveal">
-          <div class="eyebrow">Moments of Service</div>
-          <h2>In Action: A Visual Journey</h2>
-          <p>
-            A glimpse of community engagement, awareness activities and
-            humanitarian efforts captured through moments from the field.
-          </p>
-        </div>
-
-        <div class="visual-grid">
-
-          <a class="visual-item reveal"
-             href="https://farmaanhasankhan.com/wp-content/uploads/2025/07/9-scaled.jpg"
-             target="_blank" rel="noopener">
-            <img
-              src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/9-scaled.jpg"
-              alt="Community awareness gathering"
-              loading="lazy">
-            <div class="visual-caption">
-              <span>Community Engagement</span>
-              <h3>Awareness and Public Participation</h3>
-            </div>
-          </a>
-
-          <a class="visual-item reveal"
-             href="https://farmaanhasankhan.com/wp-content/uploads/2025/06/484991249_9250380978405691_8867787576858421502_n.jpg"
-             target="_blank" rel="noopener">
-            <img
-              src="https://farmaanhasankhan.com/wp-content/uploads/2025/06/484991249_9250380978405691_8867787576858421502_n.jpg"
-              alt="Healthcare related community activity"
-              loading="lazy">
-            <div class="visual-caption">
-              <span>Healthcare</span>
-              <h3>Health and Well-being</h3>
-            </div>
-          </a>
-
-          <a class="visual-item reveal"
-             href="https://farmaanhasankhan.com/wp-content/uploads/2025/07/9.png"
-             target="_blank" rel="noopener">
-            <img
-              src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/9.png"
-              alt="Women's awareness programme"
-              loading="lazy">
-            <div class="visual-caption">
-              <span>Women Empowerment</span>
-              <h3>Awareness and Empowerment</h3>
-            </div>
-          </a>
-
-          <a class="visual-item reveal"
-             href="https://farmaanhasankhan.com/wp-content/uploads/2025/07/11-scaled.jpg"
-             target="_blank" rel="noopener">
-            <img
-              src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/11-scaled.jpg"
-              alt="Cleanliness and environmental awareness drive"
-              loading="lazy">
-            <div class="visual-caption">
-              <span>Environment</span>
-              <h3>Cleanliness and Green Awareness</h3>
-            </div>
-          </a>
-
-          <a class="visual-item reveal"
-             href="https://farmaanhasankhan.com/wp-content/uploads/2025/07/0-scaled.jpg"
-             target="_blank" rel="noopener">
-            <img
-              src="https://farmaanhasankhan.com/wp-content/uploads/2025/07/0-scaled.jpg"
-              alt="Youth and community awareness programme"
-              loading="lazy">
-            <div class="visual-caption">
-              <span>Youth Engagement</span>
-              <h3>Learning and Public Awareness</h3>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- OUR APPROACH -->
-    <section class="approach">
-      <div class="container">
-
-        <div class="section-heading reveal">
-          <div class="eyebrow">Our Approach</div>
-          <h2>Service With Purpose</h2>
-          <p>
-            Social initiatives are guided by a simple belief: every individual
-            deserves dignity, opportunity and the chance to live a better life.
-          </p>
-        </div>
-
-        <div class="approach-grid">
-
-          <div class="approach-card reveal">
-            <div class="approach-icon">♡</div>
-            <h3>Human Dignity</h3>
-            <p>
-              Extending assistance with compassion, respect and sensitivity
-              towards the needs of individuals and families.
-            </p>
-          </div>
-
-          <div class="approach-card reveal">
-            <div class="approach-icon">✦</div>
-            <h3>Equal Opportunity</h3>
-            <p>
-              Encouraging access to education, healthcare, skills and
-              opportunities for people from different backgrounds.
-            </p>
-          </div>
-
-          <div class="approach-card reveal">
-            <div class="approach-icon">◎</div>
-            <h3>Unity & Understanding</h3>
-            <p>
-              Promoting peace, mutual respect and cooperation across
-              communities through dialogue and collective participation.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- QUOTE -->
-    <section class="quote-section">
-      <div class="container reveal">
-        <div class="quote-mark">“</div>
-        <blockquote>
-          True leadership begins with service and ends with unity.
-        </blockquote>
-        <div class="quote-author">Dr. Farmaan Hasan Khan</div>
-      </div>
-    </section>
-
-    <!-- SUPPORT CTA -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-box reveal">
-
-          <div>
-            <div class="intro-label">Be a Part of the Journey</div>
-            <h2>Let’s make a difference in the lives of others.</h2>
-            <p>
-              Meaningful social change becomes possible when people come
-              together with a shared spirit of compassion and responsibility.
-              Your support can help strengthen humanitarian and welfare efforts.
-            </p>
-          </div>
-
-          <div class="cta-actions">
-            <a href="support.html" class="btn btn-wine">Support the Mission</a>
-            <a href="contact.html" class="btn btn-light">Get in Touch</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-
-      <div class="footer-grid">
-
-        <div>
-          <a href="home.html" class="footer-brand">
-            <div class="brand-mark">FHK</div>
-            <div>
-              <div class="brand-name">Dr. Farmaan Hasan Khan</div>
-              <div class="brand-subtitle">Service Before Self</div>
-            </div>
-          </a>
-
-          <p class="footer-about">
-            Dedicated to humanitarian service, social welfare, peace,
-            education and the betterment of society. A commitment to
-            compassion, dignity and unity.
-          </p>
-        </div>
-
-        <div>
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="biography.html">Biography</a></li>
-            <li><a href="press-releases.html">Press Releases</a></li>
-            <li><a href="initiatives.html">Initiatives & Activities</a></li>
-            <li><a href="media-recognition.html">Media & Recognition</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Social Work</h4>
-          <ul class="footer-links">
-            <li><a href="https://ahtskills.org/" target="_blank" rel="noopener">Ala Hazrat Tajushariah Welfare Society</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="support.html">Support the Mission</a></li>
-            <li><a href="contact.html">Volunteer / Connect</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p><strong>Email</strong><br>
-            <a href="mailto:officialfarmaanhasankhan@gmail.com">officialfarmaanhasankhan@gmail.com</a>
-          </p>
-          <p><strong>Phone</strong><br>
-            <a href="tel:+917351172555">+91 7351172555</a>
-          </p>
-          <p><strong>Head Office</strong><br>
-            51, Qilla Crossing, Bareilly, Uttar Pradesh – 243003
-          </p>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
-        <span>Designed with purpose. Built for service.</span>
-      </div>
-
+  <div class="engagement-grid">
+   <div class="engagement-card reveal">
+    <span class="engagement-number">01</span>
+    <div>
+     <h3>Humanitarian Assistance</h3>
+     <p>Supporting people and families facing difficult circumstances.</p>
     </div>
-  </footer>
+   </div>
+   <div class="engagement-card reveal">
+    <span class="engagement-number">02</span>
+    <div>
+     <h3>Health Awareness</h3>
+     <p>Encouraging access to healthcare and awareness of well-being.</p>
+    </div>
+   </div>
+   <div class="engagement-card reveal">
+    <span class="engagement-number">03</span>
+    <div>
+     <h3>Youth Participation</h3>
+     <p>Encouraging young people to contribute positively to society.</p>
+    </div>
+   </div>
+   <div class="engagement-card reveal">
+    <span class="engagement-number">04</span>
+    <div>
+     <h3>Environmental Responsibility</h3>
+     <p>Promoting public participation in caring for the environment.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
 
-  <script>
-    // Mobile navigation
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+<!-- ORGANISATION -->
+<section class="institution" id="organisation">
+ <div class="container institution-grid">
+  <div class="reveal">
+   <div class="section-label">Institutional Commitment</div>
+   <h2 class="section-title">Ala Hazrat Tajushariah Welfare Society</h2>
+   <p>
+    The Society is associated with welfare initiatives focused on
+    humanitarian assistance, education, healthcare, skill development
+    and community well-being.
+   </p>
+   <p>
+    Its work reflects the belief that lasting social progress requires
+    compassion, organised effort and the participation of people
+    committed to helping others.
+   </p>
+   <a href="https://ahtskills.org/" class="btn">VISIT OFFICIAL WEBSITE ↗</a>
+  </div>
 
-    menuToggle.addEventListener('click', function () {
-      const isOpen = navLinks.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menuToggle.innerHTML = isOpen ? '&times;' : '☰';
-    });
+  <div class="institution-box reveal">
+   <span class="small-label">Areas of Engagement</span>
+   <h3>Working towards community well-being.</h3>
+   <ul>
+    <li>Educational assistance and learning support</li>
+    <li>Medical assistance and free operations</li>
+    <li>NEET coaching and youth development</li>
+    <li>Computer education and digital skills</li>
+    <li>Tree plantation and environmental awareness</li>
+    <li>Humanitarian welfare and social harmony</li>
+   </ul>
+  </div>
+ </div>
+</section>
 
-    // Close mobile menu after selecting a link
-    document.querySelectorAll('.nav-links a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navLinks.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.innerHTML = '☰';
-      });
-    });
+<!-- PARTICIPATION -->
+<section>
+ <div class="container">
+  <div class="section-heading reveal">
+   <div class="section-label">Be Part of the Work</div>
+   <h2 class="section-title">Progress grows when people participate.</h2>
+   <p class="section-description">
+    Individuals, professionals, volunteers and institutions can
+    contribute through time, knowledge, collaboration and support.
+   </p>
+  </div>
 
-    // Reveal animation
-    const revealElements = document.querySelectorAll('.reveal');
+  <div class="recognition-grid">
+   <div class="recognition-card reveal">
+    <span>PARTICIPATE / 01</span>
+    <h3>Volunteer</h3>
+    <p>Offer your time and skills to support community welfare activities.</p>
+   </div>
+   <div class="recognition-card reveal">
+    <span>COLLABORATE / 02</span>
+    <h3>Partner</h3>
+    <p>Explore meaningful collaborations with the organisation.</p>
+   </div>
+   <div class="recognition-card reveal">
+    <span>CONTRIBUTE / 03</span>
+    <h3>Support</h3>
+    <p>Help strengthen initiatives through responsible contributions.</p>
+   </div>
+  </div>
+ </div>
+</section>
 
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.12
-      });
+<!-- SUPPORT CTA -->
+<section class="support">
+ <div class="container support-inner reveal">
+  <div class="section-label">Be Part of the Mission</div>
+  <h2>Compassion becomes powerful when we act together.</h2>
+  <p>
+   Join hands in supporting initiatives that promote education,
+   healthcare, social welfare and human dignity. Every contribution
+   made with sincerity can help strengthen the spirit of service.
+  </p>
+  <a href="support.html" class="btn">SUPPORT THE MISSION ↗</a>
+ </div>
+</section>
 
-      revealElements.forEach(function (element) {
-        observer.observe(element);
-      });
-    } else {
-      revealElements.forEach(function (element) {
-        element.classList.add('visible');
-      });
-    }
-  </script>
+</main>
+<!-- FOOTER -->
+<footer>
+ <div class="container">
 
+  <div class="footer-grid">
+
+   <div>
+    <div class="footer-name">Dr. Farmaan Hasan Khan</div>
+    <p class="footer-description">
+     A life dedicated to humanity, education, peace
+     and social welfare. An ongoing journey of
+     compassion, service and collective progress.
+    </p>
+   </div>
+
+   <div>
+    <div class="footer-heading">Explore</div>
+    <div class="footer-links">
+     <a href="biography.html">Biography</a>
+     <a href="initiatives.html">Initiatives</a>
+     <a href="home.html#society">Organisation</a>
+     <a href="home.html#media">Media & Recognition</a>
+     <a href="gallery.html">Gallery</a>
+    </div>
+   </div>
+
+   <div>
+    <div class="footer-heading">Get Involved</div>
+    <div class="footer-links">
+     <a href="support.html">Support Us</a>
+     <a href="contact.html">Contact</a>
+     <a href="mailto:officialfarmaanhasankhan@gmail.com">Email Office</a>
+     <a href="https://ahtskills.org/">Welfare Society</a>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="footer-bottom">
+   <span>© <span id="currentYear"></span> Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
+   <span>Designed with Purpose & Elegance.</span>
+  </div>
+
+ </div>
+</footer>
+
+<script>
+// Mobile Navigation
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+
+menuToggle.addEventListener('click',()=>{
+ navLinks.classList.toggle('active');
+ menuToggle.textContent=navLinks.classList.contains('active')?'×':'☰';
+});
+
+navLinks.querySelectorAll('a').forEach(link=>{
+ link.addEventListener('click',()=>{
+  navLinks.classList.remove('active');
+  menuToggle.textContent='☰';
+ });
+});
+
+// Dynamic Copyright Year
+document.getElementById('currentYear').textContent=new Date().getFullYear();
+
+// Scroll Reveal
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add('visible');
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:0.12});
+
+document.querySelectorAll('.reveal').forEach(element=>{
+ observer.observe(element);
+});
+</script>
 </body>
 </html>
-
-  
