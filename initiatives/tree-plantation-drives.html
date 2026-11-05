@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about Dr. Farmaan Hasan Khan's environmental conservation efforts and the Ek Paudha Ala Hazrat Ke Naam tree plantation campaign.">
+  <meta name="description" content="Tree Plantation Drive by Dr. Farmaan Hasan Khan, including the Ek Paudha Ala Hazrat Ke Naam campaign launched during the 108th Urs-e-Razvi.">
   <title>Tree Plantation Drive | Dr. Farmaan Hasan Khan</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +24,7 @@
       --text: #40353a;
       --muted: #796e72;
       --border: #eadfe2;
-      --green: #486b50;
-      --green-light: #edf3ed;
-      --shadow: 0 16px 45px rgba(55, 20, 32, .08);
+      --shadow: 0 14px 40px rgba(55, 20, 32, .07);
     }
 
     * {
@@ -41,14 +39,14 @@
 
     body {
       font-family: 'DM Sans', sans-serif;
-      color: var(--text);
       background: var(--cream);
+      color: var(--text);
       line-height: 1.75;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
@@ -59,7 +57,7 @@
     /* Topbar */
     .topbar {
       background: var(--deep);
-      color: rgba(255,255,255,.82);
+      color: rgba(255,255,255,.78);
       font-size: 12px;
       padding: 9px 0;
     }
@@ -259,7 +257,7 @@
       margin-top: 28px;
     }
 
-    /* Main layout */
+    /* Main Content */
     .main-section {
       padding: 76px 0 85px;
     }
@@ -321,55 +319,78 @@
       margin-bottom: 8px;
     }
 
-    /* Campaign feature */
-    .campaign-card {
-      position: relative;
-      overflow: hidden;
+    /* Highlight Box */
+    .highlight-box {
+      background: var(--pink);
+      border-left: 3px solid var(--gold);
+      padding: 29px 30px;
       margin: 34px 0;
-      padding: 35px 35px 32px;
-      background: linear-gradient(135deg, #edf3ed, #f7f8f3);
-      border: 1px solid #dce7dc;
-      border-left: 4px solid var(--green);
-      border-radius: 4px;
     }
 
-    .campaign-card::after {
-      content: "✦";
-      position: absolute;
-      right: 25px;
-      top: 4px;
-      font-size: 100px;
-      color: rgba(72,107,80,.07);
-      line-height: 1;
-    }
-
-    .campaign-label {
-      color: var(--green);
-      text-transform: uppercase;
+    .highlight-box .highlight-label {
+      color: var(--wine2);
       font-size: 10px;
       font-weight: 800;
       letter-spacing: 2px;
-      margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
+      text-transform: uppercase;
+      margin-bottom: 9px;
     }
 
-    .campaign-card h2 {
-      color: #36543d;
-      font-size: 29px;
-      margin: 0 0 14px;
-      position: relative;
-      z-index: 1;
+    .highlight-box h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--wine);
+      font-size: 27px;
+      line-height: 1.35;
+      margin: 0 0 13px;
     }
 
-    .campaign-card p {
-      color: #586a5a;
+    .highlight-box p {
       margin: 0;
-      position: relative;
-      z-index: 1;
+      color: #6b5960;
     }
 
-    /* Quote */
+    /* Commitment Section */
+    .commitment-section {
+      margin-top: 43px;
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .commitment-section h2 {
+      margin-top: 0;
+      font-size: 27px;
+    }
+
+    .commitment-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .commitment-list li {
+      position: relative;
+      padding: 12px 0 12px 27px;
+      border-bottom: 1px solid #f0e8ea;
+      color: #65585e;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .commitment-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .commitment-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    /* Article Quote */
     .article-quote {
       margin: 35px 0;
       padding: 27px 30px;
@@ -380,59 +401,6 @@
       font-size: 21px;
       line-height: 1.65;
       font-weight: 600;
-    }
-
-    .article-quote span {
-      display: block;
-      font-family: 'DM Sans', sans-serif;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-top: 13px;
-    }
-
-    /* Values */
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin: 28px 0 35px;
-    }
-
-    .value-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      padding: 22px 21px;
-      border-radius: 4px;
-    }
-
-    .value-icon {
-      width: 39px;
-      height: 39px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--green-light);
-      color: var(--green);
-      font-size: 18px;
-      margin-bottom: 13px;
-    }
-
-    .value-item h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      margin: 0 0 7px;
-      color: var(--wine);
-      font-weight: 800;
-    }
-
-    .value-item p {
-      font-size: 12px;
-      line-height: 1.75;
-      margin: 0;
-      color: var(--muted);
     }
 
     /* Sidebar */
@@ -525,7 +493,7 @@
       background: var(--white);
     }
 
-    /* Closing section */
+    /* Closing Section */
     .closing-section {
       background: var(--pink);
       padding: 66px 0;
@@ -753,12 +721,12 @@
         font-size: 25px;
       }
 
-      .campaign-card {
-        padding: 26px 23px;
+      .highlight-box {
+        padding: 24px 22px;
       }
 
-      .campaign-card h2 {
-        font-size: 24px;
+      .highlight-box h2 {
+        font-size: 23px;
       }
 
       .article-quote {
@@ -766,8 +734,8 @@
         font-size: 19px;
       }
 
-      .values-grid {
-        grid-template-columns: 1fr;
+      .commitment-section {
+        padding: 23px 20px;
       }
 
       .sidebar {
@@ -793,7 +761,7 @@
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="topbar-contact">
-        <span>✉ <a href="mailto:office@farmaanhasankhan.com">office@farmaanhasankhan.com</a></span>
+        <span>✉ <a href="mailto:officialfarmaanhasankhan@gmail.com">officialfarmaanhasankhan@gmail.com</a></span>
         <span>☎ <a href="tel:+917870155869">+91 78701 55869</a></span>
       </div>
     </div>
@@ -843,12 +811,12 @@
   <section class="page-hero">
     <div class="container">
       <div class="hero-content">
-        <div class="eyebrow">Environmental Conservation</div>
+        <div class="eyebrow">Initiatives &amp; Activities</div>
         <h1>Tree Plantation Drive</h1>
         <p>
-          Building a greener tomorrow through environmental awareness,
-          community participation and the simple yet meaningful act
-          of planting trees.
+          Encouraging environmental responsibility through tree plantation,
+          community participation and the belief that a greener tomorrow
+          begins with the actions we take today.
         </p>
         <div class="hero-line"></div>
       </div>
@@ -861,57 +829,49 @@
 
       <article class="article">
 
-        <div class="section-kicker">A Responsibility Beyond Today</div>
+        <div class="section-kicker">Environmental Conservation</div>
 
         <p class="article-intro">
           For Farmaan Hasan Khan, social service is not only about helping
           people in the present. It is also about thinking of the people
           who will come after us. A cleaner neighbourhood, a healthier
           environment and a greener tomorrow are all part of the same
-          responsibility.
+          responsibility. This belief has shaped his growing work in
+          environmental conservation, particularly through tree
+          plantation drives.
         </p>
 
         <p>
-          This belief has shaped his growing work in environmental
-          conservation, particularly through tree plantation drives.
           What may appear to be a simple act of putting a sapling into
           the soil carries a much deeper message: if we care about our
           communities, we must also care about the environment in which
           those communities live.
         </p>
 
-        <p>
-          Tree plantation is a meaningful way to encourage people to
-          participate in the protection of their surroundings. It brings
-          attention to the importance of greenery and reminds communities
-          that environmental responsibility is something everyone can
-          contribute to.
-        </p>
-
-        <!-- Campaign Feature -->
-        <div class="campaign-card">
-          <div class="campaign-label">A Campaign with a Message</div>
-          <h2>Ek Paudha Ala Hazrat Ke Naam</h2>
-          <p>
-            Remembering a respected personality through an act that
-            continues to benefit people, nature and future generations.
-          </p>
-        </div>
-
-        <h2>The “Ek Paudha Aala Hazrat Ke Naam” Campaign</h2>
+        <h2>“Ek Paudha Ala Hazrat Ke Naam”</h2>
 
         <p>
           A significant step in this journey came during the
           <strong>108th Urs-e-Razvi</strong>, with the launch of the
-          <strong>“Ek Paudha Aala Hazrat Ke Naam”</strong> campaign.
+          <strong>“Ek Paudha Ala Hazrat Ke Naam”</strong> campaign.
         </p>
 
         <p>
-          As reported by <strong>Live Hindustan</strong>, the campaign
-          was launched to promote environmental consciousness and
-          encourage people to plant trees in the name of
+          As reported by Live Hindustan, the campaign was launched to
+          promote environmental consciousness and encourage people to
+          plant trees in the name of
           <strong>Aala Hazrat Imam Ahmad Raza Khan Fazil-e-Bareilvi</strong>.
         </p>
+
+        <div class="highlight-box">
+          <div class="highlight-label">The Campaign</div>
+          <h2>Ek Paudha Ala Hazrat Ke Naam</h2>
+          <p>
+            A call to remember a great personality through an act that
+            benefits people and nature, while encouraging communities
+            to take an active role in environmental conservation.
+          </p>
+        </div>
 
         <p>
           The appeal was not restricted to one city or one organisation.
@@ -929,16 +889,15 @@
         <div class="article-quote">
           A tree does not ask who planted it or where a person comes
           from. It gives shade to everyone.
-          <span>The spirit of environmental service</span>
         </div>
 
-        <h2>Planting Trees, Nurturing Communities</h2>
+        <h2>A Meaningful Act of Service</h2>
 
         <p>
-          A tree is more than a part of the landscape. It contributes
+          A tree does not distinguish between people. It contributes
           to cleaner air, supports biodiversity and quietly becomes
-          part of the life of a community. Its shade can serve people
-          across generations, without distinction.
+          part of the life of a community. Its shade and benefits can
+          extend to generations who may never know who planted it.
         </p>
 
         <p>
@@ -955,76 +914,58 @@
           community responsibility.
         </p>
 
-        <h2>Why Tree Plantation Matters</h2>
+        <h2>Encouraging Collective Participation</h2>
 
         <p>
-          Environmental conservation begins with awareness, but it
-          becomes meaningful when awareness leads to action. Tree
-          plantation offers individuals and institutions a practical
-          opportunity to participate in creating healthier surroundings.
+          The campaign carries an appeal for people and institutions
+          to take the message of plantation into their own communities.
+          Devotees, ulema, imams, madrasas, mosques and social
+          organisations all have a role to play in encouraging
+          environmental consciousness.
         </p>
 
-        <div class="values-grid">
+        <p>
+          By making tree plantation a collective effort, the initiative
+          seeks to turn a meaningful message into practical community
+          participation. Each person and institution can contribute
+          in its own way to the wider purpose of environmental care.
+        </p>
 
-          <div class="value-item">
-            <div class="value-icon">🌿</div>
-            <h3>Cleaner Environment</h3>
-            <p>
-              Encouraging greenery and contributing to cleaner,
-              healthier surroundings.
-            </p>
-          </div>
+        <!-- Commitment Section -->
+        <div class="commitment-section">
+          <div class="section-kicker">The Purpose</div>
+          <h2>A Commitment to a Greener Tomorrow</h2>
 
-          <div class="value-item">
-            <div class="value-icon">🌳</div>
-            <h3>Community Participation</h3>
-            <p>
-              Bringing individuals, institutions and local communities
-              together around a shared responsibility.
-            </p>
-          </div>
+          <p>
+            The broader purpose of this initiative is to encourage
+            lasting awareness and responsibility towards the natural
+            environment.
+          </p>
 
-          <div class="value-item">
-            <div class="value-icon">🍃</div>
-            <h3>Environmental Awareness</h3>
-            <p>
-              Promoting a greater understanding of the importance
-              of trees and environmental conservation.
-            </p>
-          </div>
-
-          <div class="value-item">
-            <div class="value-icon">🌱</div>
-            <h3>A Greener Tomorrow</h3>
-            <p>
-              Encouraging actions today that can benefit future
-              generations.
-            </p>
-          </div>
-
+          <ul class="commitment-list">
+            <li>Promoting awareness about the importance of tree plantation.</li>
+            <li>Encouraging individuals and communities to participate in environmental conservation.</li>
+            <li>Inspiring devotees, ulema, imams and religious institutions to spread the message.</li>
+            <li>Taking the plantation campaign to local communities and neighbourhoods.</li>
+            <li>Recognising environmental care as an important part of social responsibility.</li>
+          </ul>
         </div>
 
-        <h2>A Shared Responsibility for the Future</h2>
+        <h2>Service That Looks Towards the Future</h2>
 
         <p>
-          The message of the campaign goes beyond the act of planting
-          a sapling. It encourages people to see environmental care
-          as an essential part of social responsibility.
+          For Farmaan Hasan Khan, the message of this initiative goes
+          beyond planting a sapling. It is about encouraging people
+          to recognise that the well-being of a community is closely
+          connected with the environment around it.
         </p>
 
         <p>
-          Whether through an individual effort, a religious institution,
-          an educational centre or a social organisation, every
-          contribution can help strengthen awareness and inspire
-          others to take part.
-        </p>
-
-        <p>
-          For Farmaan Hasan Khan, the larger purpose is to encourage
-          a culture in which service to humanity also includes care
-          for the natural world. A greener environment is not merely
-          an aspiration for today; it is a responsibility towards
-          those who will inherit tomorrow.
+          A greener neighbourhood, a healthier environment and a
+          culture of collective responsibility are goals that require
+          participation from everyone. Through initiatives such as
+          “Ek Paudha Ala Hazrat Ke Naam”, the effort is to inspire
+          people to make environmental care a part of everyday life.
         </p>
 
       </article>
@@ -1033,45 +974,53 @@
       <aside class="sidebar">
 
         <div class="sidebar-card">
-          <h3>Our Initiatives</h3>
+          <h3>Non Profit Works</h3>
           <ul class="sidebar-links">
-            <li><a href="/initiatives/education-for-all.html">Education for All</a></li>
+            <li><a href="/initiatives/tree-plantation-drive.html">Tree Plantation Drives</a></li>
             <li><a href="/initiatives/free-operations.html">Free Operations</a></li>
+            <li><a href="/initiatives/free-neet-coaching.html">Free NEET Coachings</a></li>
+            <li><a href="/initiatives/education-for-all.html">Education for All</a></li>
             <li><a href="/initiatives/free-computer-classes.html">Free Computer Classes</a></li>
-            <li><a href="/initiatives/free-neet-coaching.html">Free NEET Coaching</a></li>
-            <li><a href="/initiatives/tree-plantation-drive.html">Tree Plantation Drive</a></li>
           </ul>
         </div>
 
         <div class="sidebar-card">
           <h3>Know More</h3>
           <ul class="sidebar-links">
-            <li><a href="/biography.html/">Biography</a></li>
-             
-            <li><a href="/media-recognition.html/">Media &amp; Recognition</a></li>
-            
+            <li><a href="/biography/">Biography</a></li>
+            <li><a href="/press-releases/">Press Releases</a></li>
+            <li><a href="/initiatives/">Initiatives &amp; Activities</a></li>
+            <li><a href="/media-recognition/">Media &amp; Recognition</a></li>
           </ul>
         </div>
 
         <div class="sidebar-card dark">
-          <h3>Connect With Us</h3>
+          <h3>Contact the Team</h3>
           <p>
-            For information about initiatives, activities and
-            opportunities to contribute, get in touch with the team.
+            For further information about initiatives, activities
+            and opportunities to contribute, get in touch with the team.
           </p>
+
           <div class="sidebar-contact">
             <p>
               Email:<br>
-              <a href="mailto:office@farmaanhasankhan.com">
-                office@farmaanhasankhan.com
+              <a href="mailto:officialfarmaanhasankhan@gmail.com">
+                officialfarmaanhasankhan@gmail.com
               </a>
             </p>
+
             <p>
               Phone:<br>
               <a href="tel:+917351172555">+91 7351172555</a>
             </p>
+
+            <p>
+              Head Office:<br>
+              51, Qilla Crossing, Bareilly, Uttar Pradesh (243003)
+            </p>
           </div>
-          <a href="/contact/" class="sidebar-button">Contact the Team →</a>
+
+          <a href="/contact/" class="sidebar-button">Connect Now →</a>
         </div>
 
       </aside>
@@ -1083,11 +1032,11 @@
   <section class="closing-section">
     <div class="container closing-inner">
       <div class="eyebrow">A Greener Tomorrow</div>
-      <h2>Let Every Sapling Become a Promise for the Future</h2>
+      <h2>Let Us Plant Today for a Better Tomorrow</h2>
       <p>
-        Caring for the environment is a responsibility we share.
-        Through awareness, participation and meaningful action,
-        communities can help nurture a greener and healthier tomorrow.
+        Environmental conservation is a shared responsibility.
+        Every effort to nurture nature is an investment in the
+        well-being of future generations.
       </p>
     </div>
   </section>
@@ -1132,21 +1081,21 @@
           <h4>Contact</h4>
           <ul>
             <li>
-              <a href="mailto:office@farmaanhasankhan.com">
-                office@farmaanhasankhan.com
+              <a href="mailto:officialfarmaanhasankhan@gmail.com">
+                officialfarmaanhasankhan@gmail.com
               </a>
             </li>
             <li><a href="tel:+917351172555">+91 7351172555</a></li>
-            <li>51, Qilla Crossing, Bareilly, Uttar Pradesh (243003)</li>
-            <li>NH24 Rampur Road, New Troll Plaza, Fatehganj, West Bareilly, Bareilly, Uttar Pradesh (243501)</li>
+            <li>Head Office: 51, Qilla Crossing, Bareilly, Uttar Pradesh (243003)</li>
+            <li>Corporate Office: NH24 Rampur Road, New Troll Plaza, Fatehganj, West Bareilly, Bareilly, Uttar Pradesh (243501)</li>
           </ul>
         </div>
 
       </div>
 
       <div class="footer-bottom">
-        <span>© <span id="year"></span> Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
-        
+        <span>© <span id="year"></span> Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
+        <span>Designed with purpose and responsibility.</span>
       </div>
 
     </div>
