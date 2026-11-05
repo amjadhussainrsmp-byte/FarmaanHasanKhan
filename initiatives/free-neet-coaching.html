@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#501827">
+<meta name="description" content="Free NEET Coaching initiative by Dr. Farmaan Hasan Khan, supporting deserving students from financially weaker backgrounds in pursuing medical education.">
+<title>Free NEET Coaching | Dr. Farmaan Hasan Khan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --wine:#501827;
+ --wine2:#702a3d;
+ --wine3:#8c485a;
+ --deep:#291019;
+ --gold:#c5a36b;
+ --cream:#fbf8f6;
+ --pink:#f5edef;
+ --white:#fff;
+ --ink:#30252a;
+ --muted:#81747a;
+ --line:#eadde0;
+ --serif:'Playfair Display',serif;
+ --sans:'DM Sans',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+ font-family:var(--sans);
+ background:var(--white);
+ color:var(--ink);
+ line-height:1.7;
+ overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1200px,calc(100% - 48px));margin:auto}
+
+/* TOP BAR */
+.topbar{
+ background:var(--deep);
+ color:#e9dce0;
+ padding:8px 0;
+ font-size:10px;
+ letter-spacing:1.2px;
+}
+.topbar-inner{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:15px;
+}
+.topbar a{color:#e7cda6}
+.topbar-right{display:flex;gap:22px}
+
+/* HEADER */
+header{
+ position:sticky;
+ top:0;
+ z-index:100;
+ background:rgba(255,255,255,.96);
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid var(--line);
+}
+.nav{
+ min-height:86px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:20px;
+}
+.brand{display:flex;align-items:center;gap:13px}
+.brand-logo{
+ width:49px;
+ height:49px;
+ border:1px solid var(--gold);
+ background:var(--wine);
+ color:white;
+ display:grid;
+ place-items:center;
+ font-family:var(--serif);
+ font-size:19px;
+ border-radius:50%;
+}
+.brand-name strong{
+ display:block;
+ font-family:var(--serif);
+ font-size:17px;
+ color:var(--wine);
+ line-height:1.3;
+}
+.brand-name small{
+ font-size:9px;
+ letter-spacing:2px;
+ color:var(--muted);
+ text-transform:uppercase;
+}
+.nav-links{
+ display:flex;
+ align-items:center;
+ gap:25px;
+}
+.nav-links a{
+ font-size:11px;
+ font-weight:700;
+ color:#51444a;
+ transition:.25s;
+}
+.nav-links a:hover{color:var(--wine3)}
+.nav-links .contact-btn{
+ background:var(--wine);
+ color:white;
+ padding:12px 19px;
+}
+.nav-links .contact-btn:hover{background:var(--deep)}
+.menu-toggle{
+ display:none;
+ background:none;
+ border:1px solid var(--line);
+ color:var(--wine);
+ padding:8px 12px;
+ font-size:22px;
+ cursor:pointer;
+}
+
+/* BREADCRUMB */
+.breadcrumb-wrap{
+ background:var(--cream);
+ border-bottom:1px solid var(--line);
+}
+.breadcrumb{
+ padding:14px 0;
+ font-size:10px;
+ color:var(--muted);
+}
+.breadcrumb a{color:var(--wine);font-weight:700}
+.breadcrumb span{padding:0 9px;color:var(--gold)}
+
+/* HERO */
+.page-hero{
+ position:relative;
+ overflow:hidden;
+ background:
+ radial-gradient(ellipse at 88% 30%,#f1e4e6 0%,transparent 42%),
+ linear-gradient(105deg,#fff 0%,#fff 58%,#faf4f3 100%);
+ padding:86px 0 92px;
+}
+.page-hero:before,.page-hero:after{
+ content:"";
+ position:absolute;
+ border:1px solid rgba(80,24,39,.07);
+ border-radius:50%;
+ pointer-events:none;
+}
+.page-hero:before{
+ width:590px;height:590px;
+ right:-190px;top:-170px;
+}
+.page-hero:after{
+ width:440px;height:440px;
+ right:-110px;top:-95px;
+ border-color:#c5a36b55;
+}
+.page-hero-inner{
+ position:relative;
+ z-index:1;
+ max-width:850px;
+}
+.eyebrow{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ color:var(--wine3);
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:3px;
+ text-transform:uppercase;
+}
+.eyebrow:before{
+ content:"";
+ width:34px;
+ height:1px;
+ background:var(--gold);
+}
+.page-hero h1{
+ font:500 clamp(44px,6vw,70px)/1.1 var(--serif);
+ letter-spacing:-1.5px;
+ color:var(--deep);
+ margin:22px 0 18px;
+}
+.page-hero h1 span{color:var(--wine3);font-style:italic}
+.page-hero .lead{
+ max-width:740px;
+ font-size:14px;
+ line-height:2;
+ color:var(--muted);
+}
+.page-hero-meta{
+ display:flex;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:27px;
+}
+.meta-chip{
+ border:1px solid #e7d8dc;
+ background:#ffffffb8;
+ color:var(--wine);
+ padding:9px 14px;
+ font-size:9px;
+ font-weight:800;
+ letter-spacing:1.2px;
+ text-transform:uppercase;
+}
+
+/* MAIN CONTENT */
+.page-content{padding:85px 0 95px}
+.content-grid{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) 310px;
+ gap:65px;
+ align-items:start;
+}
+.article-body{max-width:790px}
+.article-body p{
+ color:#71656b;
+ font-size:13px;
+ line-height:2.05;
+ margin-bottom:22px;
+}
+.article-body .article-intro{
+ font:500 21px/1.75 var(--serif);
+ color:var(--wine);
+ margin-bottom:28px;
+}
+.article-body h2{
+ font:500 29px/1.3 var(--serif);
+ color:var(--deep);
+ margin:47px 0 17px;
+}
+.article-body strong{color:var(--wine);font-weight:700}
+
+/* HIGHLIGHT */
+.highlight-panel{
+ margin:35px 0;
+ padding:29px 30px;
+ background:var(--cream);
+ border-left:3px solid var(--gold);
+}
+.highlight-panel p{
+ margin:0;
+ font:500 19px/1.7 var(--serif);
+ color:var(--wine);
+}
+
+/* SIDEBAR */
+.article-aside{position:sticky;top:115px}
+.aside-card{
+ background:var(--cream);
+ border:1px solid var(--line);
+ padding:29px 27px;
+ margin-bottom:20px;
+}
+.aside-kicker{
+ color:var(--wine3);
+ font-size:9px;
+ font-weight:800;
+ letter-spacing:2px;
+ text-transform:uppercase;
+}
+.aside-card h3{
+ font:500 25px/1.35 var(--serif);
+ color:var(--deep);
+ margin:13px 0;
+}
+.aside-card p{
+ color:var(--muted);
+ font-size:11px;
+ line-height:1.9;
+ margin-bottom:17px;
+}
+.aside-links{list-style:none}
+.aside-links li{
+ position:relative;
+ padding:11px 0 11px 17px;
+ border-top:1px solid var(--line);
+ color:#6f6268;
+ font-size:11px;
+ line-height:1.7;
+}
+.aside-links li:before{
+ content:"";
+ position:absolute;
+ left:0;
+ top:19px;
+ width:5px;
+ height:5px;
+ background:var(--gold);
+ border-radius:50%;
+}
+.aside-links a{color:var(--wine);font-weight:700}
+.aside-links a:hover{color:var(--wine3)}
+
+/* IMPACT STRIP */
+.impact-strip{
+ background:var(--wine);
+ padding:35px 0;
+ color:white;
+}
+.impact-inner{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ text-align:center;
+ gap:20px;
+}
+.impact-number{
+ font:500 38px/1.2 var(--serif);
+ color:#e5cda9;
+}
+.impact-label{
+ margin-top:7px;
+ color:#eadde0;
+ font-size:10px;
+ letter-spacing:1.1px;
+ text-transform:uppercase;
+}
+
+/* COMMITMENT */
+.commitment{
+ background:var(--cream);
+ padding:90px 0;
+ border-top:1px solid var(--line);
+ border-bottom:1px solid var(--line);
+}
+.section-heading{margin-bottom:45px}
+.section-label{
+ color:var(--wine3);
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:3px;
+ text-transform:uppercase;
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+.section-label:before{
+ content:"";
+ height:1px;
+ width:30px;
+ background:var(--gold);
+}
+.section-title{
+ font:500 clamp(34px,4vw,48px)/1.2 var(--serif);
+ color:var(--deep);
+ margin:17px 0;
+}
+.section-description{
+ font-size:13px;
+ color:var(--muted);
+ line-height:2;
+ max-width:640px;
+}
+.commitment-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:1px;
+ background:var(--line);
+ border:1px solid var(--line);
+}
+.commitment-item{
+ background:white;
+ padding:30px;
+ display:flex;
+ gap:22px;
+ align-items:flex-start;
+}
+.commitment-mark{
+ font:500 25px var(--serif);
+ color:var(--gold);
+ min-width:35px;
+}
+.commitment-item p{
+ font-size:12px;
+ color:var(--muted);
+ line-height:1.9;
+}
+.commitment-item strong{
+ display:block;
+ color:var(--wine);
+ font-size:13px;
+ margin-bottom:5px;
+}
+
+/* CLOSING */
+.closing-quote{
+ background:var(--wine);
+ color:white;
+ padding:90px 0;
+ text-align:center;
+ position:relative;
+ overflow:hidden;
+}
+.closing-quote:before,.closing-quote:after{
+ content:"";
+ position:absolute;
+ border:1px solid #ffffff12;
+ border-radius:50%;
+ pointer-events:none;
+}
+.closing-quote:before{
+ width:500px;height:500px;
+ left:-250px;top:-250px;
+}
+.closing-quote:after{
+ width:600px;height:600px;
+ right:-300px;bottom:-350px;
+}
+.closing-inner{
+ position:relative;
+ z-index:1;
+ max-width:850px;
+ margin:auto;
+}
+.closing-quote .section-label{
+ justify-content:center;
+ color:#e5cda9;
+}
+.closing-quote .section-label:before{background:var(--gold)}
+.closing-quote h2{
+ font:500 clamp(32px,4.5vw,51px)/1.25 var(--serif);
+ margin:22px 0;
+}
+.closing-quote p{
+ color:#eadde0;
+ font-size:13px;
+ line-height:2;
+ max-width:700px;
+ margin:0 auto 30px;
+}
+.btn{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ background:white;
+ color:var(--wine);
+ padding:14px 23px;
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:1px;
+ border:1px solid white;
+ transition:.3s;
+}
+.btn:hover{
+ background:transparent;
+ color:white;
+}
+
+/* FOOTER */
+footer{
+ background:var(--deep);
+ color:white;
+ padding:65px 0 25px;
+}
+.footer-grid{
+ display:grid;
+ grid-template-columns:1.5fr 1fr 1fr;
+ gap:65px;
+ padding-bottom:45px;
+}
+.footer-name{
+ font:500 25px var(--serif);
+ margin-bottom:15px;
+}
+.footer-description{
+ color:#c7b8bd;
+ font-size:11px;
+ line-height:2;
+ max-width:330px;
+}
+.footer-heading{
+ color:#e5cda9;
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:2px;
+ text-transform:uppercase;
+ margin-bottom:20px;
+}
+.footer-links{
+ display:flex;
+ flex-direction:column;
+ gap:12px;
+}
+.footer-links a{
+ color:#c7b8bd;
+ font-size:11px;
+ transition:.2s;
+}
+.footer-links a:hover{color:#e5cda9}
+.footer-bottom{
+ border-top:1px solid #ffffff20;
+ padding-top:22px;
+ color:#bcaeb3;
+ font-size:10px;
+}
+
+/* ANIMATION */
+.reveal{
+ opacity:0;
+ transform:translateY(20px);
+ transition:opacity .7s ease,transform .7s ease;
+}
+.reveal.visible{
+ opacity:1;
+ transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+ .nav-links{gap:15px}
+ .nav-links a{font-size:10px}
+ .content-grid{
+  grid-template-columns:minmax(0,1fr) 280px;
+  gap:35px;
+ }
+}
+@media(max-width:760px){
+ .container{width:min(100% - 34px,600px)}
+ .topbar{font-size:9px}
+ .topbar-right{gap:12px}
+ .nav{min-height:75px}
+ .brand-logo{width:43px;height:43px}
+ .brand-name strong{font-size:15px}
+ .brand-name small{font-size:8px}
+ .menu-toggle{display:block}
+ .nav-links{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  right:0;
+  background:white;
+  padding:18px 24px 25px;
+  border-bottom:1px solid var(--line);
+  box-shadow:0 15px 25px #29101912;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+ }
+ .nav-links.active{display:flex}
+ .nav-links a{
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
+ }
+ .nav-links .contact-btn{
+  margin-top:13px;
+  text-align:center;
+  padding:13px;
+ }
+ .page-hero{padding:65px 0 70px}
+ .page-hero h1{font-size:48px}
+ .page-content{padding:60px 0}
+ .content-grid{grid-template-columns:1fr;gap:35px}
+ .article-aside{
+  position:static;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:15px;
+ }
+ .aside-card{margin:0}
+ .article-body h2{font-size:26px;margin-top:36px}
+ .article-body .article-intro{font-size:19px}
+ .impact-inner{grid-template-columns:1fr;gap:25px}
+ .impact-number{font-size:34px}
+ .commitment{padding:65px 0}
+ .commitment-grid{grid-template-columns:1fr}
+ .commitment-item{padding:23px}
+ .closing-quote{padding:70px 0}
+ .footer-grid{
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+ }
+ .footer-grid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:430px){
+ .topbar-right a:first-child{display:none}
+ .footer-grid{grid-template-columns:1fr}
+ .footer-grid>div:first-child{grid-column:auto}
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+ <div class="container topbar-inner">
+  <span>OFFICIAL WEBSITE</span>
+  <div class="topbar-right">
+   <a href="mailto:officialfarmaanhasankhan@gmail.com">Official Correspondence</a>
+   <a href="/biography.html/">Biography ↗</a>
+  </div>
+ </div>
+</div>
+
+<!-- HEADER -->
+<header>
+ <div class="container nav">
+
+  <a href="/" class="brand">
+   <div class="brand-logo">FHK</div>
+   <div class="brand-name">
+    <strong>Dr. Farmaan Hasan Khan</strong>
+    <small>Religious Leader and Social Activist</small>
+   </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle"
+   aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+  <nav class="nav-links" id="navLinks">
+   <a href="/">Home</a>
+   <a href="/biography.html/">Biography</a>
+   <a href="/initiatives.html" aria-current="page">Initiatives</a>
+   <a href="/awards.html">Awards</a>
+   <a href="/media-recognition.html/">Media & Recognition</a>
+   <a href="/contact.html/">Contact</a>
+   <a class="contact-btn" href="mailto:officialfarmaanhasankhan@gmail.com">Get in Touch ↗</a>
+  </nav>
+
+ </div>
+</header>
+
+<main>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-wrap">
+ <div class="container breadcrumb">
+  <a href="/">Home</a>
+  <span>›</span>
+  <a href="/initiatives.html">Initiatives & Activities</a>
+  <span>›</span>
+  Free NEET Coaching
+ </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+ <div class="container page-hero-inner reveal">
+
+  <div class="eyebrow">Education and Youth Empowerment</div>
+
+  <h1>Free <span>NEET Coaching</span></h1>
+
+  <p class="lead">
+   Turning Medical Dreams into Real Opportunities. Helping deserving students pursue their ambition of becoming doctors through access to coaching, educational guidance and support.
+  </p>
+
+  <div class="page-hero-meta">
+   <span class="meta-chip">Free Coaching</span>
+   <span class="meta-chip">Medical Education</span>
+   <span class="meta-chip">Equal Opportunity</span>
+  </div>
+
+ </div>
+</section>
+
+<!-- IMPACT STRIP -->
+<section class="impact-strip">
+ <div class="container impact-inner">
+  <div>
+   <div class="impact-number">107</div>
+   <div class="impact-label">Students Supported</div>
+  </div>
+  <div>
+   <div class="impact-number">2025</div>
+   <div class="impact-label">Urs-e-Razvi Welfare Programme</div>
+  </div>
+  <div>
+   <div class="impact-number">NEET</div>
+   <div class="impact-label">Medical Entrance Preparation</div>
+  </div>
+ </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="page-content">
+ <div class="container content-grid">
+
+  <article class="article-body">
+
+   <p class="article-intro">
+    For many young people, becoming a doctor is a dream that begins in childhood. But by the time they reach the stage of preparing for NEET, the cost of coaching, study material and proper guidance can become a serious barrier.
+   </p>
+
+   <p>
+    For Farmaan Hasan Khan, a student's financial circumstances should never be the reason a dream is abandoned. This belief is at the heart of his <strong>Free NEET Coaching</strong> initiative — an effort to give deserving students access to guidance and educational support without making their family's financial position a condition for opportunity.
+   </p>
+
+   <p>
+    The idea is straightforward: talent should get a chance, hard work should be supported and a student's future should not depend entirely on their ability to pay for coaching.
+   </p>
+
+   <h2>When Coaching Becomes a Barrier</h2>
+
+   <p>
+    NEET preparation is demanding. Students spend months and often years preparing for one of the country's most competitive entrance examinations.
+   </p>
+
+   <p>
+    For families with limited means, the challenge can be much greater. Private coaching, study resources and the wider cost of preparation can place considerable pressure on parents.
+   </p>
+
+   <p>
+    There are students who have the ability to compete but simply do not have access to the same resources as others. Free NEET coaching seeks to bridge that gap.
+   </p>
+
+   <p>
+    It is about giving a student a fairer starting point — a place where they can prepare, ask questions, learn from experienced educators and remain focused on their goal.
+   </p>
+
+   <h2>Education Without a Price Tag</h2>
+
+   <p>
+    The initiative is built around a simple principle: quality educational support should reach those who need it most.
+   </p>
+
+   <p>
+    Under Farmaan Hasan Khan's social initiatives, free educational and coaching support has been extended to students from financially weaker backgrounds. During the <strong>2025 Urs-e-Razvi welfare programme</strong>, 107 students, including NEET aspirants and school students from Classes 6 to 12, were provided free education and coaching support.
+   </p>
+
+   <div class="highlight-panel">
+    <p>
+     What makes an educational initiative meaningful is not simply the number of students reached. It is the possibility represented by each individual student.
+    </p>
+   </div>
+
+   <p>
+    Behind every aspiring doctor is a family hoping for a better future. Providing access to preparation and guidance can help students take an important step towards that future.
+   </p>
+
+   <h2>From a Classroom to a Medical College</h2>
+
+   <p>
+    The ultimate purpose of coaching is not merely to complete a syllabus. It is to help students reach the next stage of their lives.
+   </p>
+
+   <p>
+    Farmaan Hasan Khan's official biography highlights students who have secured admission to government colleges through the free NEET coaching initiative.
+   </p>
+
+   <p>
+    For those students, the journey from preparation to admission represents much more than an examination result. It is proof that when the right guidance meets determination, circumstances do not necessarily have to dictate the outcome.
+   </p>
+
+   <p>
+    One student entering medical college can also change the future of an entire family.
+   </p>
+
+   <h2>Supporting the Dream of Becoming a Doctor</h2>
+
+   <p>
+    A doctor does more than earn a profession. Doctors treat patients, support families and often become a source of hope during some of the most difficult moments in people's lives.
+   </p>
+
+   <p>
+    That is why helping a deserving young person pursue medicine can have an impact far beyond one individual.
+   </p>
+
+   <p>
+    The Free NEET Coaching initiative seeks to identify and support students who are serious about their studies and determined to build a career in medicine, particularly those who might otherwise struggle to access adequate preparation.
+   </p>
+
+   <div class="highlight-panel">
+    <p>
+     Your circumstances may be difficult, but your ambitions do not have to be small.
+    </p>
+   </div>
+
+   <h2>More Than Coaching</h2>
+
+   <p>
+    Good coaching is not only about teaching chapters. Students preparing for NEET need discipline, regular guidance, encouragement and the confidence to keep going when preparation becomes difficult.
+   </p>
+
+   <p>
+    The initiative therefore represents a broader educational support system — one that seeks to encourage students to remain focused on their studies and believe that they are capable of competing at the highest level.
+   </p>
+
+   <p>
+    For a student who has never had access to professional coaching, simply having someone say "you can do this" can make a difference.
+   </p>
+
+   <h2>Giving Back Through Education</h2>
+
+   <p>
+    There is also a wider social idea behind the initiative. A student who receives an opportunity today may become the person who provides opportunities to others tomorrow.
+   </p>
+
+   <p>
+    A doctor who comes from a modest background can understand the difficulties faced by ordinary families in a very personal way. Their success can inspire younger students in their own community to dream bigger.
+   </p>
+
+   <p>
+    In this sense, free coaching is not charity alone. It is an investment in people.
+   </p>
+
+   <h2>Building Equal Opportunity</h2>
+
+   <p>
+    The aim is not to suggest that every student will become a doctor. NEET is highly competitive, and success requires sustained effort.
+   </p>
+
+   <p>
+    The aim is to ensure that a student who has the ability and determination to try is not stopped at the very beginning because coaching was unaffordable.
+   </p>
+
+   <p>
+    That is where equal opportunity begins — by making sure that a lack of resources does not automatically mean a lack of possibility.
+   </p>
+
+   <h2>A Wider Educational Vision</h2>
+
+   <p>
+    Free NEET Coaching forms part of Farmaan Hasan Khan's wider commitment to education and youth development.
+   </p>
+
+   <p>
+    Alongside educational material distribution and support for school students, the initiative focuses on creating pathways for young people who want to pursue ambitious careers.
+   </p>
+
+   <p>
+    His approach places education at the centre of social development because an educated and skilled generation is better equipped to support families, strengthen communities and contribute to the country.
+   </p>
+
+   <h2>Our Commitment</h2>
+
+   <p>
+    Through the Free NEET Coaching initiative, the focus is on:
+   </p>
+
+   <p>
+    <strong>Free coaching support:</strong> Providing educational and coaching assistance to deserving NEET aspirants.
+   </p>
+
+   <p>
+    <strong>Equal access to preparation:</strong> Helping students from financially weaker backgrounds access better preparation.
+   </p>
+
+   <p>
+    <strong>Professional education:</strong> Encouraging young people to pursue their ambition of entering the medical profession.
+   </p>
+
+   <p>
+    <strong>Guidance and motivation:</strong> Supporting students with encouragement and guidance throughout their preparation.
+   </p>
+
+   <p>
+    <strong>Opportunity beyond financial capacity:</strong> Creating opportunities based on ability and determination rather than a family's financial position.
+   </p>
+
+   <p>
+    <strong>A culture of giving back:</strong> Encouraging successful students to contribute to society and help others in the future.
+   </p>
+
+   <h2>A Dream Worth Supporting</h2>
+
+   <p>
+    Some dreams are written in expensive notebooks. Others are written on the backs of old pages, carried quietly in the hearts of students who simply want one opportunity.
+   </p>
+
+   <p>
+    The Free NEET Coaching initiative is about finding those students and helping them move forward.
+   </p>
+
+   <p>
+    Because behind every NEET aspirant is a dream — to wear a white coat, to treat patients, to make their parents proud and to build a life through education.
+   </p>
+
+   <p>
+    Farmaan Hasan Khan's message is simple: if a deserving student has the determination to study, society should do its best to make sure that money does not become the reason that dream ends.
+   </p>
+
+   <p>
+    Give a student the opportunity to prepare today — and you may help create the doctor who serves tomorrow.
+   </p>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="article-aside">
+
+   <div class="aside-card">
+    <span class="aside-kicker">The Purpose</span>
+    <h3>Turning medical dreams into real opportunities.</h3>
+
+    <p>
+     The initiative aims to support deserving NEET aspirants, particularly those who face financial barriers to accessing quality coaching and educational guidance.
+    </p>
+
+    <ul class="aside-links">
+     <li>Free coaching support for deserving NEET aspirants</li>
+     <li>Better preparation opportunities for financially weaker students</li>
+     <li>Encouragement towards professional medical education</li>
+     <li>Guidance and motivation during preparation</li>
+     <li>Equal opportunity regardless of financial capacity</li>
+     <li>Encouraging successful students to give back to society</li>
+    </ul>
+   </div>
+
+   <div class="aside-card">
+    <span class="aside-kicker">Explore More</span>
+    <h3>Other areas of work</h3>
+
+    <ul class="aside-links">
+     <li><a href="/initiatives.html">All Initiatives & Activities ↗</a></li>
+     <li><a href="/initiatives/education-for-all.html">Education for All ↗</a></li>
+     <li><a href="/initiatives/free-operations.html">Free Operations ↗</a></li>
+     <li><a href="/initiatives/free-computer-classes.html">Free Computer Classes ↗</a></li>
+     <li><a href="/initiatives/tree-plantation.html">Tree Plantation Drive ↗</a></li>
+    </ul>
+   </div>
+
+  </aside>
+
+ </div>
+</section>
+
+<!-- COMMITMENT SECTION -->
+<section class="commitment">
+ <div class="container">
+
+  <div class="section-heading reveal">
+   <div class="section-label">Our Commitment</div>
+
+   <h2 class="section-title">An opportunity to prepare. A future to pursue.</h2>
+
+   <p class="section-description">
+    Every deserving student should have the opportunity to work towards their ambitions. The initiative seeks to make educational support more accessible and help young people move forward through learning.
+   </p>
+  </div>
+
+  <div class="commitment-grid">
+
+   <div class="commitment-item reveal">
+    <span class="commitment-mark">01</span>
+    <p>
+     <strong>Access to Coaching</strong>
+     Providing free coaching support to deserving students preparing for NEET.
+    </p>
+   </div>
+
+   <div class="commitment-item reveal">
+    <span class="commitment-mark">02</span>
+    <p>
+     <strong>Support for Underprivileged Students</strong>
+     Helping students from financially weaker backgrounds access better preparation opportunities.
+    </p>
+   </div>
+
+   <div class="commitment-item reveal">
+    <span class="commitment-mark">03</span>
+    <p>
+     <strong>Guidance and Encouragement</strong>
+     Supporting students with guidance, motivation and the confidence to continue their preparation.
+    </p>
+   </div>
+
+   <div class="commitment-item reveal">
+    <span class="commitment-mark">04</span>
+    <p>
+     <strong>A Culture of Giving Back</strong>
+     Encouraging future professionals to use their success and abilities to contribute to society.
+    </p>
+   </div>
+
+  </div>
+ </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing-quote">
+ <div class="container closing-inner reveal">
+
+  <div class="section-label">The Vision</div>
+
+  <h2>Give a student the opportunity to prepare today — and you may help create the doctor who serves tomorrow.</h2>
+
+  <p>
+   Behind every aspiring doctor is a dream, a family and a future waiting to be built. Financial hardship should never be the reason that a deserving student's ambition comes to an end.
+  </p>
+
+  <a href="/initiatives.html" class="btn">EXPLORE ALL INITIATIVES ↗</a>
+
+ </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+ <div class="container">
+
+  <div class="footer-grid">
+
+   <div>
+    <div class="footer-name">Dr. Farmaan Hasan Khan</div>
+    <p class="footer-description">
+     A life dedicated to humanity, education, peace
+     and social welfare. An ongoing journey of
+     compassion, service and collective progress.
+    </p>
+   </div>
+
+   <div>
+    <div class="footer-heading">Explore</div>
+    <div class="footer-links">
+     <a href="/biography.html/">Biography</a>
+     <a href="/initiatives.html">Initiatives</a>
+     <a href="/awards.html">Awards</a>
+     <a href="/media-recognition.html/">Media & Recognition</a>
+    </div>
+   </div>
+
+   <div>
+    <div class="footer-heading">Get Involved</div>
+    <div class="footer-links">
+     <a href="/support/">Support Us</a>
+     <a href="/contact.html/">Contact</a>
+     <a href="mailto:officialfarmaanhasankhan@gmail.com">Email Office</a>
+     <a href="https://ahtskills.org/">Welfare Society</a>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="footer-bottom">
+   <span>© <span id="currentYear"></span> Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
+  </div>
+
+ </div>
+</footer>
+
+<script>
+// Mobile Navigation
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', () => {
+ const open = navLinks.classList.toggle('active');
+ menuToggle.textContent = open ? '×' : '☰';
+ menuToggle.setAttribute('aria-expanded', String(open));
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+ link.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  menuToggle.textContent = '☰';
+  menuToggle.setAttribute('aria-expanded', 'false');
+ });
+});
+
+// Dynamic Copyright Year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Scroll Reveal
+const observer = new IntersectionObserver(entries => {
+ entries.forEach(entry => {
+  if (entry.isIntersecting) {
+   entry.target.classList.add('visible');
+   observer.unobserve(entry.target);
+  }
+ });
+}, {threshold:0.12});
+
+document.querySelectorAll('.reveal').forEach(element => {
+ observer.observe(element);
+});
+</script>
+
+</body>
+</html>
