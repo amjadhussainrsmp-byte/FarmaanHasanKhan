@@ -1,1 +1,1177 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Dr. Farmaan Hasan Khan's environmental conservation efforts and the Ek Paudha Ala Hazrat Ke Naam tree plantation campaign.">
+  <title>Tree Plantation Drive | Dr. Farmaan Hasan Khan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --wine: #501827;
+      --wine2: #702a3d;
+      --wine3: #8c485a;
+      --deep: #291019;
+      --gold: #c5a36b;
+      --cream: #fbf8f6;
+      --pink: #f5edef;
+      --white: #ffffff;
+      --text: #40353a;
+      --muted: #796e72;
+      --border: #eadfe2;
+      --green: #486b50;
+      --green-light: #edf3ed;
+      --shadow: 0 16px 45px rgba(55, 20, 32, .08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.75;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 44px));
+      margin: auto;
+    }
+
+    /* Topbar */
+    .topbar {
+      background: var(--deep);
+      color: rgba(255,255,255,.82);
+      font-size: 12px;
+      padding: 9px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .topbar-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .topbar a:hover {
+      color: var(--gold);
+    }
+
+    /* Header */
+    .site-header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid rgba(80,24,39,.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(35,10,20,.035);
+    }
+
+    .header-inner {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 49px;
+      height: 49px;
+      border: 1px solid var(--gold);
+      background: var(--wine);
+      color: var(--gold);
+      display: grid;
+      place-items: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      font-weight: 700;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      color: var(--wine);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      display: block;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      font-weight: 700;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav a {
+      color: #493b40;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .25s;
+      white-space: nowrap;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--wine2);
+    }
+
+    .nav .donate-link {
+      color: var(--white);
+      background: var(--wine);
+      padding: 11px 18px;
+      border-radius: 3px;
+    }
+
+    .nav .donate-link:hover {
+      background: var(--wine2);
+      color: var(--white);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--wine);
+      width: 43px;
+      height: 43px;
+      border-radius: 3px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: 18px 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .breadcrumb a {
+      color: var(--wine2);
+      font-weight: 700;
+    }
+
+    .breadcrumb span {
+      margin: 0 8px;
+      color: #b7a9ae;
+    }
+
+    /* Hero */
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 88% 18%, rgba(197,163,107,.17), transparent 25%),
+        linear-gradient(115deg, #3d1422 0%, #64283a 58%, #7b3c4d 100%);
+      color: var(--white);
+      padding: 83px 0 86px;
+    }
+
+    .page-hero::after {
+      content: "";
+      position: absolute;
+      width: 370px;
+      height: 370px;
+      border: 1px solid rgba(220,190,139,.22);
+      border-radius: 50%;
+      right: -110px;
+      bottom: -235px;
+      box-shadow: 0 0 0 35px rgba(220,190,139,.035),
+                  0 0 0 75px rgba(220,190,139,.025);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 17px;
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 5vw, 57px);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .page-hero p {
+      color: rgba(255,255,255,.83);
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 720px;
+    }
+
+    .hero-line {
+      width: 65px;
+      height: 2px;
+      background: var(--gold);
+      margin-top: 28px;
+    }
+
+    /* Main layout */
+    .main-section {
+      padding: 76px 0 85px;
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .article {
+      min-width: 0;
+    }
+
+    .article-intro {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      line-height: 1.75;
+      color: var(--wine);
+      font-weight: 600;
+      margin-bottom: 27px;
+    }
+
+    .article p {
+      font-size: 15px;
+      line-height: 1.95;
+      color: #65585e;
+      margin-bottom: 21px;
+    }
+
+    .article h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--wine);
+      font-size: 29px;
+      line-height: 1.3;
+      margin: 43px 0 19px;
+      font-weight: 600;
+    }
+
+    .article h3 {
+      color: var(--wine2);
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      margin: 28px 0 12px;
+    }
+
+    .article strong {
+      color: var(--wine);
+      font-weight: 700;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    /* Campaign feature */
+    .campaign-card {
+      position: relative;
+      overflow: hidden;
+      margin: 34px 0;
+      padding: 35px 35px 32px;
+      background: linear-gradient(135deg, #edf3ed, #f7f8f3);
+      border: 1px solid #dce7dc;
+      border-left: 4px solid var(--green);
+      border-radius: 4px;
+    }
+
+    .campaign-card::after {
+      content: "✦";
+      position: absolute;
+      right: 25px;
+      top: 4px;
+      font-size: 100px;
+      color: rgba(72,107,80,.07);
+      line-height: 1;
+    }
+
+    .campaign-label {
+      color: var(--green);
+      text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .campaign-card h2 {
+      color: #36543d;
+      font-size: 29px;
+      margin: 0 0 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .campaign-card p {
+      color: #586a5a;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Quote */
+    .article-quote {
+      margin: 35px 0;
+      padding: 27px 30px;
+      background: var(--pink);
+      border-left: 3px solid var(--gold);
+      color: var(--wine);
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .article-quote span {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 13px;
+    }
+
+    /* Values */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin: 28px 0 35px;
+    }
+
+    .value-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 22px 21px;
+      border-radius: 4px;
+    }
+
+    .value-icon {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green-light);
+      color: var(--green);
+      font-size: 18px;
+      margin-bottom: 13px;
+    }
+
+    .value-item h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      margin: 0 0 7px;
+      color: var(--wine);
+      font-weight: 800;
+    }
+
+    .value-item p {
+      font-size: 12px;
+      line-height: 1.75;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: sticky;
+      top: 115px;
+    }
+
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 27px;
+      margin-bottom: 22px;
+      border-radius: 4px;
+    }
+
+    .sidebar-card.dark {
+      background: var(--wine);
+      border-color: var(--wine);
+      color: var(--white);
+    }
+
+    .sidebar-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--wine);
+      font-size: 21px;
+      margin-bottom: 17px;
+    }
+
+    .sidebar-card.dark h3 {
+      color: var(--white);
+    }
+
+    .sidebar-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .sidebar-card.dark p {
+      color: rgba(255,255,255,.76);
+    }
+
+    .sidebar-links {
+      list-style: none;
+    }
+
+    .sidebar-links li {
+      border-bottom: 1px solid var(--border);
+      padding: 11px 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #65585e;
+    }
+
+    .sidebar-links li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .sidebar-links a:hover {
+      color: var(--wine2);
+    }
+
+    .sidebar-contact {
+      font-size: 12px;
+      line-height: 1.8;
+      color: rgba(255,255,255,.82);
+      overflow-wrap: anywhere;
+    }
+
+    .sidebar-contact a {
+      color: var(--gold);
+    }
+
+    .sidebar-button {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 10px 17px;
+      background: var(--gold);
+      color: var(--deep);
+      font-size: 11px;
+      font-weight: 800;
+      border-radius: 2px;
+      transition: .25s;
+    }
+
+    .sidebar-button:hover {
+      background: var(--white);
+    }
+
+    /* Closing section */
+    .closing-section {
+      background: var(--pink);
+      padding: 66px 0;
+      text-align: center;
+    }
+
+    .closing-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .closing-section .eyebrow {
+      color: var(--wine2);
+    }
+
+    .closing-section h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--wine);
+      font-size: clamp(28px, 4vw, 39px);
+      line-height: 1.3;
+      margin-bottom: 17px;
+    }
+
+    .closing-section p {
+      color: #716168;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--deep);
+      color: rgba(255,255,255,.75);
+      padding: 62px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .footer-col p {
+      font-size: 12px;
+      line-height: 1.9;
+      color: rgba(255,255,255,.62);
+    }
+
+    .footer-col h4 {
+      color: var(--gold);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: rgba(255,255,255,.68);
+    }
+
+    .footer-col a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.11);
+      padding: 19px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      font-size: 11px;
+      color: rgba(255,255,255,.48);
+    }
+
+    /* Responsive */
+    @media (max-width: 1050px) {
+      .nav {
+        gap: 15px;
+      }
+
+      .nav a {
+        font-size: 11px;
+      }
+
+      .content-layout {
+        gap: 35px;
+        grid-template-columns: minmax(0, 1fr) 280px;
+      }
+
+      .footer-grid {
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .header-inner {
+        min-height: 76px;
+      }
+
+      .nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: var(--white);
+        padding: 15px 22px 22px;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 15px 25px rgba(35,10,20,.09);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .nav a {
+        padding: 12px 0;
+        border-bottom: 1px solid #f0e8ea;
+        font-size: 13px;
+      }
+
+      .nav .donate-link {
+        text-align: center;
+        margin-top: 12px;
+        padding: 12px;
+      }
+
+      .content-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .sidebar-card {
+        margin: 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 32px, 1160px);
+      }
+
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .topbar-contact {
+        justify-content: center;
+        gap: 7px 16px;
+      }
+
+      .topbar-contact span {
+        font-size: 10px;
+      }
+
+      .brand-mark {
+        width: 43px;
+        height: 43px;
+        font-size: 18px;
+      }
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .brand-subtitle {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+
+      .page-hero {
+        padding: 62px 0 65px;
+      }
+
+      .page-hero h1 {
+        font-size: 38px;
+      }
+
+      .page-hero p {
+        font-size: 14px;
+      }
+
+      .main-section {
+        padding: 50px 0 60px;
+      }
+
+      .article-intro {
+        font-size: 19px;
+      }
+
+      .article h2 {
+        font-size: 25px;
+      }
+
+      .campaign-card {
+        padding: 26px 23px;
+      }
+
+      .campaign-card h2 {
+        font-size: 24px;
+      }
+
+      .article-quote {
+        padding: 22px;
+        font-size: 19px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-contact">
+        <span>✉ <a href="mailto:office@farmaanhasankhan.com">office@farmaanhasankhan.com</a></span>
+        <span>☎ <a href="tel:+917870155869">+91 78701 55869</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/" class="brand">
+        <div class="brand-mark">FH</div>
+        <div>
+          <div class="brand-name">Dr. Farmaan Hasan Khan</div>
+          <span class="brand-subtitle">Fida-e-Waqaar-e-Millat</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="/">Home</a>
+        <a href="/biography/">Biography</a>
+        <a href="/founder/">Founder</a>
+        <a href="/press-releases/">Press Releases</a>
+        <a href="/initiatives/" class="active">Initiatives</a>
+        <a href="/media-recognition/">Media &amp; Recognition</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/contact/">Contact</a>
+        <a href="/support/" class="donate-link">Donate Now</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container breadcrumb">
+    <a href="/">Home</a>
+    <span>›</span>
+    <a href="/initiatives/">Initiatives &amp; Activity</a>
+    <span>›</span>
+    Tree Plantation Drive
+  </div>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">Environmental Conservation</div>
+        <h1>Tree Plantation Drive</h1>
+        <p>
+          Building a greener tomorrow through environmental awareness,
+          community participation and the simple yet meaningful act
+          of planting trees.
+        </p>
+        <div class="hero-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-section">
+    <div class="container content-layout">
+
+      <article class="article">
+
+        <div class="section-kicker">A Responsibility Beyond Today</div>
+
+        <p class="article-intro">
+          For Farmaan Hasan Khan, social service is not only about helping
+          people in the present. It is also about thinking of the people
+          who will come after us. A cleaner neighbourhood, a healthier
+          environment and a greener tomorrow are all part of the same
+          responsibility.
+        </p>
+
+        <p>
+          This belief has shaped his growing work in environmental
+          conservation, particularly through tree plantation drives.
+          What may appear to be a simple act of putting a sapling into
+          the soil carries a much deeper message: if we care about our
+          communities, we must also care about the environment in which
+          those communities live.
+        </p>
+
+        <p>
+          Tree plantation is a meaningful way to encourage people to
+          participate in the protection of their surroundings. It brings
+          attention to the importance of greenery and reminds communities
+          that environmental responsibility is something everyone can
+          contribute to.
+        </p>
+
+        <!-- Campaign Feature -->
+        <div class="campaign-card">
+          <div class="campaign-label">A Campaign with a Message</div>
+          <h2>Ek Paudha Ala Hazrat Ke Naam</h2>
+          <p>
+            Remembering a respected personality through an act that
+            continues to benefit people, nature and future generations.
+          </p>
+        </div>
+
+        <h2>The “Ek Paudha Aala Hazrat Ke Naam” Campaign</h2>
+
+        <p>
+          A significant step in this journey came during the
+          <strong>108th Urs-e-Razvi</strong>, with the launch of the
+          <strong>“Ek Paudha Aala Hazrat Ke Naam”</strong> campaign.
+        </p>
+
+        <p>
+          As reported by <strong>Live Hindustan</strong>, the campaign
+          was launched to promote environmental consciousness and
+          encourage people to plant trees in the name of
+          <strong>Aala Hazrat Imam Ahmad Raza Khan Fazil-e-Bareilvi</strong>.
+        </p>
+
+        <p>
+          The appeal was not restricted to one city or one organisation.
+          Devotees, ulema, imams, madrasas, mosques and social
+          organisations were encouraged to participate and take the
+          message of plantation to their own areas.
+        </p>
+
+        <p>
+          The idea behind the campaign is beautifully simple: remember
+          a great personality by planting something that will continue
+          to benefit people and nature.
+        </p>
+
+        <div class="article-quote">
+          A tree does not ask who planted it or where a person comes
+          from. It gives shade to everyone.
+          <span>The spirit of environmental service</span>
+        </div>
+
+        <h2>Planting Trees, Nurturing Communities</h2>
+
+        <p>
+          A tree is more than a part of the landscape. It contributes
+          to cleaner air, supports biodiversity and quietly becomes
+          part of the life of a community. Its shade can serve people
+          across generations, without distinction.
+        </p>
+
+        <p>
+          That makes a tree a particularly meaningful symbol of service.
+          The act of planting is simple, but its benefits can extend
+          far beyond the person who plants it. It is a contribution
+          to shared spaces and to the well-being of people who may
+          never know who planted the tree.
+        </p>
+
+        <p>
+          Through this initiative, the emphasis is on encouraging
+          environmental awareness and making plantation a shared
+          community responsibility.
+        </p>
+
+        <h2>Why Tree Plantation Matters</h2>
+
+        <p>
+          Environmental conservation begins with awareness, but it
+          becomes meaningful when awareness leads to action. Tree
+          plantation offers individuals and institutions a practical
+          opportunity to participate in creating healthier surroundings.
+        </p>
+
+        <div class="values-grid">
+
+          <div class="value-item">
+            <div class="value-icon">🌿</div>
+            <h3>Cleaner Environment</h3>
+            <p>
+              Encouraging greenery and contributing to cleaner,
+              healthier surroundings.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">🌳</div>
+            <h3>Community Participation</h3>
+            <p>
+              Bringing individuals, institutions and local communities
+              together around a shared responsibility.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">🍃</div>
+            <h3>Environmental Awareness</h3>
+            <p>
+              Promoting a greater understanding of the importance
+              of trees and environmental conservation.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">🌱</div>
+            <h3>A Greener Tomorrow</h3>
+            <p>
+              Encouraging actions today that can benefit future
+              generations.
+            </p>
+          </div>
+
+        </div>
+
+        <h2>A Shared Responsibility for the Future</h2>
+
+        <p>
+          The message of the campaign goes beyond the act of planting
+          a sapling. It encourages people to see environmental care
+          as an essential part of social responsibility.
+        </p>
+
+        <p>
+          Whether through an individual effort, a religious institution,
+          an educational centre or a social organisation, every
+          contribution can help strengthen awareness and inspire
+          others to take part.
+        </p>
+
+        <p>
+          For Farmaan Hasan Khan, the larger purpose is to encourage
+          a culture in which service to humanity also includes care
+          for the natural world. A greener environment is not merely
+          an aspiration for today; it is a responsibility towards
+          those who will inherit tomorrow.
+        </p>
+
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+
+        <div class="sidebar-card">
+          <h3>Our Initiatives</h3>
+          <ul class="sidebar-links">
+            <li><a href="/initiatives/education-for-all.html">Education for All</a></li>
+            <li><a href="/initiatives/free-operations.html">Free Operations</a></li>
+            <li><a href="/initiatives/free-computer-classes.html">Free Computer Classes</a></li>
+            <li><a href="/initiatives/free-neet-coaching.html">Free NEET Coaching</a></li>
+            <li><a href="/initiatives/tree-plantation-drive.html">Tree Plantation Drive</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Know More</h3>
+          <ul class="sidebar-links">
+            <li><a href="/biography.html/">Biography</a></li>
+             
+            <li><a href="/media-recognition.html/">Media &amp; Recognition</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="sidebar-card dark">
+          <h3>Connect With Us</h3>
+          <p>
+            For information about initiatives, activities and
+            opportunities to contribute, get in touch with the team.
+          </p>
+          <div class="sidebar-contact">
+            <p>
+              Email:<br>
+              <a href="mailto:office@farmaanhasankhan.com">
+                office@farmaanhasankhan.com
+              </a>
+            </p>
+            <p>
+              Phone:<br>
+              <a href="tel:+917351172555">+91 7351172555</a>
+            </p>
+          </div>
+          <a href="/contact/" class="sidebar-button">Contact the Team →</a>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Closing Section -->
+  <section class="closing-section">
+    <div class="container closing-inner">
+      <div class="eyebrow">A Greener Tomorrow</div>
+      <h2>Let Every Sapling Become a Promise for the Future</h2>
+      <p>
+        Caring for the environment is a responsibility we share.
+        Through awareness, participation and meaningful action,
+        communities can help nurture a greener and healthier tomorrow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-brand">Dr. Farmaan Hasan Khan</div>
+          <p>
+            Dedicated to social welfare, education, healthcare,
+            humanitarian service and community development.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/biography/">Biography</a></li>
+            <li><a href="/founder/">Founder</a></li>
+            <li><a href="/press-releases/">Press Releases</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Work</h4>
+          <ul>
+            <li><a href="/initiatives/">Initiatives &amp; Activities</a></li>
+            <li><a href="/initiatives/education-for-all.html">Education for All</a></li>
+            <li><a href="/initiatives/free-operations.html">Free Operations</a></li>
+            <li><a href="/initiatives/free-neet-coaching.html">Free NEET Coaching</a></li>
+            <li><a href="/initiatives/tree-plantation-drive.html">Tree Plantation Drive</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a href="mailto:office@farmaanhasankhan.com">
+                office@farmaanhasankhan.com
+              </a>
+            </li>
+            <li><a href="tel:+917351172555">+91 7351172555</a></li>
+            <li>51, Qilla Crossing, Bareilly, Uttar Pradesh (243003)</li>
+            <li>NH24 Rampur Road, New Troll Plaza, Fatehganj, West Bareilly, Bareilly, Uttar Pradesh (243501)</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
+        
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuToggle.innerHTML = isOpen ? '&times;' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '☰';
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
