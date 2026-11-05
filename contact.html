@@ -378,6 +378,9 @@ a {
     line-height: 1.9;
 }
 
+const yearElement = document.getElementById('currentYear');
+if (yearElement) yearElement.textContent = new Date().getFullYear();
+
 /* CONTACT FORM */
 
 .form-panel {
@@ -700,57 +703,201 @@ a {
         height: 43px;
     }
 }
+
+/* HOME PAGE DESIGN SYSTEM — CONTACT PAGE */
+:root {
+ --wine:#501827;
+ --wine2:#702a3d;
+ --wine3:#8c485a;
+ --deep:#291019;
+ --gold:#c5a36b;
+ --cream:#fbf8f6;
+ --pink:#f5edef;
+ --white:#fff;
+ --ink:#30252a;
+ --muted:#81747a;
+ --line:#eadde0;
+ --serif:'Playfair Display',Georgia,serif;
+ --sans:'DM Sans',Arial,sans-serif;
+ --shadow:0 20px 65px rgba(65,20,35,.11);
+}
+html{scroll-padding-top:90px}
+body{background:#fff;color:var(--ink);overflow-x:hidden}
+.container{width:min(1200px,calc(100% - 48px));margin:auto}
+
+/* Shared top bar and navigation — matched to home page */
+.topbar{background:var(--deep);color:#e9dce0;padding:8px 0;font-size:10px;letter-spacing:1.2px}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.topbar a{color:#e7cda6}
+.topbar-right{display:flex;gap:22px}
+header{
+ position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);
+ backdrop-filter:blur(15px);border-bottom:1px solid var(--line);
+ box-shadow:none;
+}
+.nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
+.brand-logo{
+ width:49px;height:49px;border:1px solid var(--gold);background:var(--wine);
+ color:#fff;display:grid;place-items:center;font:19px var(--serif);border-radius:50%;
+}
+.brand-name{color:var(--wine);font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.3}
+.brand-name strong{display:block;font-family:var(--serif);font-size:17px;color:var(--wine);line-height:1.3}
+.brand-name small{display:block;font:9px var(--sans);letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:0}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{font-size:11px;font-weight:700;color:#51444a;transition:.25s}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--wine3)}
+.nav-links .contact-btn{background:var(--wine);color:#fff;padding:12px 19px}
+.nav-links .contact-btn:hover{background:var(--deep);color:#fff}
+.menu-toggle{
+ display:none;background:none;border:1px solid var(--line);color:var(--wine);
+ padding:8px 12px;font-size:22px;cursor:pointer;
+}
+
+/* A lighter, editorial contact hero that follows the home-page visual language */
+.contact-hero{
+ min-height:360px;padding:85px 0 75px;color:var(--deep);position:relative;overflow:hidden;
+ background:
+  radial-gradient(ellipse at 85% 40%,#f1e4e6 0%,transparent 40%),
+  linear-gradient(105deg,#fff 0%,#fff 60%,#faf4f3 100%);
+}
+.contact-hero:before{
+ content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(80,24,39,.07);
+ border-radius:50%;right:-150px;top:-160px;pointer-events:none;
+}
+.contact-hero:after{
+ content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(197,163,107,.35);
+ border-radius:50%;right:-90px;top:-95px;pointer-events:none;
+}
+.contact-hero .container{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:12px;color:var(--wine3);font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+.eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
+.contact-hero h1{font:500 clamp(48px,6vw,68px)/1.08 var(--serif);letter-spacing:-1px;color:var(--deep);margin:22px 0 18px}
+.contact-hero p{max-width:650px;color:var(--muted);font-size:14px;line-height:2}
+.breadcrumb{margin-top:25px;font-size:10px;letter-spacing:1.5px;color:var(--muted)}
+.breadcrumb a{color:var(--wine3)}
+
+/* Home-page section rhythm, colours and card treatment */
+.contact-section{padding:90px 0;background:#fff}
+.section-kicker{color:var(--wine3);font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+.section-heading{font:500 clamp(34px,4vw,48px)/1.2 var(--serif);color:var(--deep);margin:17px 0}
+.section-description{font-size:13px;color:var(--muted);line-height:2;max-width:690px}
+.contact-layout{gap:40px;margin-top:45px}
+.contact-card{border:1px solid var(--line);padding:27px;background:#fff;transition:.3s}
+.contact-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d8bdc3}
+.contact-icon{background:var(--pink);border:1px solid #ead9dd;color:var(--wine)}
+.contact-card h3{font:22px var(--serif);color:var(--wine);margin-bottom:8px}
+.contact-card p,.contact-card a{font-size:12px;line-height:1.9}
+.office-card{background:var(--wine);padding:30px;color:#fff}
+.office-card h3{font:27px var(--serif);color:#fff}
+.office-item{border-top:1px solid #ffffff2b}
+.office-item strong{color:#e5c69a}
+.office-item p{color:#f0e3e6}
+.form-panel{border:1px solid var(--line);box-shadow:var(--shadow);padding:38px}
+.form-panel h2{font:500 29px var(--serif);color:var(--wine)}
+.form-field label{color:var(--wine)}
+.location-section{padding:0 0 90px;background:#fff}
+.location-panel{border:1px solid var(--line);box-shadow:0 12px 35px rgba(41,16,25,.05);padding:35px}
+.location-panel h3{font:27px var(--serif);color:var(--wine)}
+.map-btn,.submit-btn{background:var(--wine);transition:.25s}
+.map-btn:hover,.submit-btn:hover{background:var(--deep)}
+
+/* Exact home-page footer system */
+footer{background:var(--deep);color:#fff;padding:65px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:60px;padding-bottom:45px}
+.footer-name{font:24px var(--serif);color:#fff}
+.footer-description{font-size:11px;color:#bbaab0;line-height:2;margin-top:16px;max-width:350px}
+.footer-heading{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#d7b985;margin-bottom:19px}
+.footer-links{display:flex;flex-direction:column;gap:11px}
+.footer-links a{font-size:11px;color:#d6c7cc;line-height:1.7;transition:.2s}
+.footer-links a:hover{color:#e9c993}
+.footer-bottom{
+ border-top:1px solid #ffffff1c;padding-top:22px;display:flex;justify-content:space-between;
+ gap:15px;font-size:10px;color:#a9959d;text-align:left;
+}
+
+/* Responsive behaviour mirrors the home page */
+@media(max-width:1000px){
+ .nav-links{gap:14px}
+ .nav-links a{font-size:10px}
+ .contact-layout{gap:25px}
+ .footer-grid{gap:40px}
+}
+@media(max-width:760px){
+ .container{width:calc(100% - 34px)}
+ .topbar-right{display:none}
+ .topbar-inner{justify-content:flex-start}
+ .nav{min-height:73px}
+ .brand-name strong{font-size:15px}
+ .brand-name small{font-size:8px;letter-spacing:1.5px}
+ .brand-logo{width:42px;height:42px}
+ .menu-toggle{display:block}
+ .nav-links{
+  display:none;position:absolute;top:73px;left:0;right:0;padding:18px 25px 25px;
+  background:#fff;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0;
+ }
+ .nav-links.active{display:flex}
+ .nav-links a{padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}
+ .nav-links .contact-btn{text-align:center;margin-top:12px;padding:13px}
+ .contact-hero{min-height:0;padding:68px 0}
+ .contact-hero h1{font-size:49px}
+ .contact-section{padding:72px 0}
+ .contact-layout{grid-template-columns:1fr;gap:30px}
+ .form-panel{padding:27px}
+ .location-panel{align-items:flex-start;flex-direction:column}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:35px}
+ .footer-grid>div:first-child{grid-column:span 2}
+}
+@media(max-width:480px){
+ .contact-hero h1{font-size:43px}
+ .contact-form{grid-template-columns:1fr}
+ .form-field.full,.submit-row{grid-column:1}
+ .footer-grid{grid-template-columns:1fr;gap:30px}
+ .footer-grid>div:first-child{grid-column:auto}
+ .footer-bottom{flex-direction:column}
+ .form-panel{padding:24px}
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- TOP BAR -->
-
 <div class="topbar">
-    <div class="container topbar-inner">
-        <div class="topbar-contact">
-            <a href="mailto:officialfarmaanhasankhan@gmail.com">
-                ✉ officialfarmaanhasankhan@gmail.com
-            </a>
-
-            <a href="tel:+917351172555">
-                ☎ +91 7351172555
-            </a>
-        </div>
-    </div>
+ <div class="container topbar-inner">
+  <span>OFFICIAL WEBSITE</span>
+  <div class="topbar-right">
+   <a href="mailto:officialfarmaanhasankhan@gmail.com">Official Correspondence</a>
+   <a href="/biography/">Biography ↗</a>
+  </div>
+ </div>
 </div>
 
 <!-- NAVIGATION -->
+<header>
+ <div class="container nav">
+  <a href="/" class="brand">
+   <div class="brand-logo">FHK</div>
+   <div class="brand-name">
+    <strong>Dr. Farmaan Hasan Khan</strong>
+    <small>Religious leader and Social activist</small>
+   </div>
+  </a>
 
-<header class="navbar">
-    <div class="container nav-inner">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
-        <a href="home.html" class="brand">
-            <div class="brand-logo">FHK</div>
-
-            <div>
-                <div class="brand-name">Dr. Farmaan Hasan Khan</div>
-                <div class="brand-tagline">Religious Leader & Social Activist</div>
-            </div>
-        </a>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
-            ☰
-        </button>
-
-        <nav class="nav-links" id="navLinks">
-            <a href="home.html">Home</a>
-            <a href="biography.html">Biography</a>
-            <a href="initiatives.html">Initiatives</a>
-            <a href="organisation.html">Organisation</a>
-            <a href="media-recognition.html">Recognition</a>
-            <a href="media-recognition.html">Media</a>
-            <a href="contact.html" class="active">Contact</a>
-            <a href="contact.html" class="nav-cta">Get in Touch ↗</a>
-        </nav>
-
-    </div>
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+   <a href="/">Home</a>
+   <a href="/biography/">Biography</a>
+   <a href="/initiatives/">Initiatives</a>
+   <a href="/organisation/">Organisation</a>
+   <a href="/media-recognition/">Recognition</a>
+   <a href="/media-recognition/">Media</a>
+   <a href="/contact/" aria-current="page">Contact</a>
+   <a class="contact-btn" href="mailto:officialfarmaanhasankhan@gmail.com">Get in Touch ↗</a>
+  </nav>
+ </div>
 </header>
 
 <main>
@@ -988,73 +1135,45 @@ a {
 </main>
 
 <!-- FOOTER -->
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div>
+    <div class="footer-name">Dr. Farmaan Hasan Khan</div>
+    <p class="footer-description">
+     A life dedicated to humanity, education, peace
+     and social welfare. An ongoing journey of
+     compassion, service and collective progress.
+    </p>
+   </div>
 
-<footer class="footer">
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <div>
-                <h3>Dr. Farmaan Hasan Khan</h3>
-
-                <p>
-                    Dedicated to social welfare, education,
-                    humanitarian service and community development.
-                </p>
-            </div>
-
-            <div>
-                <h3>Quick Links</h3>
-
-                <div class="footer-links">
-                    <a href="home.html">Home</a>
-                    <a href="biography.html">Biography</a>
-                    <a href="initiatives.html">Initiatives & Activities</a>
-                    <a href="organisation.html">Organisation</a>
-                    <a href="media-recognition.html">Media & Recognition</a>
-                </div>
-            </div>
-
-            <div>
-                <h3>Explore</h3>
-
-                <div class="footer-links">
-                    <a href="gallery.html">Gallery</a>
-                    <a href="support.html">Support Us</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="https://ahtskills.org/" target="_blank" rel="noopener">
-                        Welfare Society
-                    </a>
-                </div>
-            </div>
-
-            <div>
-                <h3>Contact the Team</h3>
-
-                <div class="footer-links">
-                    <a href="mailto:officialfarmaanhasankhan@gmail.com">
-                        officialfarmaanhasankhan@gmail.com
-                    </a>
-
-                    <a href="tel:+917351172555">
-                        +91 7351172555
-                    </a>
-
-                    <p>
-                        Head Office: 51, Qilla Crossing,
-                        Bareilly, Uttar Pradesh – 243003.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            © 2026 Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan.
-            All Rights Reserved.
-        </div>
-
+   <div>
+    <div class="footer-heading">Explore</div>
+    <div class="footer-links">
+     <a href="/biography/">Biography</a>
+     <a href="/initiatives/">Initiatives</a>
+     <a href="/organisation/">Organisation</a>
+     <a href="/media-recognition/">Media &amp; Recognition</a>
+     <a href="/gallery/">Gallery</a>
     </div>
+   </div>
+
+   <div>
+    <div class="footer-heading">Get Involved</div>
+    <div class="footer-links">
+     <a href="/support/">Support Us</a>
+     <a href="/contact/">Contact</a>
+     <a href="mailto:officialfarmaanhasankhan@gmail.com">Email Office</a>
+     <a href="https://ahtskills.org/">Welfare Society</a>
+    </div>
+   </div>
+  </div>
+
+  <div class="footer-bottom">
+   <span>© <span id="currentYear"></span> Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
+   <span>Designed with Purpose &amp; Elegance.</span>
+  </div>
+ </div>
 </footer>
 
 <!-- JAVASCRIPT -->
@@ -1065,18 +1184,23 @@ const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 
 menuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('show');
+    navLinks.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
 
     menuToggle.textContent =
-        navLinks.classList.contains('show') ? '✕' : '☰';
+        navLinks.classList.contains('active') ? '✕' : '☰';
 });
 
 document.querySelectorAll('.nav-links a').forEach(function(link) {
     link.addEventListener('click', function() {
-        navLinks.classList.remove('show');
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.textContent = '☰';
     });
 });
+
+const yearElement = document.getElementById('currentYear');
+if (yearElement) yearElement.textContent = new Date().getFullYear();
 
 /* CONTACT FORM */
 
