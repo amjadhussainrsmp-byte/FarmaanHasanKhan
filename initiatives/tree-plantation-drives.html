@@ -2,834 +2,1148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tree Plantation Drive by Dr. Farmaan Hasan Khan, including the Ek Paudha Ala Hazrat Ke Naam campaign launched during the 108th Urs-e-Razvi.">
-  <title>Tree Plantation Drive | Dr. Farmaan Hasan Khan</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --wine: #501827;
-      --wine2: #702a3d;
-      --wine3: #8c485a;
-      --deep: #291019;
-      --gold: #c5a36b;
-      --cream: #fbf8f6;
-      --pink: #f5edef;
-      --white: #ffffff;
-      --text: #40353a;
-      --muted: #796e72;
-      --border: #eadfe2;
-      --shadow: 0 14px 40px rgba(55, 20, 32, .07);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.75;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1160px, calc(100% - 44px));
-      margin: auto;
-    }
-
-    /* Topbar */
-    .topbar {
-      background: var(--deep);
-      color: rgba(255,255,255,.78);
-      font-size: 12px;
-      padding: 9px 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .topbar-contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-    }
-
-    .topbar a:hover {
-      color: var(--gold);
-    }
-
-    /* Header */
-    .site-header {
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid rgba(80,24,39,.08);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 20px rgba(35,10,20,.035);
-    }
-
-    .header-inner {
-      min-height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      width: 49px;
-      height: 49px;
-      border: 1px solid var(--gold);
-      background: var(--wine);
-      color: var(--gold);
-      display: grid;
-      place-items: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 21px;
-      font-weight: 700;
-      border-radius: 50%;
-    }
-
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      color: var(--wine);
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .brand-subtitle {
-      display: block;
-      color: var(--muted);
-      font-size: 9px;
-      letter-spacing: 1.7px;
-      text-transform: uppercase;
-      margin-top: 5px;
-      font-weight: 700;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .nav a {
-      color: #493b40;
-      font-size: 12px;
-      font-weight: 700;
-      transition: .25s;
-      white-space: nowrap;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      color: var(--wine2);
-    }
-
-    .nav .donate-link {
-      color: var(--white);
-      background: var(--wine);
-      padding: 11px 18px;
-      border-radius: 3px;
-    }
-
-    .nav .donate-link:hover {
-      background: var(--wine2);
-      color: var(--white);
-    }
-
-    .menu-toggle {
-      display: none;
-      border: 1px solid var(--border);
-      background: var(--white);
-      color: var(--wine);
-      width: 43px;
-      height: 43px;
-      border-radius: 3px;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    /* Breadcrumb */
-    .breadcrumb {
-      padding: 18px 0;
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .breadcrumb a {
-      color: var(--wine2);
-      font-weight: 700;
-    }
-
-    .breadcrumb span {
-      margin: 0 8px;
-      color: #b7a9ae;
-    }
-
-    /* Hero */
-    .page-hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 88% 18%, rgba(197,163,107,.17), transparent 25%),
-        linear-gradient(115deg, #3d1422 0%, #64283a 58%, #7b3c4d 100%);
-      color: var(--white);
-      padding: 83px 0 86px;
-    }
-
-    .page-hero::after {
-      content: "";
-      position: absolute;
-      width: 370px;
-      height: 370px;
-      border: 1px solid rgba(220,190,139,.22);
-      border-radius: 50%;
-      right: -110px;
-      bottom: -235px;
-      box-shadow: 0 0 0 35px rgba(220,190,139,.035),
-                  0 0 0 75px rgba(220,190,139,.025);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 790px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 17px;
-    }
-
-    .page-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(38px, 5vw, 57px);
-      line-height: 1.15;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .page-hero p {
-      color: rgba(255,255,255,.83);
-      font-size: 16px;
-      line-height: 1.9;
-      max-width: 720px;
-    }
-
-    .hero-line {
-      width: 65px;
-      height: 2px;
-      background: var(--gold);
-      margin-top: 28px;
-    }
-
-    /* Main Content */
-    .main-section {
-      padding: 76px 0 85px;
-    }
-
-    .content-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 310px;
-      gap: 55px;
-      align-items: start;
-    }
-
-    .article {
-      min-width: 0;
-    }
-
-    .article-intro {
-      font-family: 'Playfair Display', serif;
-      font-size: 21px;
-      line-height: 1.75;
-      color: var(--wine);
-      font-weight: 600;
-      margin-bottom: 27px;
-    }
-
-    .article p {
-      font-size: 15px;
-      line-height: 1.95;
-      color: #65585e;
-      margin-bottom: 21px;
-    }
-
-    .article h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--wine);
-      font-size: 29px;
-      line-height: 1.3;
-      margin: 43px 0 19px;
-      font-weight: 600;
-    }
-
-    .article h3 {
-      color: var(--wine2);
-      font-family: 'Playfair Display', serif;
-      font-size: 21px;
-      margin: 28px 0 12px;
-    }
-
-    .article strong {
-      color: var(--wine);
-      font-weight: 700;
-    }
-
-    .section-kicker {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 10px;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-
-    /* Highlight Box */
-    .highlight-box {
-      background: var(--pink);
-      border-left: 3px solid var(--gold);
-      padding: 29px 30px;
-      margin: 34px 0;
-    }
-
-    .highlight-box .highlight-label {
-      color: var(--wine2);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 9px;
-    }
-
-    .highlight-box h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--wine);
-      font-size: 27px;
-      line-height: 1.35;
-      margin: 0 0 13px;
-    }
-
-    .highlight-box p {
-      margin: 0;
-      color: #6b5960;
-    }
-
-    /* Commitment Section */
-    .commitment-section {
-      margin-top: 43px;
-      padding: 30px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-    }
-
-    .commitment-section h2 {
-      margin-top: 0;
-      font-size: 27px;
-    }
-
-    .commitment-list {
-      list-style: none;
-      margin-top: 20px;
-    }
-
-    .commitment-list li {
-      position: relative;
-      padding: 12px 0 12px 27px;
-      border-bottom: 1px solid #f0e8ea;
-      color: #65585e;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .commitment-list li:last-child {
-      border-bottom: 0;
-    }
-
-    .commitment-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 12px;
-      color: var(--gold);
-      font-weight: 800;
-    }
-
-    /* Article Quote */
-    .article-quote {
-      margin: 35px 0;
-      padding: 27px 30px;
-      background: var(--pink);
-      border-left: 3px solid var(--gold);
-      color: var(--wine);
-      font-family: 'Playfair Display', serif;
-      font-size: 21px;
-      line-height: 1.65;
-      font-weight: 600;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      position: sticky;
-      top: 115px;
-    }
-
-    .sidebar-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      padding: 27px;
-      margin-bottom: 22px;
-      border-radius: 4px;
-    }
-
-    .sidebar-card.dark {
-      background: var(--wine);
-      border-color: var(--wine);
-      color: var(--white);
-    }
-
-    .sidebar-card h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--wine);
-      font-size: 21px;
-      margin-bottom: 17px;
-    }
-
-    .sidebar-card.dark h3 {
-      color: var(--white);
-    }
-
-    .sidebar-card p {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-
-    .sidebar-card.dark p {
-      color: rgba(255,255,255,.76);
-    }
-
-    .sidebar-links {
-      list-style: none;
-    }
-
-    .sidebar-links li {
-      border-bottom: 1px solid var(--border);
-      padding: 11px 0;
-      font-size: 13px;
-      font-weight: 600;
-      color: #65585e;
-    }
-
-    .sidebar-links li:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .sidebar-links a:hover {
-      color: var(--wine2);
-    }
-
-    .sidebar-contact {
-      font-size: 12px;
-      line-height: 1.8;
-      color: rgba(255,255,255,.82);
-      overflow-wrap: anywhere;
-    }
-
-    .sidebar-contact a {
-      color: var(--gold);
-    }
-
-    .sidebar-button {
-      display: inline-block;
-      margin-top: 7px;
-      padding: 10px 17px;
-      background: var(--gold);
-      color: var(--deep);
-      font-size: 11px;
-      font-weight: 800;
-      border-radius: 2px;
-      transition: .25s;
-    }
-
-    .sidebar-button:hover {
-      background: var(--white);
-    }
-
-    /* Closing Section */
-    .closing-section {
-      background: var(--pink);
-      padding: 66px 0;
-      text-align: center;
-    }
-
-    .closing-inner {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .closing-section .eyebrow {
-      color: var(--wine2);
-    }
-
-    .closing-section h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--wine);
-      font-size: clamp(28px, 4vw, 39px);
-      line-height: 1.3;
-      margin-bottom: 17px;
-    }
-
-    .closing-section p {
-      color: #716168;
-      font-size: 14px;
-      line-height: 1.9;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: var(--deep);
-      color: rgba(255,255,255,.75);
-      padding: 62px 0 0;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-      gap: 40px;
-      padding-bottom: 45px;
-    }
-
-    .footer-brand {
-      font-family: 'Playfair Display', serif;
-      color: var(--white);
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    .footer-col p {
-      font-size: 12px;
-      line-height: 1.9;
-      color: rgba(255,255,255,.62);
-    }
-
-    .footer-col h4 {
-      color: var(--gold);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 18px;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col li {
-      font-size: 12px;
-      margin-bottom: 10px;
-      color: rgba(255,255,255,.68);
-    }
-
-    .footer-col a:hover {
-      color: var(--gold);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.11);
-      padding: 19px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      font-size: 11px;
-      color: rgba(255,255,255,.48);
-    }
-
-    /* Responsive */
-    @media (max-width: 1050px) {
-      .nav {
-        gap: 15px;
-      }
-
-      .nav a {
-        font-size: 11px;
-      }
-
-      .content-layout {
-        gap: 35px;
-        grid-template-columns: minmax(0, 1fr) 280px;
-      }
-
-      .footer-grid {
-        gap: 25px;
-      }
-    }
-
-    @media (max-width: 850px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .header-inner {
-        min-height: 76px;
-      }
-
-      .nav {
-        display: none;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        background: var(--white);
-        padding: 15px 22px 22px;
-        border-top: 1px solid var(--border);
-        box-shadow: 0 15px 25px rgba(35,10,20,.09);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-
-      .nav.open {
-        display: flex;
-      }
-
-      .nav a {
-        padding: 12px 0;
-        border-bottom: 1px solid #f0e8ea;
-        font-size: 13px;
-      }
-
-      .nav .donate-link {
-        text-align: center;
-        margin-top: 12px;
-        padding: 12px;
-      }
-
-      .content-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-      }
-
-      .sidebar-card {
-        margin: 0;
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        width: min(100% - 32px, 1160px);
-      }
-
-      .topbar-inner {
-        justify-content: center;
-      }
-
-      .topbar-contact {
-        justify-content: center;
-        gap: 7px 16px;
-      }
-
-      .topbar-contact span {
-        font-size: 10px;
-      }
-
-      .brand-mark {
-        width: 43px;
-        height: 43px;
-        font-size: 18px;
-      }
-
-      .brand-name {
-        font-size: 15px;
-      }
-
-      .brand-subtitle {
-        font-size: 8px;
-        letter-spacing: 1px;
-      }
-
-      .page-hero {
-        padding: 62px 0 65px;
-      }
-
-      .page-hero h1 {
-        font-size: 38px;
-      }
-
-      .page-hero p {
-        font-size: 14px;
-      }
-
-      .main-section {
-        padding: 50px 0 60px;
-      }
-
-      .article-intro {
-        font-size: 19px;
-      }
-
-      .article h2 {
-        font-size: 25px;
-      }
-
-      .highlight-box {
-        padding: 24px 22px;
-      }
-
-      .highlight-box h2 {
-        font-size: 23px;
-      }
-
-      .article-quote {
-        padding: 22px;
-        font-size: 19px;
-      }
-
-      .commitment-section {
-        padding: 23px 20px;
-      }
-
-      .sidebar {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#501827">
+<meta name="description" content="Tree Plantation Drives by Dr. Farmaan Hasan Khan, including the Ek Paudha Ala Hazrat Ke Naam campaign launched during the 108th Urs-e-Razvi.">
+<title>Tree Plantation Drives | Dr. Farmaan Hasan Khan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* =========================================
+   GLOBAL DESIGN SYSTEM — HOMEPAGE MATCH
+========================================= */
+
+:root {
+ --wine:#501827;
+ --wine2:#702a3d;
+ --wine3:#8c485a;
+ --deep:#291019;
+ --gold:#c5a36b;
+ --cream:#fbf8f6;
+ --pink:#f5edef;
+ --white:#fff;
+ --ink:#30252a;
+ --muted:#81747a;
+ --line:#eadde0;
+
+ --serif:'Playfair Display',serif;
+ --sans:'DM Sans',sans-serif;
+
+ --shadow:0 20px 65px rgba(65,20,35,.11);
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+html{
+ scroll-behavior:smooth;
+ scroll-padding-top:90px;
+}
+
+body{
+ font-family:var(--sans);
+ background:var(--white);
+ color:var(--ink);
+ line-height:1.7;
+ overflow-x:hidden;
+}
+
+a{
+ text-decoration:none;
+ color:inherit;
+}
+
+img{
+ max-width:100%;
+ display:block;
+}
+
+button{
+ font:inherit;
+}
+
+.container{
+ width:min(1200px,calc(100% - 48px));
+ margin:auto;
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar{
+ background:var(--deep);
+ color:#e9dce0;
+ padding:8px 0;
+ font-size:10px;
+ letter-spacing:1.2px;
+}
+
+.topbar-inner{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:15px;
+}
+
+.topbar a{
+ color:#e7cda6;
+}
+
+.topbar-right{
+ display:flex;
+ gap:22px;
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+========================================= */
+
+header{
+ position:sticky;
+ top:0;
+ z-index:100;
+ background:rgba(255,255,255,.96);
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid var(--line);
+}
+
+.nav{
+ min-height:86px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:20px;
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:13px;
+}
+
+.brand-logo{
+ width:49px;
+ height:49px;
+ border:1px solid var(--gold);
+ background:var(--wine);
+ color:white;
+ display:grid;
+ place-items:center;
+ font-family:var(--serif);
+ font-size:19px;
+ border-radius:50%;
+}
+
+.brand-name strong{
+ display:block;
+ font-family:var(--serif);
+ font-size:17px;
+ color:var(--wine);
+ line-height:1.3;
+}
+
+.brand-name small{
+ font-size:9px;
+ letter-spacing:2px;
+ color:var(--muted);
+ text-transform:uppercase;
+}
+
+.nav-links{
+ display:flex;
+ align-items:center;
+ gap:25px;
+}
+
+.nav-links a{
+ font-size:11px;
+ font-weight:700;
+ color:#51444a;
+ transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"]{
+ color:var(--wine3);
+}
+
+.nav-links .contact-btn{
+ background:var(--wine);
+ color:white;
+ padding:12px 19px;
+}
+
+.nav-links .contact-btn:hover{
+ background:var(--deep);
+}
+
+.menu-toggle{
+ display:none;
+ background:none;
+ border:1px solid var(--line);
+ color:var(--wine);
+ padding:8px 12px;
+ font-size:22px;
+ cursor:pointer;
+}
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.breadcrumb-wrap{
+ background:var(--cream);
+ border-bottom:1px solid var(--line);
+}
+
+.breadcrumb{
+ padding:14px 0;
+ font-size:10px;
+ color:var(--muted);
+ letter-spacing:.4px;
+}
+
+.breadcrumb a{
+ color:var(--wine);
+ font-weight:700;
+}
+
+.breadcrumb span{
+ padding:0 9px;
+ color:var(--gold);
+}
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.page-hero{
+ min-height:420px;
+ position:relative;
+ display:flex;
+ align-items:center;
+ overflow:hidden;
+
+ background:
+ radial-gradient(ellipse at 85% 40%,#f1e4e6 0%,transparent 40%),
+ linear-gradient(105deg,#fff 0%,#fff 60%,#faf4f3 100%);
+}
+
+.page-hero:before{
+ content:"";
+ position:absolute;
+ width:650px;
+ height:650px;
+ border:1px solid rgba(80,24,39,.07);
+ border-radius:50%;
+ right:-190px;
+ top:-150px;
+}
+
+.page-hero:after{
+ content:"";
+ position:absolute;
+ width:510px;
+ height:510px;
+ border:1px solid rgba(197,163,107,.35);
+ border-radius:50%;
+ right:-120px;
+ top:-70px;
+}
+
+.page-hero-inner{
+ position:relative;
+ z-index:2;
+ padding:75px 0;
+ max-width:850px;
+}
+
+.eyebrow{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ color:var(--wine3);
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:3px;
+ text-transform:uppercase;
+}
+
+.eyebrow:before{
+ content:"";
+ width:34px;
+ height:1px;
+ background:var(--gold);
+}
+
+.page-hero h1{
+ font-family:var(--serif);
+ font-size:clamp(48px,6vw,76px);
+ font-weight:500;
+ line-height:1.08;
+ letter-spacing:-2px;
+ color:var(--deep);
+ margin:25px 0 20px;
+}
+
+.page-hero h1 span{
+ color:var(--wine3);
+ font-style:italic;
+}
+
+.page-hero .lead{
+ color:var(--muted);
+ font-size:14px;
+ line-height:2;
+ max-width:680px;
+}
+
+.hero-meta{
+ display:flex;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:28px;
+}
+
+.meta-chip{
+ border:1px solid #e7d8dc;
+ background:#ffffffb8;
+ color:var(--wine);
+ padding:9px 14px;
+ font-size:9px;
+ font-weight:800;
+ letter-spacing:1.2px;
+ text-transform:uppercase;
+}
+
+/* =========================================
+   INTRODUCTION STRIP
+========================================= */
+
+.identity-strip{
+ background:var(--wine);
+ color:white;
+}
+
+.identity-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ padding:26px 0;
+}
+
+.identity-item{
+ padding:5px 30px;
+ border-right:1px solid #ffffff2b;
+}
+
+.identity-item:first-child{
+ padding-left:0;
+}
+
+.identity-item:last-child{
+ border:0;
+}
+
+.identity-item strong{
+ font:20px var(--serif);
+ display:block;
+}
+
+.identity-item span{
+ font-size:9px;
+ letter-spacing:1.7px;
+ text-transform:uppercase;
+ color:#e6cbd2;
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section{
+ padding:90px 0;
+}
+
+.section-label{
+ color:var(--wine3);
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:3px;
+ text-transform:uppercase;
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.section-label:before{
+ content:"";
+ height:1px;
+ width:30px;
+ background:var(--gold);
+}
+
+.section-title{
+ font:500 clamp(34px,4vw,48px)/1.2 var(--serif);
+ color:var(--deep);
+ margin:17px 0;
+}
+
+.section-description{
+ font-size:13px;
+ color:var(--muted);
+ line-height:2;
+ max-width:680px;
+}
+
+.section-heading{
+ margin-bottom:45px;
+}
+
+/* =========================================
+   ARTICLE LAYOUT
+========================================= */
+
+.content-grid{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) 300px;
+ gap:60px;
+ align-items:start;
+}
+
+.article-body{
+ min-width:0;
+}
+
+.article-body p{
+ font-size:13px;
+ color:var(--muted);
+ line-height:2.15;
+ margin:0 0 20px;
+}
+
+.article-body h2{
+ font:500 clamp(27px,3vw,36px)/1.25 var(--serif);
+ color:var(--deep);
+ margin:46px 0 17px;
+}
+
+.article-body h2:first-child{
+ margin-top:0;
+}
+
+.article-body strong{
+ color:var(--wine);
+ font-weight:700;
+}
+
+.article-intro{
+ font:italic 22px/1.75 var(--serif)!important;
+ color:var(--wine)!important;
+ border-left:2px solid var(--gold);
+ padding:7px 0 7px 24px;
+ margin-bottom:32px!important;
+}
+
+/* =========================================
+   ARTICLE IMAGE
+========================================= */
+
+.article-image{
+ margin:35px 0;
+ background:var(--pink);
+ border:1px solid var(--line);
+ padding:12px;
+}
+
+.article-image img{
+ width:100%;
+ height:auto;
+ object-fit:cover;
+}
+
+.image-caption{
+ padding:12px 5px 3px;
+ color:var(--muted);
+ font-size:10px;
+ line-height:1.7;
+ text-align:center;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.article-aside{
+ position:sticky;
+ top:112px;
+}
+
+.aside-card{
+ background:var(--cream);
+ border:1px solid var(--line);
+ padding:27px;
+ margin-bottom:18px;
+}
+
+.aside-kicker{
+ font-size:9px;
+ letter-spacing:2px;
+ font-weight:800;
+ color:var(--wine3);
+ text-transform:uppercase;
+}
+
+.aside-card h3{
+ font:23px/1.3 var(--serif);
+ color:var(--wine);
+ margin:12px 0;
+}
+
+.aside-card p{
+ font-size:11px;
+ line-height:1.9;
+ color:var(--muted);
+}
+
+.aside-links{
+ list-style:none;
+ margin-top:17px;
+}
+
+.aside-links li{
+ border-top:1px solid var(--line);
+ padding:11px 0;
+ font-size:11px;
+ color:var(--wine);
+ font-weight:700;
+ line-height:1.7;
+}
+
+.aside-links a:hover{
+ color:var(--wine3);
+}
+
+/* =========================================
+   COMMITMENT SECTION
+========================================= */
+
+.commitment{
+ background:var(--cream);
+}
+
+.commitment-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:15px;
+ margin-top:35px;
+}
+
+.commitment-item{
+ background:white;
+ border:1px solid var(--line);
+ padding:23px;
+ display:flex;
+ gap:17px;
+ align-items:flex-start;
+ transition:.3s;
+}
+
+.commitment-item:hover{
+ transform:translateY(-4px);
+ box-shadow:var(--shadow);
+}
+
+.commitment-number{
+ font:italic 20px var(--serif);
+ color:var(--gold);
+ flex-shrink:0;
+}
+
+.commitment-item p{
+ font-size:11px;
+ line-height:1.9;
+ color:var(--muted);
+}
+
+.commitment-item strong{
+ display:block;
+ color:var(--wine);
+ font:19px var(--serif);
+ margin-bottom:5px;
+}
+
+/* =========================================
+   CLOSING SECTION
+========================================= */
+
+.closing-section{
+ background:linear-gradient(120deg,var(--deep),var(--wine));
+ color:white;
+ position:relative;
+ overflow:hidden;
+}
+
+.closing-section:after{
+ content:"";
+ position:absolute;
+ width:500px;
+ height:500px;
+ border:1px solid #ffffff16;
+ border-radius:50%;
+ right:-180px;
+ top:-190px;
+}
+
+.closing-inner{
+ text-align:center;
+ max-width:820px;
+ margin:auto;
+ position:relative;
+ z-index:2;
+}
+
+.closing-inner .section-label{
+ justify-content:center;
+ color:#e7c795;
+}
+
+.closing-inner h2{
+ font:500 clamp(34px,4vw,49px)/1.3 var(--serif);
+ margin:20px 0;
+ color:white;
+}
+
+.closing-inner p{
+ font-size:13px;
+ line-height:2;
+ color:#e6d7dc;
+ margin-bottom:30px;
+}
+
+.btn{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ background:var(--wine);
+ color:white;
+ padding:14px 23px;
+ font-size:11px;
+ font-weight:800;
+ letter-spacing:.8px;
+ border:1px solid var(--wine);
+ transition:.3s;
+}
+
+.btn:hover{
+ background:var(--deep);
+ transform:translateY(-3px);
+}
+
+.closing-inner .btn{
+ background:white;
+ color:var(--wine);
+ border-color:white;
+}
+
+.closing-inner .btn:hover{
+ background:#f2e6e8;
+}
+
+/* =========================================
+   FOOTER — HOMEPAGE MATCH
+========================================= */
+
+footer{
+ background:var(--deep);
+ color:white;
+ padding:65px 0 25px;
+}
+
+.footer-grid{
+ display:grid;
+ grid-template-columns:1.4fr .8fr .8fr;
+ gap:60px;
+ padding-bottom:45px;
+}
+
+.footer-name{
+ font:24px var(--serif);
+ color:white;
+}
+
+.footer-description{
+ font-size:11px;
+ color:#bbaab0;
+ line-height:2;
+ margin-top:16px;
+ max-width:350px;
+}
+
+.footer-heading{
+ font-size:10px;
+ letter-spacing:2px;
+ text-transform:uppercase;
+ color:#d7b985;
+ margin-bottom:19px;
+}
+
+.footer-links{
+ display:flex;
+ flex-direction:column;
+ gap:11px;
+}
+
+.footer-links a{
+ font-size:11px;
+ color:#d6c7cc;
+ transition:.2s;
+}
+
+.footer-links a:hover{
+ color:#e9c993;
+}
+
+.footer-bottom{
+ border-top:1px solid #ffffff1c;
+ padding-top:22px;
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+ font-size:10px;
+ color:#a9959d;
+}
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+.reveal{
+ opacity:0;
+ transform:translateY(25px);
+ transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.visible{
+ opacity:1;
+ transform:translateY(0);
+}
+
+::selection{
+ background:var(--wine);
+ color:white;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1000px){
+
+ .nav-links{
+  gap:14px;
+ }
+
+ .nav-links a{
+  font-size:10px;
+ }
+
+ .content-grid{
+  gap:35px;
+ }
+
+}
+
+@media(max-width:760px){
+
+ .container{
+  width:calc(100% - 34px);
+ }
+
+ .topbar-right{
+  display:none;
+ }
+
+ .nav{
+  min-height:73px;
+ }
+
+ .brand-name strong{
+  font-size:15px;
+ }
+
+ .brand-logo{
+  width:42px;
+  height:42px;
+ }
+
+ .menu-toggle{
+  display:block;
+ }
+
+ .nav-links{
+  display:none;
+  position:absolute;
+  top:73px;
+  left:0;
+  right:0;
+  padding:18px 25px 25px;
+  background:white;
+  box-shadow:var(--shadow);
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+ }
+
+ .nav-links.active{
+  display:flex;
+ }
+
+ .nav-links a{
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
+ }
+
+ .nav-links .contact-btn{
+  text-align:center;
+  margin-top:12px;
+  padding:13px;
+ }
+
+ .page-hero{
+  min-height:0;
+ }
+
+ .page-hero-inner{
+  padding:65px 0 70px;
+ }
+
+ .page-hero h1{
+  font-size:53px;
+ }
+
+ .identity-grid{
+  grid-template-columns:1fr;
+  gap:15px;
+  padding:23px 0;
+ }
+
+ .identity-item{
+  padding:0 0 13px!important;
+  border-right:0;
+  border-bottom:1px solid #ffffff2b;
+ }
+
+ .identity-item:last-child{
+  border:0;
+ }
+
+ section{
+  padding:70px 0;
+ }
+
+ .content-grid{
+  grid-template-columns:1fr;
+  gap:40px;
+ }
+
+ .article-aside{
+  position:static;
+ }
+
+ .commitment-grid{
+  grid-template-columns:1fr;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+ }
+
+ .footer-grid>div:first-child{
+  grid-column:span 2;
+ }
+
+}
+
+@media(max-width:450px){
+
+ .page-hero h1{
+  font-size:45px;
+ }
+
+ .page-hero .lead{
+  font-size:13px;
+ }
+
+ .hero-meta{
+  gap:8px;
+ }
+
+ .meta-chip{
+  font-size:8px;
+ }
+
+ .article-body h2{
+  font-size:28px;
+ }
+
+ .article-intro{
+  font-size:19px!important;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr;
+ }
+
+ .footer-grid>div:first-child{
+  grid-column:auto;
+ }
+
+ .footer-bottom{
+  flex-direction:column;
+ }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+ *,
+ *:before,
+ *:after{
+  scroll-behavior:auto!important;
+  transition:none!important;
+ }
+
+ .reveal{
+  opacity:1;
+  transform:none;
+ }
+
+}
+
+
+
+/* Tree Plantation content components, styled within the Free Operations design system */
+.tree-highlight-box,
+.tree-article-quote {
+  background: var(--pink);
+  border-left: 2px solid var(--gold);
+  padding: 25px 27px;
+  margin: 32px 0;
+}
+.tree-highlight-box .highlight-label,
+.tree-commitment-section .section-label {
+  color: var(--wine3);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tree-highlight-box h2,
+.tree-commitment-section h2 {
+  font: 500 clamp(25px, 3vw, 32px)/1.3 var(--serif);
+  color: var(--deep);
+  margin: 0 0 13px;
+}
+.tree-highlight-box p,
+.tree-commitment-section p {
+  font-size: 13px;
+  line-height: 2;
+  color: var(--muted);
+  margin: 0;
+}
+.tree-article-quote {
+  font: italic 22px/1.65 var(--serif);
+  color: var(--wine);
+}
+.tree-commitment-section {
+  margin: 38px 0;
+  padding: 28px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+.tree-commitment-section h2 { margin-top: 8px; }
+.tree-commitment-section .commitment-list {
+  list-style: none;
+  margin-top: 18px;
+}
+.tree-commitment-section .commitment-list li {
+  position: relative;
+  padding: 11px 0 11px 25px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.tree-commitment-section .commitment-list li:last-child { border-bottom: 0; }
+.tree-commitment-section .commitment-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 800;
+}
+.tree-aside-dark {
+  background: var(--wine);
+  border-color: var(--wine);
+}
+.tree-aside-dark h3 { color: white; }
+.tree-aside-dark p,
+.tree-aside-dark .tree-sidebar-contact { color: #e6d7dc; }
+.tree-aside-dark .tree-sidebar-contact p {
+  color: #e6d7dc;
+  margin: 12px 0;
+}
+.tree-aside-dark .tree-sidebar-contact a { color: #e7c795; }
+.tree-sidebar-button {
+  display: inline-flex;
+  margin-top: 8px;
+  padding: 11px 17px;
+  background: white;
+  color: var(--wine);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.tree-sidebar-button:hover { background: #f2e6e8; }
+@media(max-width:760px) {
+  .tree-commitment-section { padding: 23px 20px; }
+  .tree-article-quote { font-size: 19px; }
+}
+
+</style>
 </head>
 
 <body>
+<div class="topbar">
+ <div class="container topbar-inner">
 
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-contact">
-        <span>✉ <a href="mailto:officialfarmaanhasankhan@gmail.com">officialfarmaanhasankhan@gmail.com</a></span>
-        <span>☎ <a href="tel:+917870155869">+91 78701 55869</a></span>
-      </div>
-    </div>
+  <span>OFFICIAL WEBSITE</span>
+
+  <div class="topbar-right">
+   <a href="mailto:officialfarmaanhasankhan@gmail.com">
+    Official Correspondence
+   </a>
+
+   <a href="/biography.html/">
+    Biography ↗
+   </a>
   </div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
+ </div>
+</div>
 
-      <a href="/" class="brand">
-        <div class="brand-mark">FH</div>
-        <div>
-          <div class="brand-name">Dr. Farmaan Hasan Khan</div>
-          <span class="brand-subtitle">Fida-e-Waqaar-e-Millat</span>
-        </div>
-      </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
 
-      <nav class="nav" id="mainNav">
-        <a href="/">Home</a>
-        <a href="/biography/">Biography</a>
-        <a href="/founder/">Founder</a>
-        <a href="/press-releases/">Press Releases</a>
-        <a href="/initiatives/" class="active">Initiatives</a>
-        <a href="/media-recognition/">Media &amp; Recognition</a>
-        <a href="/gallery/">Gallery</a>
-        <a href="/contact/">Contact</a>
-        <a href="/support/" class="donate-link">Donate Now</a>
-      </nav>
 
-    </div>
-  </header>
+<header>
 
-  <!-- Breadcrumb -->
-  <div class="container breadcrumb">
-    <a href="/">Home</a>
-    <span>›</span>
-    <a href="/initiatives/">Initiatives &amp; Activity</a>
-    <span>›</span>
-    Tree Plantation Drive
+ <div class="container nav">
+
+  <a href="/" class="brand">
+
+   <div class="brand-logo">FHK</div>
+
+   <div class="brand-name">
+    <strong>Dr. Farmaan Hasan Khan</strong>
+    <small>Religious leader and Social activist</small>
+   </div>
+
+  </a>
+
+
+  <button
+   class="menu-toggle"
+   id="menuToggle"
+   aria-label="Toggle navigation"
+   aria-expanded="false"
+  >
+   ☰
+  </button>
+
+
+  <nav class="nav-links" id="navLinks">
+
+   <a href="/">Home</a>
+
+   <a href="/biography.html/">Biography</a>
+
+   <a href="/initiatives.html" aria-current="page">
+    Initiatives
+   </a>
+
+   <a href="/awards.html">Awards</a>
+
+   <a href="/media-recognition.html/">
+    Media & Recognition
+   </a>
+
+   <a href="/contact.html/">Contact</a>
+
+   <a
+    class="contact-btn"
+    href="mailto:office@farmaanhasankhan.com"
+   >
+    Get in Touch ↗
+   </a>
+
+  </nav>
+
+ </div>
+
+</header>
+
+<main>
+<div class="breadcrumb-wrap">
+
+ <div class="container breadcrumb">
+
+  <a href="/">Home</a>
+
+  <span>›</span>
+
+  <a href="/initiatives.html">Initiatives</a>
+
+  <span>›</span>
+
+  Tree Plantation Drives
+
+ </div>
+
+</div>
+
+<section class="page-hero">
+ <div class="container page-hero-inner reveal">
+  <div class="eyebrow">Environmental Responsibility and Community Participation</div>
+  <h1>Tree Plantation <span>Drives</span></h1>
+  <p class="lead">
+   Encouraging environmental responsibility through tree plantation,
+   community participation and the belief that a greener tomorrow
+   begins with the actions we take today.
+  </p>
+  <div class="hero-meta">
+   <span class="meta-chip">Environmental Conservation</span>
+   <span class="meta-chip">Community Participation</span>
+   <span class="meta-chip">A Greener Tomorrow</span>
   </div>
+ </div>
+</section>
 
-  <!-- Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">Initiatives &amp; Activities</div>
-        <h1>Tree Plantation Drive</h1>
-        <p>
-          Encouraging environmental responsibility through tree plantation,
-          community participation and the belief that a greener tomorrow
-          begins with the actions we take today.
-        </p>
-        <div class="hero-line"></div>
-      </div>
-    </div>
-  </section>
+<section>
+ <div class="container content-grid">
+  <article class="article-body">
 
-  <!-- Main Content -->
-  <main class="main-section">
-    <div class="container content-layout">
 
-      <article class="article">
-
-        <div class="section-kicker">Environmental Conservation</div>
+        <div class="section-label">Environmental Conservation</div>
 
         <p class="article-intro">
           For Farmaan Hasan Khan, social service is not only about helping
@@ -863,7 +1177,7 @@
           <strong>Aala Hazrat Imam Ahmad Raza Khan Fazil-e-Bareilvi</strong>.
         </p>
 
-        <div class="highlight-box">
+        <div class="tree-highlight-box">
           <div class="highlight-label">The Campaign</div>
           <h2>Ek Paudha Ala Hazrat Ke Naam</h2>
           <p>
@@ -886,7 +1200,7 @@
           to benefit people and nature.
         </p>
 
-        <div class="article-quote">
+        <div class="tree-article-quote">
           A tree does not ask who planted it or where a person comes
           from. It gives shade to everyone.
         </div>
@@ -932,8 +1246,8 @@
         </p>
 
         <!-- Commitment Section -->
-        <div class="commitment-section">
-          <div class="section-kicker">The Purpose</div>
+        <div class="tree-commitment-section">
+          <div class="section-label">The Purpose</div>
           <h2>A Commitment to a Greener Tomorrow</h2>
 
           <p>
@@ -968,14 +1282,14 @@
           people to make environmental care a part of everyday life.
         </p>
 
-      </article>
+      
+  </article>
+  <aside class="article-aside">
 
-      <!-- Sidebar -->
-      <aside class="sidebar">
 
-        <div class="sidebar-card">
+        <div class="aside-card">
           <h3>Non Profit Works</h3>
-          <ul class="sidebar-links">
+          <ul class="aside-links">
             <li><a href="/initiatives/tree-plantation-drive.html">Tree Plantation Drives</a></li>
             <li><a href="/initiatives/free-operations.html">Free Operations</a></li>
             <li><a href="/initiatives/free-neet-coaching.html">Free NEET Coachings</a></li>
@@ -984,9 +1298,9 @@
           </ul>
         </div>
 
-        <div class="sidebar-card">
+        <div class="aside-card">
           <h3>Know More</h3>
-          <ul class="sidebar-links">
+          <ul class="aside-links">
             <li><a href="/biography/">Biography</a></li>
             <li><a href="/press-releases/">Press Releases</a></li>
             <li><a href="/initiatives/">Initiatives &amp; Activities</a></li>
@@ -994,14 +1308,14 @@
           </ul>
         </div>
 
-        <div class="sidebar-card dark">
+        <div class="aside-card tree-aside-dark">
           <h3>Contact the Team</h3>
           <p>
             For further information about initiatives, activities
             and opportunities to contribute, get in touch with the team.
           </p>
 
-          <div class="sidebar-contact">
+          <div class="tree-sidebar-contact">
             <p>
               Email:<br>
               <a href="mailto:officialfarmaanhasankhan@gmail.com">
@@ -1020,107 +1334,198 @@
             </p>
           </div>
 
-          <a href="/contact/" class="sidebar-button">Connect Now →</a>
+          <a href="/contact/" class="tree-sidebar-button">Connect Now →</a>
         </div>
 
-      </aside>
+      
+  </aside>
+ </div>
+</section>
+
+<section class="closing-section">
+ <div class="container closing-inner reveal">
+  <div class="section-label">A Greener Tomorrow</div>
+  <h2>Let Us Plant Today for a Better Tomorrow</h2>
+  <p>
+   Environmental conservation is a shared responsibility.
+   Every effort to nurture nature is an investment in the
+   well-being of future generations.
+  </p>
+  <a href="/initiatives.html" class="btn">EXPLORE ALL INITIATIVES ↗</a>
+ </div>
+</section>
+</main>
+
+<footer>
+
+ <div class="container">
+
+  <div class="footer-grid">
+
+
+   <div>
+
+    <div class="footer-name">
+     Dr. Farmaan Hasan Khan
+    </div>
+
+    <p class="footer-description">
+     A life dedicated to humanity, education, peace
+     and social welfare. An ongoing journey of
+     compassion, service and collective progress.
+    </p>
+
+   </div>
+
+
+   <div>
+
+    <div class="footer-heading">
+     Explore
+    </div>
+
+    <div class="footer-links">
+
+     <a href="/biography.html/">
+      Biography
+     </a>
+
+     <a href="/initiatives.html">
+      Initiatives
+     </a>
+
+     <a href="/awards.html">
+      Awards
+     </a>
+
+     <a href="/media-recognition.html/">
+      Media & Recognition
+     </a>
 
     </div>
-  </main>
 
-  <!-- Closing Section -->
-  <section class="closing-section">
-    <div class="container closing-inner">
-      <div class="eyebrow">A Greener Tomorrow</div>
-      <h2>Let Us Plant Today for a Better Tomorrow</h2>
-      <p>
-        Environmental conservation is a shared responsibility.
-        Every effort to nurture nature is an investment in the
-        well-being of future generations.
-      </p>
+   </div>
+
+
+   <div>
+
+    <div class="footer-heading">
+     Get Involved
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
+    <div class="footer-links">
 
-      <div class="footer-grid">
+     <a href="/support/">
+      Support Us
+     </a>
 
-        <div class="footer-col">
-          <div class="footer-brand">Dr. Farmaan Hasan Khan</div>
-          <p>
-            Dedicated to social welfare, education, healthcare,
-            humanitarian service and community development.
-          </p>
-        </div>
+     <a href="/contact.html/">
+      Contact
+     </a>
 
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/biography/">Biography</a></li>
-            <li><a href="/founder/">Founder</a></li>
-            <li><a href="/press-releases/">Press Releases</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </div>
+     <a href="mailto:office@farmaanhasankhan.com">
+      Email Office
+     </a>
 
-        <div class="footer-col">
-          <h4>Our Work</h4>
-          <ul>
-            <li><a href="/initiatives/">Initiatives &amp; Activities</a></li>
-            <li><a href="/initiatives/education-for-all.html">Education for All</a></li>
-            <li><a href="/initiatives/free-operations.html">Free Operations</a></li>
-            <li><a href="/initiatives/free-neet-coaching.html">Free NEET Coaching</a></li>
-            <li><a href="/initiatives/tree-plantation-drive.html">Tree Plantation Drive</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li>
-              <a href="mailto:officialfarmaanhasankhan@gmail.com">
-                officialfarmaanhasankhan@gmail.com
-              </a>
-            </li>
-            <li><a href="tel:+917351172555">+91 7351172555</a></li>
-            <li>Head Office: 51, Qilla Crossing, Bareilly, Uttar Pradesh (243003)</li>
-            <li>Corporate Office: NH24 Rampur Road, New Troll Plaza, Fatehganj, West Bareilly, Bareilly, Uttar Pradesh (243501)</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> Fida-e-Waqaar-e-Millat Dr. Farmaan Hasan Khan. All Rights Reserved.</span>
-        <span>Designed with purpose and responsibility.</span>
-      </div>
+     <a href="https://ahtskills.org/">
+      Welfare Society
+     </a>
 
     </div>
-  </footer>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
+   </div>
 
-    menuToggle.addEventListener('click', function () {
-      const isOpen = mainNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menuToggle.innerHTML = isOpen ? '&times;' : '☰';
-    });
 
-    document.querySelectorAll('#mainNav a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mainNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.innerHTML = '☰';
-      });
-    });
+  </div>
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
+  <div class="footer-bottom">
+
+   <span>
+    © <span id="currentYear"></span>
+    Dr. Farmaan Hasan Khan. All Rights Reserved.
+   </span>
+
+   <span>
+    Designed with Purpose & Elegance.
+   </span>
+
+  </div>
+
+ </div>
+
+</footer>
+
+<script>
+
+// Mobile Navigation
+
+const menuToggle = document.getElementById('menuToggle');
+
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', () => {
+
+ const open = navLinks.classList.toggle('active');
+
+ menuToggle.textContent = open ? '×' : '☰';
+
+ menuToggle.setAttribute(
+  'aria-expanded',
+  String(open)
+ );
+
+});
+
+
+// Close Menu After Navigation
+
+navLinks.querySelectorAll('a').forEach(link => {
+
+ link.addEventListener('click', () => {
+
+  navLinks.classList.remove('active');
+
+  menuToggle.textContent = '☰';
+
+  menuToggle.setAttribute('aria-expanded','false');
+
+ });
+
+});
+
+
+// Dynamic Copyright Year
+
+document.getElementById('currentYear').textContent =
+ new Date().getFullYear();
+
+
+// Scroll Reveal
+
+const observer = new IntersectionObserver(entries => {
+
+ entries.forEach(entry => {
+
+  if(entry.isIntersecting){
+
+   entry.target.classList.add('visible');
+
+   observer.unobserve(entry.target);
+
+  }
+
+ });
+
+},{threshold:0.12});
+
+
+document.querySelectorAll('.reveal').forEach(element => {
+
+ observer.observe(element);
+
+});
+
+</script>
 </body>
 </html>
