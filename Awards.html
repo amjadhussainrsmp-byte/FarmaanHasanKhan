@@ -1,0 +1,1511 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#501827">
+<meta name="description" content="Awards and honours received by Dr. Farmaan Hasan Khan.">
+<title>Awards and Honours | Dr. Farmaan Hasan Khan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* =========================================
+   GLOBAL DESIGN SYSTEM — HOMEPAGE MATCH
+========================================= */
+
+:root {
+ --wine:#501827;
+ --wine2:#702a3d;
+ --wine3:#8c485a;
+ --deep:#291019;
+ --gold:#c5a36b;
+ --cream:#fbf8f6;
+ --pink:#f5edef;
+ --white:#fff;
+ --ink:#30252a;
+ --muted:#81747a;
+ --line:#eadde0;
+
+ --serif:'Playfair Display',serif;
+ --sans:'DM Sans',sans-serif;
+
+ --shadow:0 20px 65px rgba(65,20,35,.11);
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+html{
+ scroll-behavior:smooth;
+ scroll-padding-top:90px;
+}
+
+body{
+ font-family:var(--sans);
+ background:var(--white);
+ color:var(--ink);
+ line-height:1.7;
+ overflow-x:hidden;
+}
+
+a{
+ text-decoration:none;
+ color:inherit;
+}
+
+img{
+ max-width:100%;
+ display:block;
+}
+
+button{
+ font:inherit;
+}
+
+.container{
+ width:min(1200px,calc(100% - 48px));
+ margin:auto;
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar{
+ background:var(--deep);
+ color:#e9dce0;
+ padding:8px 0;
+ font-size:10px;
+ letter-spacing:1.2px;
+}
+
+.topbar-inner{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:15px;
+}
+
+.topbar a{
+ color:#e7cda6;
+}
+
+.topbar-right{
+ display:flex;
+ gap:22px;
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+========================================= */
+
+header{
+ position:sticky;
+ top:0;
+ z-index:100;
+ background:rgba(255,255,255,.96);
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid var(--line);
+}
+
+.nav{
+ min-height:86px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:20px;
+}
+
+.brand{
+ display:flex;
+ align-items:center;
+ gap:13px;
+}
+
+.brand-logo{
+ width:49px;
+ height:49px;
+ border:1px solid var(--gold);
+ background:var(--wine);
+ color:white;
+ display:grid;
+ place-items:center;
+ font-family:var(--serif);
+ font-size:19px;
+ border-radius:50%;
+}
+
+.brand-name strong{
+ display:block;
+ font-family:var(--serif);
+ font-size:17px;
+ color:var(--wine);
+ line-height:1.3;
+}
+
+.brand-name small{
+ font-size:9px;
+ letter-spacing:2px;
+ color:var(--muted);
+ text-transform:uppercase;
+}
+
+.nav-links{
+ display:flex;
+ align-items:center;
+ gap:25px;
+}
+
+.nav-links a{
+ font-size:11px;
+ font-weight:700;
+ color:#51444a;
+ transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"]{
+ color:var(--wine3);
+}
+
+.nav-links .contact-btn{
+ background:var(--wine);
+ color:white;
+ padding:12px 19px;
+}
+
+.nav-links .contact-btn:hover{
+ background:var(--deep);
+}
+
+.menu-toggle{
+ display:none;
+ background:none;
+ border:1px solid var(--line);
+ color:var(--wine);
+ padding:8px 12px;
+ font-size:22px;
+ cursor:pointer;
+}
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.breadcrumb-wrap{
+ background:var(--cream);
+ border-bottom:1px solid var(--line);
+}
+
+.breadcrumb{
+ padding:14px 0;
+ font-size:10px;
+ color:var(--muted);
+ letter-spacing:.4px;
+}
+
+.breadcrumb a{
+ color:var(--wine);
+ font-weight:700;
+}
+
+.breadcrumb span{
+ padding:0 9px;
+ color:var(--gold);
+}
+
+/* =========================================
+   PAGE HERO
+========================================= */
+
+.page-hero{
+ min-height:420px;
+ position:relative;
+ display:flex;
+ align-items:center;
+ overflow:hidden;
+
+ background:
+ radial-gradient(ellipse at 85% 40%,#f1e4e6 0%,transparent 40%),
+ linear-gradient(105deg,#fff 0%,#fff 60%,#faf4f3 100%);
+}
+
+.page-hero:before{
+ content:"";
+ position:absolute;
+ width:650px;
+ height:650px;
+ border:1px solid rgba(80,24,39,.07);
+ border-radius:50%;
+ right:-190px;
+ top:-150px;
+}
+
+.page-hero:after{
+ content:"";
+ position:absolute;
+ width:510px;
+ height:510px;
+ border:1px solid rgba(197,163,107,.35);
+ border-radius:50%;
+ right:-120px;
+ top:-70px;
+}
+
+.page-hero-inner{
+ position:relative;
+ z-index:2;
+ padding:75px 0;
+ max-width:850px;
+}
+
+.eyebrow{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ color:var(--wine3);
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:3px;
+ text-transform:uppercase;
+}
+
+.eyebrow:before{
+ content:"";
+ width:34px;
+ height:1px;
+ background:var(--gold);
+}
+
+.page-hero h1{
+ font-family:var(--serif);
+ font-size:clamp(48px,6vw,76px);
+ font-weight:500;
+ line-height:1.08;
+ letter-spacing:-2px;
+ color:var(--deep);
+ margin:25px 0 20px;
+}
+
+.page-hero h1 span{
+ color:var(--wine3);
+ font-style:italic;
+}
+
+.page-hero .lead{
+ color:var(--muted);
+ font-size:14px;
+ line-height:2;
+ max-width:680px;
+}
+
+.hero-meta{
+ display:flex;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:28px;
+}
+
+.meta-chip{
+ border:1px solid #e7d8dc;
+ background:#ffffffb8;
+ color:var(--wine);
+ padding:9px 14px;
+ font-size:9px;
+ font-weight:800;
+ letter-spacing:1.2px;
+ text-transform:uppercase;
+}
+
+/* =========================================
+   INTRODUCTION STRIP
+========================================= */
+
+.identity-strip{
+ background:var(--wine);
+ color:white;
+}
+
+.identity-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ padding:26px 0;
+}
+
+.identity-item{
+ padding:5px 30px;
+ border-right:1px solid #ffffff2b;
+}
+
+.identity-item:first-child{
+ padding-left:0;
+}
+
+.identity-item:last-child{
+ border:0;
+}
+
+.identity-item strong{
+ font:20px var(--serif);
+ display:block;
+}
+
+.identity-item span{
+ font-size:9px;
+ letter-spacing:1.7px;
+ text-transform:uppercase;
+ color:#e6cbd2;
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section{
+ padding:90px 0;
+}
+
+.section-label{
+ color:var(--wine3);
+ font-size:10px;
+ font-weight:800;
+ letter-spacing:3px;
+ text-transform:uppercase;
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.section-label:before{
+ content:"";
+ height:1px;
+ width:30px;
+ background:var(--gold);
+}
+
+.section-title{
+ font:500 clamp(34px,4vw,48px)/1.2 var(--serif);
+ color:var(--deep);
+ margin:17px 0;
+}
+
+.section-description{
+ font-size:13px;
+ color:var(--muted);
+ line-height:2;
+ max-width:680px;
+}
+
+.section-heading{
+ margin-bottom:45px;
+}
+
+/* =========================================
+   ARTICLE LAYOUT
+========================================= */
+
+.content-grid{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) 300px;
+ gap:60px;
+ align-items:start;
+}
+
+.article-body{
+ min-width:0;
+}
+
+.article-body p{
+ font-size:13px;
+ color:var(--muted);
+ line-height:2.15;
+ margin:0 0 20px;
+}
+
+.article-body h2{
+ font:500 clamp(27px,3vw,36px)/1.25 var(--serif);
+ color:var(--deep);
+ margin:46px 0 17px;
+}
+
+.article-body h2:first-child{
+ margin-top:0;
+}
+
+.article-body strong{
+ color:var(--wine);
+ font-weight:700;
+}
+
+.article-intro{
+ font:italic 22px/1.75 var(--serif)!important;
+ color:var(--wine)!important;
+ border-left:2px solid var(--gold);
+ padding:7px 0 7px 24px;
+ margin-bottom:32px!important;
+}
+
+/* =========================================
+   ARTICLE IMAGE
+========================================= */
+
+.article-image{
+ margin:35px 0;
+ background:var(--pink);
+ border:1px solid var(--line);
+ padding:12px;
+}
+
+.article-image img{
+ width:100%;
+ height:auto;
+ object-fit:cover;
+}
+
+.image-caption{
+ padding:12px 5px 3px;
+ color:var(--muted);
+ font-size:10px;
+ line-height:1.7;
+ text-align:center;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.article-aside{
+ position:sticky;
+ top:112px;
+}
+
+.aside-card{
+ background:var(--cream);
+ border:1px solid var(--line);
+ padding:27px;
+ margin-bottom:18px;
+}
+
+.aside-kicker{
+ font-size:9px;
+ letter-spacing:2px;
+ font-weight:800;
+ color:var(--wine3);
+ text-transform:uppercase;
+}
+
+.aside-card h3{
+ font:23px/1.3 var(--serif);
+ color:var(--wine);
+ margin:12px 0;
+}
+
+.aside-card p{
+ font-size:11px;
+ line-height:1.9;
+ color:var(--muted);
+}
+
+.aside-links{
+ list-style:none;
+ margin-top:17px;
+}
+
+.aside-links li{
+ border-top:1px solid var(--line);
+ padding:11px 0;
+ font-size:11px;
+ color:var(--wine);
+ font-weight:700;
+ line-height:1.7;
+}
+
+.aside-links a:hover{
+ color:var(--wine3);
+}
+
+/* =========================================
+   COMMITMENT SECTION
+========================================= */
+
+.commitment{
+ background:var(--cream);
+}
+
+.commitment-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:15px;
+ margin-top:35px;
+}
+
+.commitment-item{
+ background:white;
+ border:1px solid var(--line);
+ padding:23px;
+ display:flex;
+ gap:17px;
+ align-items:flex-start;
+ transition:.3s;
+}
+
+.commitment-item:hover{
+ transform:translateY(-4px);
+ box-shadow:var(--shadow);
+}
+
+.commitment-number{
+ font:italic 20px var(--serif);
+ color:var(--gold);
+ flex-shrink:0;
+}
+
+.commitment-item p{
+ font-size:11px;
+ line-height:1.9;
+ color:var(--muted);
+}
+
+.commitment-item strong{
+ display:block;
+ color:var(--wine);
+ font:19px var(--serif);
+ margin-bottom:5px;
+}
+
+/* =========================================
+   CLOSING SECTION
+========================================= */
+
+.closing-section{
+ background:linear-gradient(120deg,var(--deep),var(--wine));
+ color:white;
+ position:relative;
+ overflow:hidden;
+}
+
+.closing-section:after{
+ content:"";
+ position:absolute;
+ width:500px;
+ height:500px;
+ border:1px solid #ffffff16;
+ border-radius:50%;
+ right:-180px;
+ top:-190px;
+}
+
+.closing-inner{
+ text-align:center;
+ max-width:820px;
+ margin:auto;
+ position:relative;
+ z-index:2;
+}
+
+.closing-inner .section-label{
+ justify-content:center;
+ color:#e7c795;
+}
+
+.closing-inner h2{
+ font:500 clamp(34px,4vw,49px)/1.3 var(--serif);
+ margin:20px 0;
+ color:white;
+}
+
+.closing-inner p{
+ font-size:13px;
+ line-height:2;
+ color:#e6d7dc;
+ margin-bottom:30px;
+}
+
+.btn{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ background:var(--wine);
+ color:white;
+ padding:14px 23px;
+ font-size:11px;
+ font-weight:800;
+ letter-spacing:.8px;
+ border:1px solid var(--wine);
+ transition:.3s;
+}
+
+.btn:hover{
+ background:var(--deep);
+ transform:translateY(-3px);
+}
+
+.closing-inner .btn{
+ background:white;
+ color:var(--wine);
+ border-color:white;
+}
+
+.closing-inner .btn:hover{
+ background:#f2e6e8;
+}
+
+/* =========================================
+   FOOTER — HOMEPAGE MATCH
+========================================= */
+
+footer{
+ background:var(--deep);
+ color:white;
+ padding:65px 0 25px;
+}
+
+.footer-grid{
+ display:grid;
+ grid-template-columns:1.4fr .8fr .8fr;
+ gap:60px;
+ padding-bottom:45px;
+}
+
+.footer-name{
+ font:24px var(--serif);
+ color:white;
+}
+
+.footer-description{
+ font-size:11px;
+ color:#bbaab0;
+ line-height:2;
+ margin-top:16px;
+ max-width:350px;
+}
+
+.footer-heading{
+ font-size:10px;
+ letter-spacing:2px;
+ text-transform:uppercase;
+ color:#d7b985;
+ margin-bottom:19px;
+}
+
+.footer-links{
+ display:flex;
+ flex-direction:column;
+ gap:11px;
+}
+
+.footer-links a{
+ font-size:11px;
+ color:#d6c7cc;
+ transition:.2s;
+}
+
+.footer-links a:hover{
+ color:#e9c993;
+}
+
+.footer-bottom{
+ border-top:1px solid #ffffff1c;
+ padding-top:22px;
+ display:flex;
+ justify-content:space-between;
+ gap:15px;
+ font-size:10px;
+ color:#a9959d;
+}
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+.reveal{
+ opacity:0;
+ transform:translateY(25px);
+ transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.visible{
+ opacity:1;
+ transform:translateY(0);
+}
+
+::selection{
+ background:var(--wine);
+ color:white;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1000px){
+
+ .nav-links{
+  gap:14px;
+ }
+
+ .nav-links a{
+  font-size:10px;
+ }
+
+ .content-grid{
+  gap:35px;
+ }
+
+}
+
+@media(max-width:760px){
+
+ .container{
+  width:calc(100% - 34px);
+ }
+
+ .topbar-right{
+  display:none;
+ }
+
+ .nav{
+  min-height:73px;
+ }
+
+ .brand-name strong{
+  font-size:15px;
+ }
+
+ .brand-logo{
+  width:42px;
+  height:42px;
+ }
+
+ .menu-toggle{
+  display:block;
+ }
+
+ .nav-links{
+  display:none;
+  position:absolute;
+  top:73px;
+  left:0;
+  right:0;
+  padding:18px 25px 25px;
+  background:white;
+  box-shadow:var(--shadow);
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+ }
+
+ .nav-links.active{
+  display:flex;
+ }
+
+ .nav-links a{
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
+ }
+
+ .nav-links .contact-btn{
+  text-align:center;
+  margin-top:12px;
+  padding:13px;
+ }
+
+ .page-hero{
+  min-height:0;
+ }
+
+ .page-hero-inner{
+  padding:65px 0 70px;
+ }
+
+ .page-hero h1{
+  font-size:53px;
+ }
+
+ .identity-grid{
+  grid-template-columns:1fr;
+  gap:15px;
+  padding:23px 0;
+ }
+
+ .identity-item{
+  padding:0 0 13px!important;
+  border-right:0;
+  border-bottom:1px solid #ffffff2b;
+ }
+
+ .identity-item:last-child{
+  border:0;
+ }
+
+ section{
+  padding:70px 0;
+ }
+
+ .content-grid{
+  grid-template-columns:1fr;
+  gap:40px;
+ }
+
+ .article-aside{
+  position:static;
+ }
+
+ .commitment-grid{
+  grid-template-columns:1fr;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+ }
+
+ .footer-grid>div:first-child{
+  grid-column:span 2;
+ }
+
+}
+
+@media(max-width:450px){
+
+ .page-hero h1{
+  font-size:45px;
+ }
+
+ .page-hero .lead{
+  font-size:13px;
+ }
+
+ .hero-meta{
+  gap:8px;
+ }
+
+ .meta-chip{
+  font-size:8px;
+ }
+
+ .article-body h2{
+  font-size:28px;
+ }
+
+ .article-intro{
+  font-size:19px!important;
+ }
+
+ .footer-grid{
+  grid-template-columns:1fr;
+ }
+
+ .footer-grid>div:first-child{
+  grid-column:auto;
+ }
+
+ .footer-bottom{
+  flex-direction:column;
+ }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+ *,
+ *:before,
+ *:after{
+  scroll-behavior:auto!important;
+  transition:none!important;
+ }
+
+ .reveal{
+  opacity:1;
+  transform:none;
+ }
+
+}
+
+
+
+/* Tree Plantation content components, styled within the Free Operations design system */
+.tree-highlight-box,
+.tree-article-quote {
+  background: var(--pink);
+  border-left: 2px solid var(--gold);
+  padding: 25px 27px;
+  margin: 32px 0;
+}
+.tree-highlight-box .highlight-label,
+.tree-commitment-section .section-label {
+  color: var(--wine3);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tree-highlight-box h2,
+.tree-commitment-section h2 {
+  font: 500 clamp(25px, 3vw, 32px)/1.3 var(--serif);
+  color: var(--deep);
+  margin: 0 0 13px;
+}
+.tree-highlight-box p,
+.tree-commitment-section p {
+  font-size: 13px;
+  line-height: 2;
+  color: var(--muted);
+  margin: 0;
+}
+.tree-article-quote {
+  font: italic 22px/1.65 var(--serif);
+  color: var(--wine);
+}
+.tree-commitment-section {
+  margin: 38px 0;
+  padding: 28px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+.tree-commitment-section h2 { margin-top: 8px; }
+.tree-commitment-section .commitment-list {
+  list-style: none;
+  margin-top: 18px;
+}
+.tree-commitment-section .commitment-list li {
+  position: relative;
+  padding: 11px 0 11px 25px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.tree-commitment-section .commitment-list li:last-child { border-bottom: 0; }
+.tree-commitment-section .commitment-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 800;
+}
+.tree-aside-dark {
+  background: var(--wine);
+  border-color: var(--wine);
+}
+.tree-aside-dark h3 { color: white; }
+.tree-aside-dark p,
+.tree-aside-dark .tree-sidebar-contact { color: #e6d7dc; }
+.tree-aside-dark .tree-sidebar-contact p {
+  color: #e6d7dc;
+  margin: 12px 0;
+}
+.tree-aside-dark .tree-sidebar-contact a { color: #e7c795; }
+.tree-sidebar-button {
+  display: inline-flex;
+  margin-top: 8px;
+  padding: 11px 17px;
+  background: white;
+  color: var(--wine);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.tree-sidebar-button:hover { background: #f2e6e8; }
+@media(max-width:760px) {
+  .tree-commitment-section { padding: 23px 20px; }
+  .tree-article-quote { font-size: 19px; }
+}
+
+
+/* =========================================
+   AWARDS & HONOURS
+========================================= */
+.awards-intro {
+  margin: 0 0 34px;
+  color: #65575d;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.awards-list {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 38px;
+}
+.award-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 22px;
+  align-items: center;
+  padding: 24px 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 35px rgba(65,20,35,.055);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.award-card:hover {
+  transform: translateY(-3px);
+  border-color: #d7bdc4;
+  box-shadow: 0 18px 42px rgba(65,20,35,.10);
+}
+.award-year {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  background: var(--pink);
+  border: 1px solid #ead9de;
+  color: var(--wine);
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+}
+.award-card h3 {
+  margin: 0 0 5px;
+  color: var(--wine);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.award-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+.awards-note {
+  margin-top: 32px;
+  padding: 28px 30px;
+  background: linear-gradient(120deg,#fbf6f5,#f5edef);
+  border-left: 3px solid var(--gold);
+}
+.awards-note .section-label { margin-bottom: 10px; }
+.awards-note p {
+  margin: 0;
+  color: #65575d;
+}
+@media (max-width: 600px) {
+  .award-card { grid-template-columns: 62px 1fr; gap: 15px; padding: 18px; }
+  .award-year { width: 60px; height: 60px; font-size: 19px; }
+  .award-card h3 { font-size: 16px; }
+}
+
+</style>
+</head>
+
+<body>
+<div class="topbar">
+ <div class="container topbar-inner">
+
+  <span>OFFICIAL WEBSITE</span>
+
+  <div class="topbar-right">
+   <a href="mailto:officialfarmaanhasankhan@gmail.com">
+    Official Correspondence
+   </a>
+
+   <a href="/biography.html/">
+    Biography ↗
+   </a>
+  </div>
+
+ </div>
+</div>
+
+
+
+
+<header>
+
+ <div class="container nav">
+
+  <a href="/" class="brand">
+
+   <div class="brand-logo">FHK</div>
+
+   <div class="brand-name">
+    <strong>Dr. Farmaan Hasan Khan</strong>
+    <small>Religious leader and Social activist</small>
+   </div>
+
+  </a>
+
+
+  <button
+   class="menu-toggle"
+   id="menuToggle"
+   aria-label="Toggle navigation"
+   aria-expanded="false"
+  >
+   ☰
+  </button>
+
+
+  <nav class="nav-links" id="navLinks">
+
+   <a href="/">Home</a>
+
+   <a href="/biography.html/">Biography</a>
+
+   <a href="/initiatives.html" aria-current="page">
+    Initiatives
+   </a>
+
+   <a href="/awards.html">Awards</a>
+
+   <a href="/media-recognition.html/">
+    Media & Recognition
+   </a>
+
+   <a href="/contact.html/">Contact</a>
+
+   <a
+    class="contact-btn"
+    href="mailto:office@farmaanhasankhan.com"
+   >
+    Get in Touch ↗
+   </a>
+
+  </nav>
+
+ </div>
+
+</header>
+
+<main>
+<div class="breadcrumb-wrap">
+ <div class="container breadcrumb">
+  <a href="/">Home</a>
+  <span>›</span>
+  <a href="/media-recognition/">Media &amp; Recognition</a>
+  <span>›</span>
+  Awards and Honours
+ </div>
+</div>
+
+<section class="page-hero">
+ <div class="container page-hero-inner reveal">
+  <div class="eyebrow">Recognition for Service, Leadership and Contribution</div>
+  <h1>Awards &amp; <span>Honours</span></h1>
+  <p class="lead">
+   A record of recognitions and honours acknowledging contributions
+   across public service, social impact, peace and leadership.
+  </p>
+  <div class="hero-meta">
+   <span class="meta-chip">Awards &amp; Recognition</span>
+   <span class="meta-chip">Leadership</span>
+   <span class="meta-chip">Public Service</span>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container content-grid">
+  <article class="article-body">
+   <div class="section-label">Awards and Honours</div>
+   <p class="awards-intro">
+    Recognition is a meaningful milestone in a journey of service and
+    commitment. The following awards and honours form part of the
+    recognitions received by Dr. Farmaan Hasan Khan.
+   </p>
+
+   <div class="awards-list">
+    <div class="award-card">
+     <div class="award-year">2022</div>
+     <div>
+      <h3>Honorary Doctorate</h3>
+      <p>Honorary Recognition · 2022</p>
+     </div>
+    </div>
+
+    <div class="award-card">
+     <div class="award-year">2023</div>
+     <div>
+      <h3>Bharat Gaurav Ratna</h3>
+      <p>National Honour · 2023</p>
+     </div>
+    </div>
+
+    <div class="award-card">
+     <div class="award-year">2023</div>
+     <div>
+      <h3>World Peace Ambassador</h3>
+      <p>World Human Rights Protection Commissions · 2023</p>
+     </div>
+    </div>
+
+    <div class="award-card">
+     <div class="award-year">2026</div>
+     <div>
+      <h3>Forbes India 30 Under 30</h3>
+      <p>Forbes India · 2026</p>
+     </div>
+    </div>
+
+    <div class="award-card">
+     <div class="award-year">2026</div>
+     <div>
+      <h3>Title of Waqar-e-Millat</h3>
+      <p>Title of Honour · 2026</p>
+     </div>
+    </div>
+
+    <div class="award-card">
+     <div class="award-year">2026</div>
+     <div>
+      <h3>Certificate of the World Record</h3>
+      <p>London Book of World Records · 2026</p>
+     </div>
+    </div>
+   </div>
+
+   <div class="awards-note">
+    <div class="section-label">A Continuing Journey</div>
+    <p>
+     Each recognition represents a moment in an ongoing journey.
+     The focus remains on meaningful work, positive contribution and
+     serving communities with sincerity and purpose.
+    </p>
+   </div>
+  </article>
+
+  <aside class="article-aside">
+   <div class="aside-card">
+    <h3>Explore</h3>
+    <ul class="aside-links">
+     <li><a href="/biography/">Biography</a></li>
+     <li><a href="/initiatives/">Initiatives &amp; Activities</a></li>
+     <li><a href="/press-releases/">Press Releases</a></li>
+     <li><a href="/media-recognition/">Media &amp; Recognition</a></li>
+     <li><a href="/awards.html" aria-current="page">Awards and Honours</a></li>
+    </ul>
+   </div>
+
+   <div class="aside-card">
+    <h3>Initiatives</h3>
+    <ul class="aside-links">
+     <li><a href="/initiatives/free-operations.html">Free Operations</a></li>
+     <li><a href="/initiatives/tree-plantation-drive.html">Tree Plantation Drives</a></li>
+     <li><a href="/initiatives/free-neet-coaching.html">Free NEET Coachings</a></li>
+     <li><a href="/initiatives/education-for-all.html">Education for All</a></li>
+    </ul>
+   </div>
+
+   <div class="aside-card tree-aside-dark">
+    <h3>Contact the Team</h3>
+    <p>
+     For enquiries, media communication and further information,
+     get in touch with the team.
+    </p>
+    <div class="tree-sidebar-contact">
+     <p>
+      Email:<br>
+      <a href="mailto:officialfarmaanhasankhan@gmail.com">officialfarmaanhasankhan@gmail.com</a>
+     </p>
+     <p>
+      Phone:<br>
+      <a href="tel:+917351172555">+91 7351172555</a>
+     </p>
+     <p>
+      Head Office:<br>
+      51, Qilla Crossing, Bareilly, Uttar Pradesh (243003)
+     </p>
+    </div>
+    <a href="/contact/" class="tree-sidebar-button">Connect Now →</a>
+   </div>
+  </aside>
+ </div>
+</section>
+
+<section class="closing-section">
+ <div class="container closing-inner reveal">
+  <div class="section-label">Purpose Beyond Recognition</div>
+  <h2>Committed to Meaningful Contribution</h2>
+  <p>
+   Awards mark important milestones, while the work of service,
+   leadership and positive change continues.
+  </p>
+  <a href="/biography/" class="btn">EXPLORE BIOGRAPHY ↗</a>
+ </div>
+</section>
+</main>
+
+<footer>
+
+ <div class="container">
+
+  <div class="footer-grid">
+
+
+   <div>
+
+    <div class="footer-name">
+     Dr. Farmaan Hasan Khan
+    </div>
+
+    <p class="footer-description">
+     A life dedicated to humanity, education, peace
+     and social welfare. An ongoing journey of
+     compassion, service and collective progress.
+    </p>
+
+   </div>
+
+
+   <div>
+
+    <div class="footer-heading">
+     Explore
+    </div>
+
+    <div class="footer-links">
+
+     <a href="/biography.html/">
+      Biography
+     </a>
+
+     <a href="/initiatives.html">
+      Initiatives
+     </a>
+
+     <a href="/awards.html">
+      Awards
+     </a>
+
+     <a href="/media-recognition.html/">
+      Media & Recognition
+     </a>
+
+    </div>
+
+   </div>
+
+
+   <div>
+
+    <div class="footer-heading">
+     Get Involved
+    </div>
+
+    <div class="footer-links">
+
+     <a href="/support/">
+      Support Us
+     </a>
+
+     <a href="/contact.html/">
+      Contact
+     </a>
+
+     <a href="mailto:office@farmaanhasankhan.com">
+      Email Office
+     </a>
+
+     <a href="https://ahtskills.org/">
+      Welfare Society
+     </a>
+
+    </div>
+
+   </div>
+
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+   <span>
+    © <span id="currentYear"></span>
+    Dr. Farmaan Hasan Khan. All Rights Reserved.
+   </span>
+
+   <span>
+    Designed with Purpose & Elegance.
+   </span>
+
+  </div>
+
+ </div>
+
+</footer>
+
+<script>
+
+// Mobile Navigation
+
+const menuToggle = document.getElementById('menuToggle');
+
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', () => {
+
+ const open = navLinks.classList.toggle('active');
+
+ menuToggle.textContent = open ? '×' : '☰';
+
+ menuToggle.setAttribute(
+  'aria-expanded',
+  String(open)
+ );
+
+});
+
+
+// Close Menu After Navigation
+
+navLinks.querySelectorAll('a').forEach(link => {
+
+ link.addEventListener('click', () => {
+
+  navLinks.classList.remove('active');
+
+  menuToggle.textContent = '☰';
+
+  menuToggle.setAttribute('aria-expanded','false');
+
+ });
+
+});
+
+
+// Dynamic Copyright Year
+
+document.getElementById('currentYear').textContent =
+ new Date().getFullYear();
+
+
+// Scroll Reveal
+
+const observer = new IntersectionObserver(entries => {
+
+ entries.forEach(entry => {
+
+  if(entry.isIntersecting){
+
+   entry.target.classList.add('visible');
+
+   observer.unobserve(entry.target);
+
+  }
+
+ });
+
+},{threshold:0.12});
+
+
+document.querySelectorAll('.reveal').forEach(element => {
+
+ observer.observe(element);
+
+});
+
+</script>
+</body>
+</html>
