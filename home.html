@@ -481,6 +481,19 @@ footer{background:var(--deep);color:white;padding:65px 0 25px}
  font-size:10px;color:#a9959d;
 }
 
+
+/* AWARDS BELOW THE OFFICIAL PORTRAIT */
+.hero-awards{position:relative;margin-top:42px;padding:25px 24px 22px;background:rgba(255,255,255,.96);border:1px solid var(--line);border-top:3px solid var(--gold);box-shadow:var(--shadow)}
+.hero-awards-heading{margin-bottom:17px;text-align:center}
+.hero-awards-heading span{display:block;color:var(--wine3);font-size:9px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+.hero-awards-heading h2{margin-top:5px;color:var(--deep);font:500 25px/1.2 var(--serif)}
+.hero-award-item{padding:15px 0;border-top:1px solid var(--line)}
+.hero-award-item h3{color:var(--wine);font:500 18px/1.35 var(--serif)}
+.hero-award-item p{margin:5px 0 9px;color:var(--muted);font-size:10px;line-height:1.7}
+.hero-award-news{display:inline-flex;align-items:center;gap:7px;color:var(--wine);font-size:9px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:3px;transition:.2s}
+.hero-award-news:hover{color:var(--wine3);gap:11px}
+@media(max-width:760px){.hero-awards{margin-top:35px;padding:22px 20px}}
+
 /* ANIMATION */
 
 .reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
@@ -636,6 +649,29 @@ footer{background:var(--deep);color:white;padding:65px 0 25px}
     <strong>Farmaan Hasan Khan</strong>
    </div>
   </div>
+
+    <section class="hero-awards" aria-labelledby="hero-awards-title">
+     <div class="hero-awards-heading">
+      <span>Honours & Recognition</span>
+      <h2 id="hero-awards-title">Awards & Recognition</h2>
+     </div>
+     <article class="hero-award-item">
+      <h3>Bharat Gaurav Ratna</h3>
+      <p>Award received in 2023.</p>
+      <a class="hero-award-news" href="https://sample.com" target="_blank" rel="noopener noreferrer">Read News ↗</a>
+     </article>
+     <article class="hero-award-item">
+      <h3>World Peace Ambassador</h3>
+      <p>Honour from the World Human Rights Protection Commission.</p>
+      <a class="hero-award-news" href="https://sample.com" target="_blank" rel="noopener noreferrer">Read News ↗</a>
+     </article>
+     <article class="hero-award-item">
+      <h3>Forbes 30 Under 30</h3>
+      <p>Recognition of humanitarian and community initiatives.</p>
+      <a class="hero-award-news" href="https://sample.com" target="_blank" rel="noopener noreferrer">Read News ↗</a>
+     </article>
+    </section>
+
 
  </div>
 </section>
@@ -892,47 +928,7 @@ footer{background:var(--deep);color:white;padding:65px 0 25px}
  </div>
 </section>
 
-<!-- RECOGNITION -->
-<section id="recognition">
- <div class="container">
 
-  <div class="section-heading reveal">
-   <div class="section-label">Honours & Recognition</div>
-   <h2 class="section-title">Recognitions and milestones.</h2>
-   <p class="section-description">
-    A record of honours, distinctions and acknowledgements
-    associated with his public and humanitarian contributions.
-   </p>
-  </div>
-
-  <div class="recognition-grid">
-
-   <div class="recognition-card reveal">
-    <span>AWARD</span>
-    <h3>Bharat Gaurav Ratna</h3>
-    <p>Award received in 2023.</p>
-   </div>
-
-   <div class="recognition-card reveal">
-    <span>HONOUR</span>
-    <h3>World Peace Ambassador</h3>
-    <p>from World Human Rights Protection Commission</p>
-   </div>
-
-   <div class="recognition-card reveal">
-    <span>HONOUR</span>
-    <h3>Forbes 30 Under 30</h3>
-    <p>Recognition of humanitarian and community initiatives.</p>
-   </div>
-
-  </div>
-
-  <div style="text-align:center;margin-top:35px">
-   <a href="/media-recognition.html/" class="btn">VIEW MEDIA & RECOGNITION </a>
-  </div>
-
- </div>
-</section>
 
 <!-- MEDIA -->
 <section class="media-section" id="media">
